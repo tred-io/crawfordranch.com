@@ -11,14 +11,26 @@ import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
   const [logoOpacity, setLogoOpacity] = useState(1);
+  const [logoTransform, setLogoTransform] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      const windowHeight = window.innerHeight;
-      // Fade out logo as user scrolls down
-      const opacity = Math.max(0, 1 - (scrolled / (windowHeight * 0.8)));
-      setLogoOpacity(opacity);
+      const scrollThreshold = 50; // When navbar becomes transparent
+      
+      if (scrolled <= scrollThreshold) {
+        // Slide logo up into navbar as user scrolls
+        const progress = scrolled / scrollThreshold;
+        const translateY = -progress * 15; // Move up 15px into navbar
+        const opacity = Math.max(0.3, 1 - (progress * 0.7)); // Fade but don't disappear completely
+        
+        setLogoTransform(translateY);
+        setLogoOpacity(opacity);
+      } else {
+        // Logo is fully in navbar position and faded
+        setLogoTransform(-15);
+        setLogoOpacity(0.3);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -30,10 +42,11 @@ export default function Home() {
       <Navigation />
       {/* Floating Logo */}
       <div 
-        className="fixed top-5 z-50 pointer-events-none transition-all duration-300"
+        className="fixed top-5 z-50 pointer-events-none transition-all duration-300 ease-out"
         style={{ 
           opacity: logoOpacity,
-          left: 'max(1.5rem, calc((100vw - 1280px) / 2 + 2.5rem))' // Match whitespace with contact button
+          left: 'max(1.5rem, calc((100vw - 1280px) / 2 + 2.5rem))',
+          transform: `translateY(${logoTransform}px)`
         }}
       >
         <img 
