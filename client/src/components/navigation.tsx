@@ -35,12 +35,8 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
-              <img 
-                src={logoImage} 
-                alt="Crawford Ranch Logo" 
-                className="h-10 w-auto"
-              />
+            <Link href="/" className="text-2xl font-merriweather font-bold text-texas-maroon hover:text-texas-maroon-light transition-colors">
+              Crawford Ranch
             </Link>
           </div>
           
