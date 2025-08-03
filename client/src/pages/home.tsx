@@ -10,9 +10,12 @@ import heroImage from "@assets/IMG_2788_1754201480313.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
-  const [logoOpacity, setLogoOpacity] = useState(1);
-  const [logoScale, setLogoScale] = useState(1);
-  const [logoTranslateY, setLogoTranslateY] = useState(0);
+  const [logoTransform, setLogoTransform] = useState({
+    scale: 1,
+    translateX: 0,
+    translateY: 0,
+    opacity: 1
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,20 +23,23 @@ export default function Home() {
       const scrollThreshold = 50; // When navbar becomes transparent
       
       if (scrolled <= scrollThreshold) {
-        // Shrink logo and move it into navbar as user scrolls
         const progress = scrolled / scrollThreshold;
-        const scale = 1 - (progress * 0.6); // Shrink to 40% of original size
-        const translateY = -progress * 8; // Move up slightly into navbar
-        const opacity = Math.max(0.8, 1 - (progress * 0.2)); // Slight fade
         
-        setLogoScale(scale);
-        setLogoTranslateY(translateY);
-        setLogoOpacity(opacity);
+        // Calculate transforms to move logo to navbar position
+        const scale = 1 - (progress * 0.65); // Shrink to 35% size
+        const translateX = -progress * 150; // Move left to navbar position
+        const translateY = -progress * 12; // Move up into navbar
+        const opacity = Math.max(0.9, 1 - (progress * 0.1));
+        
+        setLogoTransform({ scale, translateX, translateY, opacity });
       } else {
-        // Logo is fully shrunk and in navbar
-        setLogoScale(0.4);
-        setLogoTranslateY(-8);
-        setLogoOpacity(0.8);
+        // Final navbar position
+        setLogoTransform({ 
+          scale: 0.35, 
+          translateX: -150, 
+          translateY: -12, 
+          opacity: 0.9 
+        });
       }
     };
 
@@ -46,11 +52,11 @@ export default function Home() {
       <Navigation />
       {/* Floating Logo */}
       <div 
-        className="fixed top-5 z-50 pointer-events-none transition-all duration-300 ease-out"
+        className="fixed top-5 z-50 pointer-events-none transition-all duration-500 ease-out"
         style={{ 
-          opacity: logoOpacity,
+          opacity: logoTransform.opacity,
           left: 'max(1.5rem, calc((100vw - 1280px) / 2 + 2.5rem))',
-          transform: `translateY(${logoTranslateY}px) scale(${logoScale})`
+          transform: `translate(${logoTransform.translateX}px, ${logoTransform.translateY}px) scale(${logoTransform.scale})`
         }}
       >
         <img 
