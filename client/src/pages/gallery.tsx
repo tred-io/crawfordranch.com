@@ -16,8 +16,8 @@ import image12 from "@assets/IMG_7588_1754201480323.jpg";
 import image13 from "@assets/IMG_7597_1754202325477.jpg";
 import image14 from "@assets/IMG_3328_1754202354559.jpg";
 import image15 from "@assets/IMG_2196_1754202398409.jpg";
-import image16 from "@assets/IMG_3326_1754202418292.JPG";
-import image17 from "@assets/IMG_3327_1754202418294.JPG";
+import image16 from "@assets/IMG_3326_1754202418292.jpg";
+import image17 from "@assets/IMG_3327_1754202418294.jpg";
 
 export default function Gallery() {
   const images = [
