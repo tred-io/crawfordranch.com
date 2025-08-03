@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 import fieldImage from "@assets/IMG_2196_1754202398409.jpg";
+import cattleImage from "@assets/IMG_7989_1754205048016.jpg";
 
 export default function About() {
   return (
@@ -63,6 +64,30 @@ export default function About() {
                     alt="Peaceful ranch field with heritage oak tree" 
                     className="rounded-lg shadow-xl w-full"
                   />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <img 
+                    src={cattleImage} 
+                    alt="Modern cattle operations at Crawford Ranch" 
+                    className="rounded-lg shadow-xl w-full"
+                  />
+                </div>
+                
+                <div className="space-y-6">
+                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Modern Ranch Life</h2>
+                  <p className="text-lg text-warm-gray leading-relaxed">
+                    Today, Crawford Ranch seamlessly blends traditional ranching practices with modern hospitality. 
+                    Our working cattle operation continues the legacy while welcoming families, couples, and groups 
+                    to experience authentic Texas ranch life through events, retreats, and outdoor adventures.
+                  </p>
+                  <p className="text-lg text-warm-gray leading-relaxed">
+                    From intimate weddings under the Texas sky to corporate retreats that inspire innovation, 
+                    we provide a unique setting where modern comfort meets timeless tradition. Our commitment 
+                    to preserving this special place ensures future generations can continue to enjoy its beauty and heritage.
+                  </p>
                 </div>
               </div>
 
