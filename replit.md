@@ -1,8 +1,8 @@
-# Lampasas Legacy Ranch Website
+# Crawford Ranch Website
 
 ## Overview
 
-This is a modern, full-stack web application for Lampasas Legacy Ranch, a multi-generational cattle ranch in Central Texas. The application serves as a marketing website and contact management system for the ranch, which offers wedding venues, corporate retreats, Christian retreats, hunting trips, and outdoor activities.
+This is a modern, full-stack web application for Crawford Ranch, a multi-generational cattle ranch in Central Texas. The application serves as a marketing website and contact management system for the ranch, which offers wedding venues, corporate retreats, Christian retreats, hunting trips, and outdoor activities.
 
 ## System Architecture
 
@@ -38,15 +38,15 @@ This is a modern, full-stack web application for Lampasas Legacy Ranch, a multi-
 - `POST /api/contact` - Submit new contact inquiries
 - `GET /api/contact` - Retrieve all contact inquiries (admin functionality)
 
-#### UI Sections
-- **Navigation**: Responsive navigation with smooth scrolling
-- **Hero Section**: Full-screen landing with call-to-action buttons
-- **About Section**: Ranch history and statistics
-- **Events Section**: Wedding, corporate, and Christian retreat offerings
-- **Activities Section**: Hunting, fishing, and party house features
-- **Future Offerings**: Upcoming outfitter and meat shop
-- **Gallery**: Photo showcase of ranch property
-- **Contact Section**: Comprehensive inquiry form with validation
+#### Website Structure
+- **Multi-Page Architecture**: Separate pages instead of single-page scrolling
+- **Home Page**: Hero section with ranch imagery and call-to-action buttons
+- **About Page**: Ranch history, statistics, and heritage story
+- **Events Page**: Wedding, corporate, and Christian retreat offerings
+- **Activities Page**: Hunting, fishing, and party house features
+- **Gallery Page**: Photo showcase of ranch property
+- **Contact Page**: Comprehensive inquiry form with validation
+- **Navigation**: Responsive navigation with page routing and active states
 
 ## Data Flow
 
@@ -54,6 +54,7 @@ This is a modern, full-stack web application for Lampasas Legacy Ranch, a multi-
 2. **Admin Access**: Contact inquiries can be retrieved via API for administrative purposes
 3. **Static Content**: All marketing content is statically rendered with optimized images
 4. **Responsive Design**: Mobile-first approach with breakpoint-based layouts
+5. **Page Routing**: Client-side routing with Wouter for seamless navigation
 
 ## External Dependencies
 

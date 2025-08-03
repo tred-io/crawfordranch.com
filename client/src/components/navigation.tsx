@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { Link, useLocation } from "wouter";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,20 +18,12 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
-  };
-
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'events', label: 'Events' },
-    { id: 'activities', label: 'Activities' },
-    { id: 'gallery', label: 'Gallery' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/events', label: 'Events' },
+    { href: '/activities', label: 'Activities' },
+    { href: '/gallery', label: 'Gallery' },
   ];
 
   return (
@@ -39,28 +33,31 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="text-2xl font-playfair font-bold text-texas-red">
-              🐄 Lampasas Legacy Ranch
-            </div>
+            <Link href="/" className="text-2xl font-playfair font-bold text-texas-red hover:text-texas-red-light transition-colors">
+              🐄 Crawford Ranch
+            </Link>
           </div>
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-ranch-brown hover:text-texas-red transition-colors font-medium"
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`transition-colors font-medium ${
+                    location === item.href 
+                      ? 'text-texas-red' 
+                      : 'text-ranch-brown hover:text-texas-red'
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="bg-texas-red text-white hover:bg-texas-red-light"
-              >
-                Contact
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-texas-red text-white hover:bg-texas-red-light">
+                  Contact
+                </Button>
+              </Link>
             </div>
           </div>
           
@@ -74,20 +71,27 @@ export default function Navigation() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-6">
                   {navItems.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.id)}
-                      className="text-left px-3 py-2 text-ranch-brown hover:text-texas-red transition-colors font-medium"
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`text-left px-3 py-2 transition-colors font-medium ${
+                        location === item.href 
+                          ? 'text-texas-red' 
+                          : 'text-ranch-brown hover:text-texas-red'
+                      }`}
+                      onClick={() => setIsOpen(false)}
                     >
                       {item.label}
-                    </button>
+                    </Link>
                   ))}
-                  <Button
-                    onClick={() => scrollToSection('contact')}
-                    className="bg-texas-red text-white hover:bg-texas-red-light mt-4"
-                  >
-                    Contact
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                      className="bg-texas-red text-white hover:bg-texas-red-light mt-4"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Contact
+                    </Button>
+                  </Link>
                 </div>
               </SheetContent>
             </Sheet>

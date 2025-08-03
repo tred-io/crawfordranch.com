@@ -1,19 +1,13 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   const quickLinks = [
-    { id: 'about', label: 'About Us' },
-    { id: 'events', label: 'Events' },
-    { id: 'activities', label: 'Activities' },
-    { id: 'gallery', label: 'Gallery' },
-    { id: 'contact', label: 'Contact' },
+    { href: '/about', label: 'About Us' },
+    { href: '/events', label: 'Events' },
+    { href: '/activities', label: 'Activities' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   const services = [
@@ -30,7 +24,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="text-2xl font-playfair font-bold mb-4">
-              🐄 Lampasas Legacy Ranch
+              🐄 Crawford Ranch
             </div>
             <p className="text-ranch-cream/80 mb-4 leading-relaxed">
               A multi-generational Central Texas cattle ranch dedicated to creating unforgettable experiences 
@@ -53,13 +47,13 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-ranch-cream/80">
               {quickLinks.map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="hover:text-sunset-orange transition-colors text-left"
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-sunset-orange transition-colors"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -76,7 +70,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-ranch-cream/20 mt-8 pt-8 text-center text-ranch-cream/60">
-          <p>&copy; 2024 Lampasas Legacy Ranch. All rights reserved.</p>
+          <p>&copy; 2024 Crawford Ranch. All rights reserved.</p>
         </div>
       </div>
     </footer>
