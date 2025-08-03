@@ -1,43 +1,79 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
-import image1 from "@assets/IMG_2788_1754201480313.jpg";
-import image2 from "@assets/IMG_3645_1754201480316.jpg";
-import image3 from "@assets/IMG_6890_1754201480319.jpg";
+import image1 from "@assets/IMG_0518_1754201480310.jpg";
+import image2 from "@assets/IMG_1144_1754201480312.jpg";
+import image3 from "@assets/IMG_2788_1754201480313.jpg";
 import image4 from "@assets/IMG_3639_1754201480314.jpg";
-import image5 from "@assets/IMG_7582_1754201480321.jpg";
-import image6 from "@assets/IMG_6885_1754201480318.jpg";
+import image5 from "@assets/IMG_3645_1754201480316.jpg";
+import image6 from "@assets/IMG_3673_1754201480317.jpg";
+import image7 from "@assets/IMG_6885_1754201480318.jpg";
+import image8 from "@assets/IMG_6890_1754201480319.jpg";
+import image9 from "@assets/IMG_6973_1754201480320.jpg";
+import image10 from "@assets/IMG_7582_1754201480321.jpg";
+import image11 from "@assets/IMG_7584_1754201480322.jpg";
+import image12 from "@assets/IMG_7588_1754201480323.jpg";
 
 export default function Gallery() {
   const images = [
     {
       src: image1,
-      alt: "Rolling Texas hills with cattle at sunrise",
+      alt: "Historic Crawford Ranch barn with cattle corrals",
       className: "md:col-span-2 lg:col-span-1 h-64 lg:h-80"
     },
     {
       src: image2,
-      alt: "Beautiful ranch property with party house",
+      alt: "Ranch landscape with natural hunting grounds",
       className: "h-64"
     },
     {
       src: image3,
-      alt: "Clear creek flowing through the ranch",
+      alt: "Rolling Texas hills with cattle at sunrise",
       className: "h-64"
     },
     {
       src: image4,
-      alt: "Outdoor kitchen and entertaining area",
+      alt: "Modern outdoor kitchen and entertaining area",
       className: "h-64"
     },
     {
       src: image5,
-      alt: "Scenic ranch landscape at golden hour",
+      alt: "Beautiful ranch property with party house",
       className: "md:col-span-2 h-64"
     },
     {
       src: image6,
-      alt: "Ranch grounds perfect for events",
+      alt: "Scenic bluebonnet fields in spring",
+      className: "h-64"
+    },
+    {
+      src: image7,
+      alt: "Ranch grounds perfect for outdoor events",
+      className: "h-64"
+    },
+    {
+      src: image8,
+      alt: "Crystal clear creek flowing through property",
+      className: "h-64"
+    },
+    {
+      src: image9,
+      alt: "Peaceful ranch setting with mature oak trees",
+      className: "md:col-span-2 lg:col-span-1 h-64 lg:h-80"
+    },
+    {
+      src: image10,
+      alt: "Scenic ranch landscape at golden hour",
+      className: "h-64"
+    },
+    {
+      src: image11,
+      alt: "Ranch facilities and natural surroundings",
+      className: "h-64"
+    },
+    {
+      src: image12,
+      alt: "Expansive ranch views with Central Texas terrain",
       className: "h-64"
     }
   ];
