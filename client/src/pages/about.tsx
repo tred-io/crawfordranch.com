@@ -13,9 +13,10 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Our Heritage</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Crawford Ranch History - Texas Heritage Since 1880s</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-                Discover the rich history and deep roots that make Crawford Ranch a treasured piece of Central Texas.
+                Discover the rich history and deep Texas roots of Crawford Ranch, a treasured multi-generational cattle ranch 
+                in Lampasas County that has been hosting events and welcoming guests for over a century.
               </p>
             </div>
             

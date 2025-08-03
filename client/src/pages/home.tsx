@@ -26,8 +26,8 @@ export default function Home() {
             <span className="text-sunset-orange">Crawford Ranch</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
-            A multi-generational Central Texas cattle ranch perfect for unforgettable events,<br />
-            outdoor adventures, and authentic ranch experiences
+            Premier event venue and corporate retreat center in Lampasas County, Texas.<br />
+            Weddings, hunting parties, family getaways, and Christian retreats since 1880s.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/events">
@@ -64,16 +64,16 @@ export default function Home() {
             </div>
             
             <div className="space-y-6">
-              <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">A Piece of Texas History</h2>
+              <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Texas Event Venue & Corporate Retreat Center</h2>
               <p className="text-lg text-warm-gray leading-relaxed">
-                Nestled in the heart of Lampasas County, our ranch spans hundreds of acres of pristine Central Texas landscape. 
-                From rolling hills dotted with heritage oak trees to crystal-clear creeks that wind through our property, 
-                every corner tells a story of Texas tradition.
+                Crawford Ranch is a premier event venue and corporate retreat center nestled in Lampasas County, Central Texas. 
+                Our working cattle ranch spans hundreds of acres of pristine landscape with heritage oak trees, crystal-clear creeks, 
+                and authentic Texas charm that makes every event unforgettable.
               </p>
               <p className="text-lg text-warm-gray leading-relaxed">
-                Our multi-generational cattle operation continues to this day, but we've opened our gates to share 
-                this special place with couples seeking the perfect wedding venue, corporations planning memorable retreats, 
-                and faith communities looking for a peaceful setting for spiritual renewal.
+                From intimate ranch weddings to large corporate team-building retreats, hunting parties to Christian retreats, 
+                we provide the perfect Texas Hill Country setting. Our family has been welcoming guests to experience authentic 
+                ranch hospitality while maintaining our multi-generational cattle operation since the 1880s.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">

@@ -27,10 +27,10 @@ export default function Activities() {
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-2" />
                 <HorseshoeIcon className="text-texas-maroon h-8 w-8 mx-4" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Ranch Activities</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Activities & Outdoor Adventures</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-                Experience authentic Texas ranch life with world-class hunting, peaceful fishing, 
-                and unmatched hospitality at our party house.
+                Experience authentic Central Texas ranch life with world-class hunting, creek fishing, 
+                and premium party house accommodations. Perfect for corporate team building, family vacations, and group adventures.
               </p>
             </div>
             

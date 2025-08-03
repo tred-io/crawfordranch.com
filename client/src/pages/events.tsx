@@ -80,10 +80,10 @@ export default function Events() {
                 <CowboyHatIcon className="text-texas-maroon h-8 w-12 mx-2" />
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Unforgettable Events</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Event Venues & Corporate Retreats</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-                From intimate weddings to large corporate gatherings, our ranch provides the perfect backdrop 
-                for your most important moments.
+                Crawford Ranch offers premier event venues for weddings, corporate retreats, Christian retreats, hunting parties, and family getaways 
+                in the heart of Central Texas. Perfect for intimate gatherings to large corporate events on our historic working cattle ranch.
               </p>
             </div>
             
