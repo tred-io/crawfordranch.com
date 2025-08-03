@@ -68,6 +68,8 @@ export default function Lightbox({
             src={currentImage.src}
             alt={currentImage.alt}
             className="max-w-full max-h-full object-contain rounded-lg"
+            loading="eager"
+            decoding="sync"
           />
         </div>
 

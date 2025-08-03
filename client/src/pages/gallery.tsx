@@ -3,6 +3,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
 import Lightbox from "@/components/lightbox";
+import ThumbnailImage from "@/components/thumbnail-image";
 import image1 from "@assets/IMG_0518_1754201480310.jpg";
 import image2 from "@assets/IMG_1144_1754201480312.jpg";
 import image3 from "@assets/IMG_2788_1754201480313.jpg";
@@ -150,14 +151,13 @@ export default function Gallery() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {images.map((image, index) => (
-                <div key={index} className={image.className}>
-                  <img 
-                    src={image.src} 
-                    alt={image.alt}
-                    className="rounded-lg shadow-lg w-full h-full object-cover hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
-                    onClick={() => openLightbox(index)}
-                  />
-                </div>
+                <ThumbnailImage
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className={image.className}
+                  onClick={() => openLightbox(index)}
+                />
               ))}
             </div>
 
