@@ -11,7 +11,8 @@ import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
   const [logoOpacity, setLogoOpacity] = useState(1);
-  const [logoTransform, setLogoTransform] = useState(0);
+  const [logoScale, setLogoScale] = useState(1);
+  const [logoTranslateY, setLogoTranslateY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,17 +20,20 @@ export default function Home() {
       const scrollThreshold = 50; // When navbar becomes transparent
       
       if (scrolled <= scrollThreshold) {
-        // Slide logo up into navbar as user scrolls
+        // Shrink logo and move it into navbar as user scrolls
         const progress = scrolled / scrollThreshold;
-        const translateY = -progress * 15; // Move up 15px into navbar
-        const opacity = Math.max(0.3, 1 - (progress * 0.7)); // Fade but don't disappear completely
+        const scale = 1 - (progress * 0.6); // Shrink to 40% of original size
+        const translateY = -progress * 8; // Move up slightly into navbar
+        const opacity = Math.max(0.8, 1 - (progress * 0.2)); // Slight fade
         
-        setLogoTransform(translateY);
+        setLogoScale(scale);
+        setLogoTranslateY(translateY);
         setLogoOpacity(opacity);
       } else {
-        // Logo is fully in navbar position and faded
-        setLogoTransform(-15);
-        setLogoOpacity(0.3);
+        // Logo is fully shrunk and in navbar
+        setLogoScale(0.4);
+        setLogoTranslateY(-8);
+        setLogoOpacity(0.8);
       }
     };
 
@@ -46,7 +50,7 @@ export default function Home() {
         style={{ 
           opacity: logoOpacity,
           left: 'max(1.5rem, calc((100vw - 1280px) / 2 + 2.5rem))',
-          transform: `translateY(${logoTransform}px)`
+          transform: `translateY(${logoTranslateY}px) scale(${logoScale})`
         }}
       >
         <img 
