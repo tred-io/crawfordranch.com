@@ -33,7 +33,7 @@ export default function Home() {
         className="fixed top-5 z-50 pointer-events-none transition-all duration-300"
         style={{ 
           opacity: logoOpacity,
-          left: 'max(1rem, calc((100vw - 1280px) / 2 + 2rem))' // Align with navbar content
+          left: 'max(1.5rem, calc((100vw - 1280px) / 2 + 2.5rem))' // Match whitespace with contact button
         }}
       >
         <img 
