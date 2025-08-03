@@ -1,73 +1,19 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import FloatingLogo from "@/components/floating-logo";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
 import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
-import logoWideImage from "@assets/logo_wide_1754206705389.png";
 import heroImage from "@assets/IMG_2788_1754201480313.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
-  const [logoTransform, setLogoTransform] = useState({
-    scale: 1,
-    translateX: 0,
-    translateY: 0,
-    opacity: 1
-  });
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      const scrollThreshold = 50; // When navbar becomes transparent
-      
-      if (scrolled <= scrollThreshold) {
-        const progress = scrolled / scrollThreshold;
-        
-        // Calculate transforms to move logo to navbar position
-        const scale = 1 - (progress * 0.5); // Shrink to 30% size
-        const translateX = -progress * 50; // Move left slightly 
-        const translateY = -progress * 30; // Move up into navbar
-        const opacity = Math.max(0.8, 1 - (progress * 0.2));
-        
-        setLogoTransform({ scale, translateX, translateY, opacity });
-      } else {
-        // Final navbar position - small and positioned in navbar
-        setLogoTransform({ 
-          scale: 0.5, 
-          translateX: -50, 
-          translateY: -30, 
-          opacity: 0.8 
-        });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
-      {/* Floating Logo */}
-      <div 
-        className="fixed top-5 z-50 pointer-events-none transition-all duration-500 ease-out"
-        style={{ 
-          opacity: logoTransform.opacity,
-          left: 'max(1.5rem, calc((100vw - 1280px) / 2 + 2.5rem))',
-          transform: `translate(${logoTransform.translateX}px, ${logoTransform.translateY}px) scale(${logoTransform.scale})`
-        }}
-      >
-        <img 
-          src={logoWideImage} 
-          alt="Crawford Ranch Logo" 
-          className="h-20 md:h-24 lg:h-28 w-auto"
-          style={{
-            filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
-          }}
-        />
-      </div>
+      <FloatingLogo />
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 

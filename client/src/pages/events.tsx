@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import FloatingLogo from "@/components/floating-logo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
@@ -71,6 +72,7 @@ export default function Events() {
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
+      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

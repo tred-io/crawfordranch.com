@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import FloatingLogo from "@/components/floating-logo";
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
@@ -88,6 +89,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
+      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

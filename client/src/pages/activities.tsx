@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import FloatingLogo from "@/components/floating-logo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Utensils, Armchair, Flame, Music, Fish, Target } from "lucide-react";
 import { HorseshoeIcon, StarIcon } from "@/components/icons/ranch-icons";
@@ -18,6 +19,7 @@ export default function Activities() {
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
+      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
