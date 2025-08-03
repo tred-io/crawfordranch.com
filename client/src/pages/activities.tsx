@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Utensils, Armchair, Flame, Music, Fish, Target } from "lucide-react";
 import { HorseshoeIcon, StarIcon } from "@/components/icons/ranch-icons";
 import kitchenImage from "@assets/IMG_3639_1754201480314.jpg";
-import creekImage from "@assets/IMG_6890_1754201480319.jpg";
-import huntingImage from "@assets/IMG_1144_1754201480312.jpg";
+import creekImage from "@assets/IMG_3328_1754202354559.jpg";
+import huntingImage from "@assets/IMG_7597_1754202325477.jpg";
 
 export default function Activities() {
   const features = [
@@ -71,7 +71,7 @@ export default function Activities() {
                 <CardContent>
                   <img 
                     src={creekImage} 
-                    alt="Peaceful creek with clear water and oak trees" 
+                    alt="Crystal clear creek flowing through lush ranch landscape" 
                     className="rounded-lg mb-4 w-full h-48 object-cover"
                   />
                   <p className="text-warm-gray leading-relaxed">
@@ -92,7 +92,7 @@ export default function Activities() {
                 <CardContent>
                   <img 
                     src={huntingImage} 
-                    alt="Deer in natural oak tree habitat" 
+                    alt="White-tail deer and wild turkeys feeding at ranch" 
                     className="rounded-lg mb-4 w-full h-48 object-cover"
                   />
                   <p className="text-warm-gray leading-relaxed">

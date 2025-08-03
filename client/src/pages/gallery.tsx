@@ -13,6 +13,8 @@ import image9 from "@assets/IMG_6973_1754201480320.jpg";
 import image10 from "@assets/IMG_7582_1754201480321.jpg";
 import image11 from "@assets/IMG_7584_1754201480322.jpg";
 import image12 from "@assets/IMG_7588_1754201480323.jpg";
+import image13 from "@assets/IMG_7597_1754202325477.jpg";
+import image14 from "@assets/IMG_3328_1754202354559.jpg";
 
 export default function Gallery() {
   const images = [
@@ -74,6 +76,16 @@ export default function Gallery() {
     {
       src: image12,
       alt: "Expansive ranch views with Central Texas terrain",
+      className: "h-64"
+    },
+    {
+      src: image13,
+      alt: "White-tail deer and wild turkeys at ranch feeding area",
+      className: "md:col-span-2 h-64"
+    },
+    {
+      src: image14,
+      alt: "Pristine creek with clear water perfect for fishing",
       className: "h-64"
     }
   ];
