@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
 
 export default function Gallery() {
   const images = [
@@ -43,6 +44,11 @@ export default function Gallery() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Ranch Gallery</h1>
+              <div className="flex items-center justify-center mb-6">
+                <BluesonnetIcon className="text-texas-red h-8 w-8 mx-2" />
+                <RopeIcon className="text-warm-gray h-4 w-24 mx-4" />
+                <BluesonnetIcon className="text-texas-red h-8 w-8 mx-2" />
+              </div>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Take a visual journey through our beautiful property and see why guests fall in love with our ranch.
               </p>

@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { insertContactInquirySchema } from "@shared/schema";
+import { RopeIcon, StarIcon } from "@/components/icons/ranch-icons";
 
 const formSchema = insertContactInquirySchema.extend({
   firstName: z.string().min(1, "First name is required"),
@@ -91,6 +92,11 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Plan Your Visit</h1>
+              <div className="flex items-center justify-center mb-6">
+                <RopeIcon className="text-warm-gray h-4 w-24" />
+                <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+                <RopeIcon className="text-warm-gray h-4 w-24" />
+              </div>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Ready to experience all that Crawford Ranch has to offer? Get in touch with us to start planning your event or visit.
               </p>

@@ -15,6 +15,7 @@ This is a modern, full-stack web application for Crawford Ranch, a multi-generat
 - **State Management**: TanStack Query (React Query) for server state
 - **Forms**: React Hook Form with Zod validation
 - **Design System**: Custom Texas ranch theme with variables for colors
+- **Rustic Elements**: Custom SVG icons including cattle brand, longhorn, cowboy hat, horseshoe, bluebonnet, stars, and rope patterns
 
 ### Backend Architecture
 - **Runtime**: Node.js with TypeScript
@@ -91,6 +92,8 @@ This is a modern, full-stack web application for Crawford Ranch, a multi-generat
 - PostgreSQL dialect with Drizzle Kit configuration
 
 ## Changelog
+- August 3, 2025. Added rustic old west design elements throughout the site
+- August 3, 2025. Converted to multi-page architecture and renamed to Crawford Ranch
 - June 21, 2025. Initial setup
 
 ## User Preferences

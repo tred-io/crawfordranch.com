@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
+import { LonghornIcon, StarIcon, RopeIcon } from "@/components/icons/ranch-icons";
 
 export default function Home() {
   return (
@@ -47,6 +48,18 @@ export default function Home() {
           <ChevronDown className="text-white text-2xl h-8 w-8" />
         </div>
       </section>
+
+      {/* Decorative Rope Divider */}
+      <div className="bg-ranch-cream py-8">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
+          <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+          <RopeIcon className="text-warm-gray h-4 w-32" />
+          <LonghornIcon className="text-texas-red h-8 w-16 mx-4" />
+          <RopeIcon className="text-warm-gray h-4 w-32" />
+          <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

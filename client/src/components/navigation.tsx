@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { CattleBrandIcon } from "@/components/icons/ranch-icons";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,8 +34,9 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-playfair font-bold text-texas-red hover:text-texas-red-light transition-colors">
-              🐄 Crawford Ranch
+            <Link href="/" className="flex items-center space-x-2 text-2xl font-playfair font-bold text-texas-red hover:text-texas-red-light transition-colors">
+              <CattleBrandIcon className="h-8 w-8" />
+              <span>Crawford Ranch</span>
             </Link>
           </div>
           

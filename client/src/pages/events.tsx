@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
 
 export default function Events() {
   const events = [
@@ -47,6 +48,11 @@ export default function Events() {
         <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-6">
+                <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+                <CowboyHatIcon className="text-texas-red h-8 w-12 mx-2" />
+                <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+              </div>
               <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Unforgettable Events</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 From intimate weddings to large corporate gatherings, our ranch provides the perfect backdrop 

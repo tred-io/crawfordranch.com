@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { Link } from "wouter";
+import { CattleBrandIcon } from "@/components/icons/ranch-icons";
 
 export default function Footer() {
   const quickLinks = [
@@ -23,8 +24,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="text-2xl font-playfair font-bold mb-4">
-              🐄 Crawford Ranch
+            <div className="flex items-center text-2xl font-playfair font-bold mb-4">
+              <CattleBrandIcon className="h-8 w-8 mr-3" />
+              <span>Crawford Ranch</span>
             </div>
             <p className="text-ranch-cream/80 mb-4 leading-relaxed">
               A multi-generational Central Texas cattle ranch dedicated to creating unforgettable experiences 

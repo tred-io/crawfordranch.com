@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
 
 export default function About() {
   return (
@@ -39,11 +40,13 @@ export default function About() {
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 pt-6">
-                  <div className="text-center">
+                  <div className="text-center flex flex-col items-center">
+                    <HorseshoeIcon className="text-texas-red h-8 w-8 mb-2" />
                     <div className="text-3xl font-bold text-texas-red">500+</div>
                     <div className="text-warm-gray">Acres</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center flex flex-col items-center">
+                    <BluesonnetIcon className="text-texas-red h-8 w-8 mb-2" />
                     <div className="text-3xl font-bold text-texas-red">4</div>
                     <div className="text-warm-gray">Generations</div>
                   </div>

@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Utensils, Armchair, Flame, Music, Fish, Target } from "lucide-react";
+import { HorseshoeIcon, StarIcon } from "@/components/icons/ranch-icons";
 
 export default function Activities() {
   const features = [
@@ -18,6 +19,11 @@ export default function Activities() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-6">
+                <HorseshoeIcon className="text-texas-red h-8 w-8 mx-4" />
+                <StarIcon className="text-texas-red h-6 w-6 mx-2" />
+                <HorseshoeIcon className="text-texas-red h-8 w-8 mx-4" />
+              </div>
               <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Ranch Activities</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Experience authentic Texas ranch life with world-class hunting, peaceful fishing, 
