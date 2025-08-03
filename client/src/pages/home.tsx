@@ -26,19 +26,19 @@ export default function Home() {
         const progress = scrolled / scrollThreshold;
         
         // Calculate transforms to move logo to navbar position
-        const scale = 1 - (progress * 0.65); // Shrink to 35% size
-        const translateX = -progress * 150; // Move left to navbar position
-        const translateY = -progress * 12; // Move up into navbar
-        const opacity = Math.max(0.9, 1 - (progress * 0.1));
+        const scale = 1 - (progress * 0.7); // Shrink to 30% size
+        const translateX = -progress * 50; // Move left slightly 
+        const translateY = -progress * 15; // Move up into navbar
+        const opacity = Math.max(0.8, 1 - (progress * 0.2));
         
         setLogoTransform({ scale, translateX, translateY, opacity });
       } else {
-        // Final navbar position
+        // Final navbar position - small and positioned in navbar
         setLogoTransform({ 
-          scale: 0.35, 
-          translateX: -150, 
-          translateY: -12, 
-          opacity: 0.9 
+          scale: 0.3, 
+          translateX: -50, 
+          translateY: -15, 
+          opacity: 0.8 
         });
       }
     };
