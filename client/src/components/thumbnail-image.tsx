@@ -38,14 +38,19 @@ export default function ThumbnailImage({ src, alt, className, onClick }: Thumbna
   return (
     <div 
       ref={placeholderRef}
-      className={`${className} relative overflow-hidden rounded-lg shadow-lg bg-ranch-cream animate-pulse`}
+      className={`${className} relative overflow-hidden rounded-lg shadow-lg bg-ranch-cream/50 cursor-pointer group`}
       onClick={onClick}
     >
       {/* Placeholder while loading */}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-br from-ranch-cream to-warm-gray/20 flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-texas-maroon border-t-transparent rounded-full animate-spin"></div>
+      {!isLoaded && isInView && (
+        <div className="absolute inset-0 bg-gradient-to-br from-ranch-cream to-warm-gray/10 flex items-center justify-center">
+          <div className="w-6 h-6 border-2 border-texas-maroon/50 border-t-transparent rounded-full animate-spin"></div>
         </div>
+      )}
+      
+      {/* Default placeholder when not in view */}
+      {!isInView && (
+        <div className="absolute inset-0 bg-gradient-to-br from-ranch-cream to-warm-gray/10"></div>
       )}
       
       {/* Actual image - only load when in viewport */}
@@ -54,8 +59,8 @@ export default function ThumbnailImage({ src, alt, className, onClick }: Thumbna
           ref={imgRef}
           src={src}
           alt={alt}
-          className={`w-full h-full object-cover transition-all duration-300 cursor-pointer hover:scale-105 ${
-            isLoaded ? 'opacity-100 hover:shadow-xl' : 'opacity-0'
+          className={`w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105 ${
+            isLoaded ? 'opacity-100 group-hover:shadow-xl' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           loading="lazy"
