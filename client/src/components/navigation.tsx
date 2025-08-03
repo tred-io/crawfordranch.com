@@ -33,11 +33,9 @@ export default function Navigation() {
       isScrolled ? 'bg-white/98 backdrop-blur-sm shadow-sm' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-merriweather font-bold text-texas-maroon hover:text-texas-maroon-light transition-colors">
-              Crawford Ranch
-            </Link>
+            {/* Logo space reserved for floating logo */}
           </div>
           
           <div className="hidden md:block">

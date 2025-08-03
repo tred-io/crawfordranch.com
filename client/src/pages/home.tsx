@@ -30,13 +30,13 @@ export default function Home() {
       <Navigation />
       {/* Floating Logo */}
       <div 
-        className="fixed top-8 left-4 md:left-8 lg:left-16 z-50 pointer-events-none transition-all duration-300"
+        className="fixed top-0 left-8 md:left-12 lg:left-16 z-50 pointer-events-none transition-all duration-300"
         style={{ opacity: logoOpacity }}
       >
         <img 
           src={logoWideImage} 
           alt="Crawford Ranch Logo" 
-          className="h-20 md:h-24 lg:h-28 w-auto drop-shadow-2xl"
+          className="h-16 md:h-20 lg:h-24 w-auto"
           style={{
             filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
           }}
@@ -52,7 +52,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/40" />
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-20">
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-24">
           <h1 className="text-4xl md:text-6xl font-merriweather font-black mb-6 leading-tight">
             Premier Texas Event Venue<br />
             <span className="text-sunset-orange">& Corporate Retreat Center</span>
