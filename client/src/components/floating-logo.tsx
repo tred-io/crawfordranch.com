@@ -18,18 +18,18 @@ export default function FloatingLogo() {
         const progress = scrolled / scrollThreshold;
         
         // Calculate transforms to move logo to navbar position
-        const scale = 1 - (progress * 0.7); // Shrink to 30% size
+        const scale = 1 - (progress * 0.5); // Shrink to 30% size
         const translateX = -progress * 50; // Move left slightly 
-        const translateY = -progress * 15; // Move up into navbar
+        const translateY = -progress * 30; // Move up into navbar
         const opacity = Math.max(0.8, 1 - (progress * 0.2));
         
         setLogoTransform({ scale, translateX, translateY, opacity });
       } else {
         // Final navbar position - small and positioned in navbar
         setLogoTransform({ 
-          scale: 0.3, 
+          scale: 0.5, 
           translateX: -50, 
-          translateY: -15, 
+          translateY: -30, 
           opacity: 0.8 
         });
       }
