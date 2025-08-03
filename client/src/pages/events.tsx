@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
 import partyHouseImage from "@assets/IMG_3645_1754201480316.jpg";
-import landscapeImage from "@assets/IMG_7582_1754201480321.jpg";
-import bluebonnetImage from "@assets/IMG_3673_1754201480317.jpg";
+import landscapeImage from "@assets/IMG_3326_1754202418292.JPG";
+import bluebonnetImage from "@assets/IMG_2196_1754202398409.jpg";
 
 export default function Events() {
   const events = [
