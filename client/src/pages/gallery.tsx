@@ -1,37 +1,43 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
+import image1 from "@assets/IMG_2788_1754201480313.jpg";
+import image2 from "@assets/IMG_3645_1754201480316.jpg";
+import image3 from "@assets/IMG_6890_1754201480319.jpg";
+import image4 from "@assets/IMG_3639_1754201480314.jpg";
+import image5 from "@assets/IMG_7582_1754201480321.jpg";
+import image6 from "@assets/IMG_6885_1754201480318.jpg";
 
 export default function Gallery() {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1516431883659-655d41c09bf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      src: image1,
       alt: "Rolling Texas hills with cattle at sunrise",
       className: "md:col-span-2 lg:col-span-1 h-64 lg:h-80"
     },
     {
-      src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      alt: "Rustic wedding reception with string lights",
+      src: image2,
+      alt: "Beautiful ranch property with party house",
       className: "h-64"
     },
     {
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      alt: "Clear creek flowing over limestone rocks",
+      src: image3,
+      alt: "Clear creek flowing through the ranch",
       className: "h-64"
     },
     {
-      src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      alt: "Group enjoying barbecue at outdoor kitchen",
+      src: image4,
+      alt: "Outdoor kitchen and entertaining area",
       className: "h-64"
     },
     {
-      src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      alt: "Majestic oak tree against Texas sunset",
+      src: image5,
+      alt: "Scenic ranch landscape at golden hour",
       className: "md:col-span-2 h-64"
     },
     {
-      src: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=300",
-      alt: "Wild turkeys in meadow with wildflowers",
+      src: image6,
+      alt: "Ranch grounds perfect for events",
       className: "h-64"
     }
   ];

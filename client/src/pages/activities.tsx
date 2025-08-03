@@ -3,6 +3,9 @@ import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Utensils, Armchair, Flame, Music, Fish, Target } from "lucide-react";
 import { HorseshoeIcon, StarIcon } from "@/components/icons/ranch-icons";
+import kitchenImage from "@assets/IMG_3639_1754201480314.jpg";
+import creekImage from "@assets/IMG_6890_1754201480319.jpg";
+import huntingImage from "@assets/IMG_1144_1754201480312.jpg";
 
 export default function Activities() {
   const features = [
@@ -50,7 +53,7 @@ export default function Activities() {
               </div>
               <div className="order-1 lg:order-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                  src={kitchenImage} 
                   alt="Modern outdoor kitchen with stone countertops" 
                   className="rounded-lg shadow-xl w-full"
                 />
@@ -67,7 +70,7 @@ export default function Activities() {
                 </CardHeader>
                 <CardContent>
                   <img 
-                    src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300" 
+                    src={creekImage} 
                     alt="Peaceful creek with clear water and oak trees" 
                     className="rounded-lg mb-4 w-full h-48 object-cover"
                   />
@@ -88,7 +91,7 @@ export default function Activities() {
                 </CardHeader>
                 <CardContent>
                   <img 
-                    src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300" 
+                    src={huntingImage} 
                     alt="Deer in natural oak tree habitat" 
                     className="rounded-lg mb-4 w-full h-48 object-cover"
                   />
