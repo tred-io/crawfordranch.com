@@ -30,8 +30,11 @@ export default function Home() {
       <Navigation />
       {/* Floating Logo */}
       <div 
-        className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none transition-all duration-300"
-        style={{ opacity: logoOpacity }}
+        className="fixed top-5 z-50 pointer-events-none transition-all duration-300"
+        style={{ 
+          opacity: logoOpacity,
+          left: 'max(1rem, calc((100vw - 1280px) / 2 + 2rem))' // Align with navbar content
+        }}
       >
         <img 
           src={logoWideImage} 
