@@ -3,14 +3,43 @@ import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
+import { useState, useEffect } from "react";
 import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
+import logoWideImage from "@assets/logo_wide_1754206705389.png";
 import heroImage from "@assets/IMG_2788_1754201480313.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
+  const [logoOpacity, setLogoOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const windowHeight = window.innerHeight;
+      // Fade out logo as user scrolls down
+      const opacity = Math.max(0, 1 - (scrolled / (windowHeight * 0.8)));
+      setLogoOpacity(opacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
+      {/* Floating Logo */}
+      <div 
+        className="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none transition-opacity duration-300"
+        style={{ opacity: logoOpacity }}
+      >
+        <img 
+          src={logoWideImage} 
+          alt="Crawford Ranch Logo" 
+          className="h-32 md:h-40 lg:h-48 w-auto drop-shadow-2xl"
+        />
+      </div>
+
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -20,10 +49,10 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/40" />
         
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-20">
-          <h1 className="text-5xl md:text-7xl font-merriweather font-black mb-6 leading-tight">
-            Welcome to<br />
-            <span className="text-sunset-orange">Crawford Ranch</span>
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-32 md:pt-40">
+          <h1 className="text-4xl md:text-6xl font-merriweather font-black mb-6 leading-tight">
+            Premier Texas Event Venue<br />
+            <span className="text-sunset-orange">& Corporate Retreat Center</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
             Premier event venue and corporate retreat center in Lampasas County, Texas.<br />

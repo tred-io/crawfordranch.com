@@ -91,7 +91,8 @@ This is a modern, full-stack web application for Crawford Ranch, a multi-generat
 - Migrations generated with `npm run db:push`
 - PostgreSQL dialect with Drizzle Kit configuration
 
-## Changelog
+## Changelog  
+- August 3, 2025. Brand Integration: Integrated Crawford Ranch logos throughout site including floating wide logo on homepage that fades on scroll, navbar branding, footer with inverted colors, 404 page, mobile navigation, and updated all meta tags and structured data references
 - August 3, 2025. SEO Optimization: Comprehensive SEO implementation with meta tags, structured data (JSON-LD), optimized content with target keywords, sitemap.xml, robots.txt, PWA manifest, geo-targeting, and enhanced headings for better search ranking
 - August 3, 2025. Major design updates: Added lightbox gallery with zoom functionality, updated to sophisticated rustic fonts (Merriweather, Playfair Display, Crimson Text), implemented Texas A&M maroon color scheme throughout, adjusted hero text positioning, fixed button styling issues, moved About content to Home page and rewrote About with historical context, added stylized map to contact page showing ranch location
 - August 3, 2025. Added rustic old west design elements throughout the site
