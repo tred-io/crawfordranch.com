@@ -3,12 +3,15 @@ import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
+import partyHouseImage from "@assets/IMG_3645_1754201480316.jpg";
+import landscapeImage from "@assets/IMG_7582_1754201480321.jpg";
+import bluebonnetImage from "@assets/IMG_3673_1754201480317.jpg";
 
 export default function Events() {
   const events = [
     {
       title: "Weddings",
-      image: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: partyHouseImage,
       description: "Say \"I do\" under the Texas sky. Our ranch offers breathtaking ceremony sites, from creek-side vows to hilltop celebrations with panoramic views.",
       features: [
         "Indoor/outdoor ceremony options",
@@ -19,7 +22,7 @@ export default function Events() {
     },
     {
       title: "Corporate Retreats",
-      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: landscapeImage,
       description: "Inspire your team with a change of scenery. Our ranch provides the perfect environment for productive meetings, team building, and strategic planning.",
       features: [
         "Private meeting spaces",
@@ -30,7 +33,7 @@ export default function Events() {
     },
     {
       title: "Christian Retreats",
-      image: "https://images.unsplash.com/photo-1438032005730-c779502df39b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: bluebonnetImage,
       description: "Find peace and spiritual renewal in God's creation. Our serene setting provides the perfect atmosphere for worship, fellowship, and reflection.",
       features: [
         "Quiet prayer spaces",

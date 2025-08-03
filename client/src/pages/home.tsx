@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
 import { LonghornIcon, StarIcon, RopeIcon } from "@/components/icons/ranch-icons";
+import heroImage from "@assets/IMG_2788_1754201480313.jpg";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1500595046743-cd271d694d30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080")'
+            backgroundImage: `url("${heroImage}")`
           }}
         />
         <div className="absolute inset-0 bg-black/40" />

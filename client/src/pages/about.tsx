@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
+import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function About() {
   return (
@@ -20,8 +21,8 @@ export default function About() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                  alt="Historic ranch house with wide porches" 
+                  src={barnImage} 
+                  alt="Historic Crawford Ranch barn with cattle corrals" 
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
