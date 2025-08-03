@@ -16,6 +16,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { insertContactInquirySchema } from "@shared/schema";
 import { RopeIcon, StarIcon } from "@/components/icons/ranch-icons";
+import SimpleMap from "@/components/map";
 
 const formSchema = insertContactInquirySchema.extend({
   firstName: z.string().min(1, "First name is required"),
@@ -91,10 +92,10 @@ export default function Contact() {
         <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Plan Your Visit</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Plan Your Visit</h1>
               <div className="flex items-center justify-center mb-6">
                 <RopeIcon className="text-warm-gray h-4 w-24" />
-                <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+                <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
                 <RopeIcon className="text-warm-gray h-4 w-24" />
               </div>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
@@ -106,21 +107,21 @@ export default function Contact() {
               <div>
                 <Card className="bg-white shadow-lg mb-8">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-playfair font-semibold text-ranch-brown">
+                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                       Contact Information
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex items-center space-x-3">
-                      <MapPin className="text-texas-red h-5 w-5" />
+                      <MapPin className="text-texas-maroon h-5 w-5" />
                       <span className="text-warm-gray">Lampasas County, Central Texas</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Phone className="text-texas-red h-5 w-5" />
+                      <Phone className="text-texas-maroon h-5 w-5" />
                       <span className="text-warm-gray">(512) 555-RANCH</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Mail className="text-texas-red h-5 w-5" />
+                      <Mail className="text-texas-maroon h-5 w-5" />
                       <span className="text-warm-gray">info@crawfordranch.com</span>
                     </div>
                   </CardContent>
@@ -128,7 +129,7 @@ export default function Contact() {
                 
                 <Card className="bg-white shadow-lg">
                   <CardHeader>
-                    <CardTitle className="text-2xl font-playfair font-semibold text-ranch-brown">
+                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                       Operating Hours
                     </CardTitle>
                   </CardHeader>
@@ -149,11 +150,17 @@ export default function Contact() {
                     </div>
                   </CardContent>
                 </Card>
+                
+                <SimpleMap 
+                  latitude={31.052657624177748} 
+                  longitude={-98.12161918442692} 
+                  title="Crawford Ranch Location" 
+                />
               </div>
               
               <Card className="bg-white shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-playfair font-semibold text-ranch-brown">
+                  <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                     Request Information
                   </CardTitle>
                 </CardHeader>
@@ -296,7 +303,7 @@ export default function Contact() {
                       
                       <Button 
                         type="submit" 
-                        className="w-full bg-texas-red hover:bg-texas-red-light text-white py-3 px-6 text-lg font-semibold"
+                        className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white py-3 px-6 text-lg font-semibold"
                         disabled={contactMutation.isPending}
                       >
                         {contactMutation.isPending ? "Sending..." : "Send Inquiry"}

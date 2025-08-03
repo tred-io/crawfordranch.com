@@ -52,11 +52,11 @@ export default function Events() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
-                <StarIcon className="text-texas-red h-6 w-6 mx-4" />
-                <CowboyHatIcon className="text-texas-red h-8 w-12 mx-2" />
-                <StarIcon className="text-texas-red h-6 w-6 mx-4" />
+                <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+                <CowboyHatIcon className="text-texas-maroon h-8 w-12 mx-2" />
+                <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Unforgettable Events</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Unforgettable Events</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 From intimate weddings to large corporate gatherings, our ranch provides the perfect backdrop 
                 for your most important moments.
@@ -74,7 +74,7 @@ export default function Events() {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-2xl font-playfair font-semibold text-ranch-brown">
+                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                       {event.title}
                     </CardTitle>
                   </CardHeader>
@@ -85,7 +85,7 @@ export default function Events() {
                     <ul className="space-y-2">
                       {event.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
-                          <Check className="h-4 w-4 text-texas-red mr-2 flex-shrink-0" />
+                          <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}

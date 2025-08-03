@@ -23,11 +23,11 @@ export default function Activities() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
-                <HorseshoeIcon className="text-texas-red h-8 w-8 mx-4" />
-                <StarIcon className="text-texas-red h-6 w-6 mx-2" />
-                <HorseshoeIcon className="text-texas-red h-8 w-8 mx-4" />
+                <HorseshoeIcon className="text-texas-maroon h-8 w-8 mx-4" />
+                <StarIcon className="text-texas-maroon h-6 w-6 mx-2" />
+                <HorseshoeIcon className="text-texas-maroon h-8 w-8 mx-4" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Ranch Activities</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Ranch Activities</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Experience authentic Texas ranch life with world-class hunting, peaceful fishing, 
                 and unmatched hospitality at our party house.
@@ -36,7 +36,7 @@ export default function Activities() {
             
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div className="order-2 lg:order-1">
-                <h2 className="text-3xl font-playfair font-semibold text-ranch-brown mb-6">The Party House</h2>
+                <h2 className="text-3xl font-merriweather font-bold text-texas-maroon mb-6">The Party House</h2>
                 <p className="text-lg text-warm-gray mb-6 leading-relaxed">
                   Our centerpiece party house features a state-of-the-art outdoor kitchen perfect for 
                   entertaining. Whether you're hosting a family reunion, bachelor party, or corporate event, 
@@ -45,7 +45,7 @@ export default function Activities() {
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <feature.icon className="text-texas-red h-5 w-5" />
+                      <feature.icon className="text-texas-maroon h-5 w-5" />
                       <span className="text-warm-gray">{feature.label}</span>
                     </div>
                   ))}
@@ -63,8 +63,8 @@ export default function Activities() {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-ranch-cream">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-2xl font-playfair font-semibold text-ranch-brown">
-                    <Fish className="text-texas-red h-8 w-8 mr-4" />
+                  <CardTitle className="flex items-center text-2xl font-merriweather font-bold text-texas-maroon">
+                    <Fish className="text-texas-maroon h-8 w-8 mr-4" />
                     Creek Fishing
                   </CardTitle>
                 </CardHeader>
@@ -84,8 +84,8 @@ export default function Activities() {
               
               <Card className="bg-ranch-cream">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-2xl font-playfair font-semibold text-ranch-brown">
-                    <Target className="text-texas-red h-8 w-8 mr-4" />
+                  <CardTitle className="flex items-center text-2xl font-merriweather font-bold text-texas-maroon">
+                    <Target className="text-texas-maroon h-8 w-8 mr-4" />
                     Hunting Adventures
                   </CardTitle>
                 </CardHeader>

@@ -92,6 +92,7 @@ This is a modern, full-stack web application for Crawford Ranch, a multi-generat
 - PostgreSQL dialect with Drizzle Kit configuration
 
 ## Changelog
+- August 3, 2025. Major design updates: Added lightbox gallery with zoom functionality, updated to sophisticated rustic fonts (Merriweather, Playfair Display, Crimson Text), implemented Texas A&M maroon color scheme throughout, adjusted hero text positioning, fixed button styling issues, moved About content to Home page and rewrote About with historical context, added stylized map to contact page showing ranch location
 - August 3, 2025. Added rustic old west design elements throughout the site
 - August 3, 2025. Converted to multi-page architecture and renamed to Crawford Ranch
 - June 21, 2025. Initial setup

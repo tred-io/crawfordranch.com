@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Merriweather:wght@300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,6 +29,8 @@
   /* Custom Texas Ranch Colors */
   --texas-red: hsl(0, 100%, 15%);
   --texas-red-light: hsl(0, 40%, 30%);
+  --texas-maroon: hsl(357, 85%, 25%);
+  --texas-maroon-light: hsl(357, 60%, 35%);
   --sunset-orange: hsl(27, 75%, 47%);
   --ranch-cream: hsl(60, 29%, 92%);
   --warm-gray: hsl(37, 15%, 55%);
@@ -89,6 +93,34 @@
   
   .text-ranch-brown {
     color: var(--ranch-brown);
+  }
+  
+  .text-texas-maroon {
+    color: var(--texas-maroon);
+  }
+  
+  .text-texas-maroon-light {
+    color: var(--texas-maroon-light);
+  }
+  
+  .bg-texas-maroon {
+    background-color: var(--texas-maroon);
+  }
+  
+  .bg-texas-maroon-light {
+    background-color: var(--texas-maroon-light);
+  }
+  
+  .border-texas-maroon {
+    border-color: var(--texas-maroon);
+  }
+  
+  .hover\:bg-texas-maroon:hover {
+    background-color: var(--texas-maroon);
+  }
+  
+  .hover\:bg-texas-maroon-light:hover {
+    background-color: var(--texas-maroon-light);
   }
   
   .bg-texas-red {

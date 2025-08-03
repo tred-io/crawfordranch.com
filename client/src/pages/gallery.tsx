@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
+import Lightbox from "@/components/lightbox";
 import image1 from "@assets/IMG_0518_1754201480310.jpg";
 import image2 from "@assets/IMG_1144_1754201480312.jpg";
 import image3 from "@assets/IMG_2788_1754201480313.jpg";
@@ -20,6 +22,26 @@ import image16 from "@assets/IMG_3326_1754202418292.jpg";
 import image17 from "@assets/IMG_3327_1754202418294.jpg";
 
 export default function Gallery() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   const images = [
     {
       src: image1,
@@ -115,11 +137,11 @@ export default function Gallery() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-playfair font-bold text-texas-red mb-6">Ranch Gallery</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Ranch Gallery</h1>
               <div className="flex items-center justify-center mb-6">
-                <BluesonnetIcon className="text-texas-red h-8 w-8 mx-2" />
+                <BluesonnetIcon className="text-texas-maroon h-8 w-8 mx-2" />
                 <RopeIcon className="text-warm-gray h-4 w-24 mx-4" />
-                <BluesonnetIcon className="text-texas-red h-8 w-8 mx-2" />
+                <BluesonnetIcon className="text-texas-maroon h-8 w-8 mx-2" />
               </div>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Take a visual journey through our beautiful property and see why guests fall in love with our ranch.
@@ -132,11 +154,21 @@ export default function Gallery() {
                   <img 
                     src={image.src} 
                     alt={image.alt}
-                    className="rounded-lg shadow-lg w-full h-full object-cover hover:shadow-xl transition-shadow cursor-pointer"
+                    className="rounded-lg shadow-lg w-full h-full object-cover hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105"
+                    onClick={() => openLightbox(index)}
                   />
                 </div>
               ))}
             </div>
+
+            <Lightbox
+              images={images}
+              currentIndex={currentImageIndex}
+              isOpen={lightboxOpen}
+              onClose={closeLightbox}
+              onNext={nextImage}
+              onPrevious={previousImage}
+            />
           </div>
         </section>
       </div>

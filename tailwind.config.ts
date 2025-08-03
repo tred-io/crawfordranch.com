@@ -62,6 +62,11 @@ export default {
           ring: "var(--sidebar-ring)",
         },
       },
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+        'crimson': ['Crimson Text', 'serif'],
+        'merriweather': ['Merriweather', 'serif'],
+      },
       keyframes: {
         "accordion-down": {
           from: {
