@@ -30,13 +30,13 @@ export default function Home() {
       <Navigation />
       {/* Floating Logo */}
       <div 
-        className="fixed top-0 left-8 md:left-12 lg:left-16 z-50 pointer-events-none transition-all duration-300"
+        className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none transition-all duration-300"
         style={{ opacity: logoOpacity }}
       >
         <img 
           src={logoWideImage} 
           alt="Crawford Ranch Logo" 
-          className="h-16 md:h-20 lg:h-24 w-auto"
+          className="h-20 md:h-24 lg:h-28 w-auto"
           style={{
             filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
           }}
