@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { CattleBrandIcon } from "@/components/icons/ranch-icons";
+import logoImage from "@assets/logo_1754206429175.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +35,12 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2 text-2xl font-playfair font-bold text-texas-red hover:text-texas-red-light transition-colors">
-              <CattleBrandIcon className="h-8 w-8" />
-              <span>Crawford Ranch</span>
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
+              <img 
+                src={logoImage} 
+                alt="Crawford Ranch Logo" 
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
           
@@ -48,15 +52,15 @@ export default function Navigation() {
                   href={item.href}
                   className={`transition-colors font-medium ${
                     location === item.href 
-                      ? 'text-texas-red' 
-                      : 'text-ranch-brown hover:text-texas-red'
+                      ? 'text-texas-maroon' 
+                      : 'text-ranch-brown hover:text-texas-maroon'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
               <Link href="/contact">
-                <Button className="bg-texas-red text-white hover:bg-texas-red-light">
+                <Button className="bg-texas-maroon text-white hover:bg-texas-maroon-light">
                   Contact
                 </Button>
               </Link>
@@ -78,8 +82,8 @@ export default function Navigation() {
                       href={item.href}
                       className={`text-left px-3 py-2 transition-colors font-medium ${
                         location === item.href 
-                          ? 'text-texas-red' 
-                          : 'text-ranch-brown hover:text-texas-red'
+                          ? 'text-texas-maroon' 
+                          : 'text-ranch-brown hover:text-texas-maroon'
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -88,7 +92,7 @@ export default function Navigation() {
                   ))}
                   <Link href="/contact">
                     <Button
-                      className="bg-texas-red text-white hover:bg-texas-red-light mt-4"
+                      className="bg-texas-maroon text-white hover:bg-texas-maroon-light mt-4"
                       onClick={() => setIsOpen(false)}
                     >
                       Contact

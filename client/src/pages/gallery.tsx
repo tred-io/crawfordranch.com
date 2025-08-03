@@ -137,7 +137,7 @@ export default function Gallery() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Ranch Gallery</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Crawford Ranch Gallery</h1>
               <div className="flex items-center justify-center mb-6">
                 <BluesonnetIcon className="text-texas-maroon h-8 w-8 mx-2" />
                 <RopeIcon className="text-warm-gray h-4 w-24 mx-4" />
