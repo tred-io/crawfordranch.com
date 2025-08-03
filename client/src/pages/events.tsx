@@ -6,6 +6,8 @@ import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
 import partyHouseImage from "@assets/IMG_3645_1754201480316.jpg";
 import landscapeImage from "@assets/IMG_3326_1754202418292.jpg";
 import bluebonnetImage from "@assets/IMG_2196_1754202398409.jpg";
+import familyGetawaysImage from "@assets/IMG_7989_1754205048016.jpg";
+import huntingPartiesImage from "@assets/IMG_5829_1754205067288.jpg";
 
 export default function Events() {
   const events = [
@@ -41,6 +43,28 @@ export default function Events() {
         "Fellowship hall",
         "Peaceful walking trails"
       ]
+    },
+    {
+      title: "Family Getaways",
+      image: familyGetawaysImage,
+      description: "Create lasting memories with authentic ranch experiences. Families can enjoy hands-on activities with cattle, explore the property, and bond in a peaceful countryside setting.",
+      features: [
+        "Cattle interaction experiences",
+        "Family-friendly activities",
+        "Safe environment for children",
+        "Educational ranch tours"
+      ]
+    },
+    {
+      title: "Hunting Parties",
+      image: huntingPartiesImage,
+      description: "Gather around the fire after a successful hunt. Our ranch offers excellent hunting opportunities followed by comfortable accommodations and great fellowship.",
+      features: [
+        "Prime hunting grounds",
+        "Fire pit gatherings",
+        "Group accommodation",
+        "Traditional hunting experience"
+      ]
     }
   ];
 
@@ -63,7 +87,7 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
               {events.map((event, index) => (
                 <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <div className="overflow-hidden rounded-t-lg">

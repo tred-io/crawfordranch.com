@@ -127,30 +127,6 @@ export default function Contact() {
                   </CardContent>
                 </Card>
                 
-                <Card className="bg-white shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
-                      Operating Hours
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2 text-warm-gray">
-                      <div className="flex justify-between">
-                        <span>Monday - Friday:</span>
-                        <span>8:00 AM - 6:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Saturday:</span>
-                        <span>7:00 AM - 8:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Sunday:</span>
-                        <span>9:00 AM - 5:00 PM</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                
                 <SimpleMap 
                   latitude={31.052657624177748} 
                   longitude={-98.12161918442692} 
