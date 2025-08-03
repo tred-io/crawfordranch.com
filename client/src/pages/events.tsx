@@ -87,14 +87,46 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-              {events.map((event, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {events.slice(0, 3).map((event, index) => (
                 <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <div className="overflow-hidden rounded-t-lg">
                     <img 
                       src={event.image} 
                       alt={event.title}
                       className="w-full h-64 object-cover"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
+                      {event.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-warm-gray mb-4 leading-relaxed">
+                      {event.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {event.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
+                          <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+              {events.slice(3).map((event, index) => (
+                <Card key={index + 3} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="overflow-hidden rounded-t-lg">
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className={`w-full h-64 object-cover ${event.title === 'Hunting Parties' ? 'brightness-125 contrast-90' : ''}`}
                     />
                   </div>
                   <CardHeader>
