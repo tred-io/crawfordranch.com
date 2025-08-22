@@ -25,9 +25,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40" />
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-24">
-          <h1 className="text-4xl md:text-6xl font-merriweather font-black mb-6 leading-tight">
-            Four Generations of Texas Heritage<br />
-            <span className="text-sunset-orange">In the Beautiful Hill Country</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-merriweather font-black mb-6 leading-tight">
+            <span className="block sm:inline">Four Generations of</span>
+            <span className="block sm:inline"> Texas Heritage</span><br className="hidden sm:block" />
+            <span className="text-sunset-orange block sm:inline">In the Beautiful Hill Country</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
             A generational cattle and hunting ranch where families gather, friends connect, and memories are made.<br />
@@ -80,18 +81,6 @@ export default function Home() {
                 unforgettable experiences amid stunning landscapes.
               </p>
               
-              <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="text-center flex flex-col items-center">
-                  <HorseshoeIcon className="text-texas-maroon h-8 w-8 mb-2" />
-                  <div className="text-3xl font-bold text-texas-maroon">500+</div>
-                  <div className="text-warm-gray">Acres</div>
-                </div>
-                <div className="text-center flex flex-col items-center">
-                  <BluesonnetIcon className="text-texas-maroon h-8 w-8 mb-2" />
-                  <div className="text-3xl font-bold text-texas-maroon">4</div>
-                  <div className="text-warm-gray">Generations</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

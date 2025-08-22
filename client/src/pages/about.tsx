@@ -1,6 +1,5 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import FloatingLogo from "@/components/floating-logo";
 import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 import fieldImage from "@assets/IMG_2196_1754202398409.jpg";
@@ -10,7 +9,6 @@ export default function About() {
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
-      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

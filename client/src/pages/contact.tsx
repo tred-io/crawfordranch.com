@@ -1,8 +1,8 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import FloatingLogo from "@/components/floating-logo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useLocation } from "wouter";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -35,6 +35,7 @@ type ContactFormData = z.infer<typeof formSchema>;
 export default function Contact() {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const [location] = useLocation();
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(formSchema),
@@ -49,6 +50,15 @@ export default function Contact() {
       message: "",
     },
   });
+
+  // Handle URL parameters for prepopulating event type
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventParam = urlParams.get('event');
+    if (eventParam) {
+      form.setValue('eventType', eventParam);
+    }
+  }, [form, location]);
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
@@ -89,7 +99,6 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
-      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

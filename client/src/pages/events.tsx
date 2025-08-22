@@ -1,8 +1,9 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import FloatingLogo from "@/components/floating-logo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { Link } from "wouter";
 import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
 import partyHouseImage from "@assets/IMG_3645_1754201480316.jpg";
 import landscapeImage from "@assets/IMG_3326_1754202418292.jpg";
@@ -72,7 +73,6 @@ export default function Events() {
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
-      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,7 +109,7 @@ export default function Events() {
                     <p className="text-warm-gray mb-4 leading-relaxed">
                       {event.description}
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {event.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
                           <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
@@ -117,6 +117,11 @@ export default function Events() {
                         </li>
                       ))}
                     </ul>
+                    <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
+                      <Button className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white">
+                        More Information
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
@@ -141,7 +146,7 @@ export default function Events() {
                     <p className="text-warm-gray mb-4 leading-relaxed">
                       {event.description}
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {event.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
                           <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
@@ -149,6 +154,11 @@ export default function Events() {
                         </li>
                       ))}
                     </ul>
+                    <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
+                      <Button className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white">
+                        More Information
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}

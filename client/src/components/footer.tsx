@@ -8,16 +8,17 @@ export default function Footer() {
     { href: '/about', label: 'About Us' },
     { href: '/events', label: 'Events' },
     { href: '/activities', label: 'Activities' },
+    { href: '/outfitter', label: 'Outfitter' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
   ];
 
   const services = [
-    'Wedding Venues',
-    'Corporate Retreats',
-    'Christian Retreats',
-    'Hunting Trips',
-    'Creek Fishing',
+    { href: '/events', label: 'Wedding Venues' },
+    { href: '/events', label: 'Corporate Retreats' },
+    { href: '/events', label: 'Christian Retreats' },
+    { href: '/outfitter', label: 'Hunting Trips' },
+    { href: '/activities', label: 'Creek Fishing' },
   ];
 
   return (
@@ -69,14 +70,21 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-ranch-cream/80">
               {services.map((service) => (
-                <li key={service}>{service}</li>
+                <li key={service.label}>
+                  <Link
+                    href={service.href}
+                    className="hover:text-sunset-orange transition-colors"
+                  >
+                    {service.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
         </div>
         
         <div className="border-t border-ranch-cream/20 mt-8 pt-8 text-center text-ranch-cream/60">
-          <p>&copy; 2024 Crawford Ranch. All rights reserved.</p>
+          <p>&copy; 2025 Crawford Ranch. All rights reserved.</p>
         </div>
       </div>
     </footer>

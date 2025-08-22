@@ -25,6 +25,7 @@ export default function Navigation() {
     { href: '/about', label: 'About' },
     { href: '/events', label: 'Events' },
     { href: '/activities', label: 'Activities' },
+    { href: '/outfitter', label: 'Outfitter' },
     { href: '/gallery', label: 'Gallery' },
   ];
 
@@ -49,6 +50,7 @@ export default function Navigation() {
                       ? 'text-texas-maroon' 
                       : 'text-ranch-brown hover:text-texas-maroon'
                   }`}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   {item.label}
                 </Link>
@@ -79,7 +81,10 @@ export default function Navigation() {
                           ? 'text-texas-maroon' 
                           : 'text-ranch-brown hover:text-texas-maroon'
                       }`}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                     >
                       {item.label}
                     </Link>
@@ -87,7 +92,10 @@ export default function Navigation() {
                   <Link href="/contact">
                     <Button
                       className="bg-texas-maroon text-white hover:bg-texas-maroon-light mt-4"
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                     >
                       Contact
                     </Button>

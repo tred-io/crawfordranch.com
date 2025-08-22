@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import FloatingLogo from "@/components/floating-logo";
 import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
 import Lightbox from "@/components/lightbox";
 import ThumbnailImage from "@/components/thumbnail-image";
@@ -48,94 +47,93 @@ export default function Gallery() {
     {
       src: image1,
       alt: "Historic Crawford Ranch barn with cattle corrals",
-      className: "md:col-span-2 lg:col-span-1 h-64 lg:h-80"
+      className: "h-64 object-cover"
     },
     {
       src: image2,
-      alt: "Ranch landscape with natural hunting grounds",
-      className: "h-64"
+      alt: "Ranch landscape with natural hunting grounds", 
+      className: "h-64 object-cover"
     },
     {
       src: image3,
       alt: "Rolling Texas hills with cattle at sunrise",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image4,
       alt: "Modern outdoor kitchen and entertaining area",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image5,
-      alt: "Beautiful ranch property with party house",
-      className: "md:col-span-2 h-64"
+      alt: "Beautiful ranch property with Creekside Venue",
+      className: "md:col-span-2 h-64 object-cover"
     },
     {
       src: image6,
       alt: "Scenic bluebonnet fields in spring",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image7,
       alt: "Ranch grounds perfect for outdoor events",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image8,
       alt: "Crystal clear creek flowing through property",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image9,
       alt: "Peaceful ranch setting with mature oak trees",
-      className: "md:col-span-2 lg:col-span-1 h-64 lg:h-80"
+      className: "h-64 object-cover"
     },
     {
       src: image10,
       alt: "Scenic ranch landscape at golden hour",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image11,
       alt: "Ranch facilities and natural surroundings",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image12,
       alt: "Expansive ranch views with Central Texas terrain",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image13,
       alt: "White-tail deer and wild turkeys at ranch feeding area",
-      className: "md:col-span-2 h-64"
+      className: "md:col-span-2 h-64 object-cover"
     },
     {
       src: image14,
       alt: "Pristine creek with clear water perfect for fishing",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image15,
       alt: "Peaceful ranch field with majestic oak tree at sunset",
-      className: "md:col-span-2 lg:col-span-1 h-64 lg:h-80"
+      className: "h-64 object-cover"
     },
     {
       src: image16,
       alt: "Rustic fire pit area with ranch fencing and scenic views",
-      className: "h-64"
+      className: "h-64 object-cover"
     },
     {
       src: image17,
       alt: "Heritage oak tree surrounded by ranch fencing",
-      className: "h-64"
+      className: "h-64 object-cover"
     }
   ];
 
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
-      <FloatingLogo />
       <div className="pt-16">
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
