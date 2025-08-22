@@ -26,12 +26,12 @@ export default function Home() {
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-24">
           <h1 className="text-4xl md:text-6xl font-merriweather font-black mb-6 leading-tight">
-            Premier Texas Event Venue<br />
-            <span className="text-sunset-orange">& Corporate Retreat Center</span>
+            Four Generations of Texas Heritage<br />
+            <span className="text-sunset-orange">In the Beautiful Hill Country</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
-            Premier event venue and corporate retreat center in Lampasas County, Texas.<br />
-            Weddings, hunting parties, family getaways, and Christian retreats since 1880s.
+            A generational cattle and hunting ranch where families gather, friends connect, and memories are made.<br />
+            Experience the perfect blend of adventure and relaxation in one of Texas's most beautiful landscapes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/events">
@@ -68,16 +68,16 @@ export default function Home() {
             </div>
             
             <div className="space-y-6">
-              <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Texas Event Venue & Corporate Retreat Center</h2>
+              <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">A Testament to Family, Tradition & the Great Outdoors</h2>
               <p className="text-lg text-warm-gray leading-relaxed">
-                Crawford Ranch is a premier event venue and corporate retreat center nestled in Lampasas County, Central Texas. 
-                Our working cattle ranch spans hundreds of acres of pristine landscape with heritage oak trees, crystal-clear creeks, 
-                and authentic Texas charm that makes every event unforgettable.
+                Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch stands as 
+                a testament to the enduring spirit of family, tradition, and the great outdoors. For over four generations, we have 
+                cultivated this land, not just as a business but as a way of life.
               </p>
               <p className="text-lg text-warm-gray leading-relaxed">
-                From intimate ranch weddings to large corporate team-building retreats, hunting parties to Christian retreats, 
-                we provide the perfect Texas Hill Country setting. Our family has been welcoming guests to experience authentic 
-                ranch hospitality while maintaining our multi-generational cattle operation since the 1880s.
+                Our ranch is now a place where families gather, friends connect, and memories are made. We invite visitors to 
+                immerse themselves in the beauty of the Texas Hill Country, where nature and heritage intertwine to create 
+                unforgettable experiences amid stunning landscapes.
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">

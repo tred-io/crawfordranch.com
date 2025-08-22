@@ -32,17 +32,17 @@ export default function Activities() {
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Activities & Outdoor Adventures</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Experience authentic Central Texas ranch life with world-class hunting, creek fishing, 
-                and premium party house accommodations. Perfect for corporate team building, family vacations, and group adventures.
+                and premium Creekside Venue accommodations. Perfect for corporate team building, family vacations, and group adventures.
               </p>
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div className="order-2 lg:order-1">
-                <h2 className="text-3xl font-merriweather font-bold text-texas-maroon mb-6">The Party House</h2>
+                <h2 className="text-3xl font-merriweather font-bold text-texas-maroon mb-6">Creekside Venue</h2>
                 <p className="text-lg text-warm-gray mb-6 leading-relaxed">
-                  Our centerpiece party house features a state-of-the-art outdoor kitchen perfect for 
-                  entertaining. Whether you're hosting a family reunion, bachelor party, or corporate event, 
-                  this space combines rustic charm with modern amenities.
+                  Welcome to Creekside Venue, your tranquil hill country retreat nestled under the shade of majestic pecan trees, 
+                  where the soothing sound of the creek flows by. Our picturesque setting is designed to host a variety of events, 
+                  with ample outdoor space and inviting indoor facilities that cater to all your event needs.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   {features.map((feature, index) => (
@@ -98,9 +98,9 @@ export default function Activities() {
                     className="rounded-lg mb-4 w-full h-48 object-cover"
                   />
                   <p className="text-warm-gray leading-relaxed">
-                    Our hundreds of acres provide excellent hunting opportunities for white-tail deer 
-                    and wild turkey. Guided hunts available with experienced local guides who know 
-                    every trail and feeding ground on the property.
+                    Welcome to our premier high-fence whitetail outfitting experience in the beautiful Texas Hill Country! 
+                    Whether you're an experienced hunter or new to the sport, our expert guides are dedicated to delivering 
+                    an unforgettable whitetail hunting experience, tailored to your needs.
                   </p>
                 </CardContent>
               </Card>

@@ -18,7 +18,7 @@ export default function Events() {
       description: "Say \"I do\" under the Texas sky. Our ranch offers breathtaking ceremony sites, from creek-side vows to hilltop celebrations with panoramic views.",
       features: [
         "Indoor/outdoor ceremony options",
-        "Bridal suite in party house",
+        "Bridal suite in Creekside Venue",
         "Professional outdoor kitchen",
         "Accommodates up to 200 guests"
       ]
@@ -26,7 +26,7 @@ export default function Events() {
     {
       title: "Corporate Retreats",
       image: landscapeImage,
-      description: "Inspire your team with a change of scenery. Our ranch provides the perfect environment for productive meetings, team building, and strategic planning.",
+      description: "Inspire your team with a change of scenery in the tranquil hill country. Our ranch provides the perfect environment for productive meetings, team building, and strategic planning surrounded by stunning natural beauty.",
       features: [
         "Private meeting spaces",
         "Team building activities",
@@ -37,7 +37,7 @@ export default function Events() {
     {
       title: "Christian Retreats",
       image: bluebonnetImage,
-      description: "Find peace and spiritual renewal in God's creation. Our serene setting provides the perfect atmosphere for worship, fellowship, and reflection.",
+      description: "Find peace and spiritual renewal in God's creation. Our serene hill country setting provides the perfect atmosphere for worship, fellowship, and reflection under the Texas sky.",
       features: [
         "Quiet prayer spaces",
         "Natural amphitheater",
@@ -48,7 +48,7 @@ export default function Events() {
     {
       title: "Family Getaways",
       image: familyGetawaysImage,
-      description: "Create lasting memories with authentic ranch experiences. Families can enjoy hands-on activities with cattle, explore the property, and bond in a peaceful countryside setting.",
+      description: "Create lasting memories with authentic ranch experiences where families gather and friends connect. Enjoy hands-on activities with cattle, explore the beautiful property, and bond in our peaceful hill country setting.",
       features: [
         "Cattle interaction experiences",
         "Family-friendly activities",
@@ -59,7 +59,7 @@ export default function Events() {
     {
       title: "Hunting Parties",
       image: huntingPartiesImage,
-      description: "Gather around the fire after a successful hunt. Our ranch offers excellent hunting opportunities followed by comfortable accommodations and great fellowship.",
+      description: "Experience the thrill of the hunt in one of Texas's most beautiful landscapes. Our ranch offers excellent hunting opportunities with expert guides, followed by comfortable accommodations and great fellowship.",
       features: [
         "Prime hunting grounds",
         "Fire pit gatherings",
@@ -84,8 +84,9 @@ export default function Events() {
               </div>
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Event Venues & Corporate Retreats</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-                Crawford Ranch offers premier event venues for weddings, corporate retreats, Christian retreats, hunting parties, and family getaways 
-                in the heart of Central Texas. Perfect for intimate gatherings to large corporate events on our historic working cattle ranch.
+                Our ranch is a place where families gather, friends connect, and memories are made. We invite you to experience 
+                the perfect blend of adventure and relaxation in the beautiful Texas Hill Country, where your vision becomes reality 
+                in a serene and enchanting environment.
               </p>
             </div>
             

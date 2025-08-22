@@ -15,10 +15,10 @@ export default function About() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Crawford Ranch History - Texas Heritage Since 1880s</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Our Family Legacy - Four Generations in the Texas Hill Country</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-                Discover the rich history and deep Texas roots of Crawford Ranch, a treasured multi-generational cattle ranch 
-                in Lampasas County that has been hosting events and welcoming guests for over a century.
+                Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch 
+                stands as a testament to the enduring spirit of family, tradition, and the great outdoors.
               </p>
             </div>
             
@@ -33,31 +33,32 @@ export default function About() {
                 </div>
                 
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Deep Texas Roots</h2>
+                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Where It All Began</h2>
                   <p className="text-lg text-warm-gray leading-relaxed">
-                    Established in the late 1800s, Crawford Ranch has been a cornerstone of Lampasas County for over a century. 
-                    Originally homesteaded by pioneers seeking fertile land and fresh water, our ranch sits on some of the most 
-                    beautiful and productive acreage in Central Texas.
+                    Our story began with my great grandfather, a passionate rancher and hunter who saw the beauty in the rolling hills 
+                    and fertile pastures of Texas. With a vision to create a sustainable ranching operation, his love for the land 
+                    and its wildlife laid the foundation for what would become a cherished family legacy.
                   </p>
                   <p className="text-lg text-warm-gray leading-relaxed">
-                    The land has witnessed the transformation of Texas from frontier territory to modern state, serving as 
-                    a working cattle ranch through economic booms, challenging droughts, and changing times while maintaining 
-                    its commitment to stewardship of the land.
+                    For over four generations, we have cultivated this land, not just as a business but as a way of life, where 
+                    nature and heritage intertwine to create unforgettable experiences. Each generation has brought innovation and 
+                    a deeper understanding of sustainable ranching practices.
                   </p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 space-y-6">
-                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Land of Natural Beauty</h2>
+                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Exceptional Cattle & Conservation</h2>
                   <p className="text-lg text-warm-gray leading-relaxed">
-                    Our ranch encompasses diverse ecosystems typical of the Texas Hill Country transition zone. Ancient limestone 
-                    formations create natural springs that feed crystal-clear creeks, while native grasses support both wildlife 
-                    and cattle grazing.
+                    We focused on breeding exceptional cattle, ensuring that each generation was stronger and healthier than the last. 
+                    Our cattle grazed on the natural grasses of the Hill Country, resulting in superior quality beef that reflects 
+                    the essence of our land.
                   </p>
                   <p className="text-lg text-warm-gray leading-relaxed">
-                    Heritage oak trees, some over 200 years old, dot the landscape and provide natural gathering spaces that 
-                    have sheltered generations of families, creating the perfect backdrop for today's celebrations and retreats.
+                    Our family also recognized the importance of the abundant wildlife that called our ranch home. Responsible hunting 
+                    practices created a balanced ecosystem that benefited both the land and the animals. This commitment to conservation 
+                    has attracted hunters from all over the country, eager to experience the thrill of the hunt in one of Texas's most beautiful landscapes.
                   </p>
                 </div>
                 
@@ -80,35 +81,32 @@ export default function About() {
                 </div>
                 
                 <div className="space-y-6">
-                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Modern Ranch Life</h2>
+                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Carrying On the Legacy</h2>
                   <p className="text-lg text-warm-gray leading-relaxed">
-                    Today, Crawford Ranch seamlessly blends traditional ranching practices with modern hospitality. 
-                    Our working cattle operation continues the legacy while welcoming families, couples, and groups 
-                    to experience authentic Texas ranch life through events, retreats, and outdoor adventures.
+                    Today, I am proud to carry on this legacy alongside my own family. We have embraced our roots while adapting 
+                    to the modern era of ranching and hunting. Our ranch is now a place where families gather, friends connect, 
+                    and memories are made.
                   </p>
                   <p className="text-lg text-warm-gray leading-relaxed">
-                    From intimate weddings under the Texas sky to corporate retreats that inspire innovation, 
-                    we provide a unique setting where modern comfort meets timeless tradition. Our commitment 
-                    to preserving this special place ensures future generations can continue to enjoy its beauty and heritage.
+                    We offer guided hunting experiences that not only provide an adrenaline rush but also educate our guests 
+                    about the importance of wildlife management and conservation. At our ranch, the experience goes far beyond 
+                    hunting and ranching. We invite visitors to immerse themselves in the beauty of the Texas Hill Country.
                   </p>
                 </div>
               </div>
 
               <div className="bg-ranch-cream p-8 rounded-lg">
-                <h2 className="text-3xl font-merriweather font-bold text-texas-maroon mb-6 text-center">Ranch Timeline</h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-texas-maroon mb-2">1880s</div>
-                    <div className="text-warm-gray">Original homestead established by pioneer families</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-texas-maroon mb-2">1920s</div>
-                    <div className="text-warm-gray">Expanded to include modern cattle operations</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-texas-maroon mb-2">Today</div>
-                    <div className="text-warm-gray">Multi-generational ranch welcoming guests from around Texas</div>
-                  </div>
+                <h2 className="text-3xl font-merriweather font-bold text-texas-maroon mb-6 text-center">Our Commitment to the Future</h2>
+                <div className="text-center max-w-4xl mx-auto">
+                  <p className="text-lg text-warm-gray leading-relaxed mb-6">
+                    As we look to the future, we remain committed to our core values: sustainability, family, and community. 
+                    We are dedicated to ensuring that our ranch continues to thrive for generations to come, ensuring that our traditions live on.
+                  </p>
+                  <p className="text-lg text-warm-gray leading-relaxed">
+                    Our generational cattle and hunting ranch in the Texas Hill Country is more than just a business; it is a legacy 
+                    built on love for the land and a commitment to preserving its beauty for future generations. We invite you to join us 
+                    on this journey, to experience the thrill of the hunt, the joy of ranch life, and the warmth of our hospitality.
+                  </p>
                 </div>
               </div>
             </div>
