@@ -66,7 +66,7 @@ export default function About() {
                     <img 
                       src={cattleFieldImage} 
                       alt="Black cattle grazing in Texas Hill Country pasture" 
-                      className="rounded-lg shadow-xl w-full"
+                      className="rounded-lg shadow-xl w-full h-96 object-cover object-center"
                     />
                   </div>
                 </div>

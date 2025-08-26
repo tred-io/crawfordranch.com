@@ -35,7 +35,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center">
             <Link href="/events">
-              <Button className="bg-texas-maroon hover:bg-texas-maroon-light text-white px-8 py-4 text-lg font-semibold">
+              <Button className="bg-texas-maroon hover:bg-texas-maroon-light text-white px-12 py-6 text-xl font-bold shadow-lg hover:shadow-xl transition-all">
                 Plan Your Event
               </Button>
             </Link>
