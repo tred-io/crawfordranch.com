@@ -74,9 +74,9 @@ export default function Events() {
               {events.map((event, index) => {
                 const isEven = index % 2 === 0;
                 const bgColors = [
-                  'bg-ranch-brown text-ranch-cream', 
+                  'bg-white text-ranch-brown', 
                   'bg-texas-maroon text-white', 
-                  'bg-white text-ranch-brown'
+                  'bg-ranch-brown text-ranch-cream'
                 ];
                 const textBgColor = bgColors[index % bgColors.length];
                 
@@ -88,7 +88,7 @@ export default function Events() {
                         <img 
                           src={event.image} 
                           alt={event.title}
-                          className="w-full h-80 md:h-96 object-cover"
+                          className="w-full h-full min-h-[400px] md:min-h-[500px] object-cover"
                         />
                       </div>
                       
@@ -103,7 +103,7 @@ export default function Events() {
                         <ul className="space-y-3 mb-8">
                           {event.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center">
-                              <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${index === 2 ? 'text-texas-maroon' : 'text-current opacity-75'}`} />
+                              <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${index === 0 ? 'text-texas-maroon' : 'text-current opacity-75'}`} />
                               <span className="font-medium">{feature}</span>
                             </li>
                           ))}
