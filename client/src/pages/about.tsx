@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
 import barnImage from "@assets/IMG_5016_1756230324987.jpg";
 import fieldImage from "@assets/IMG_0518_1754201480310.jpg";
+import cattleFieldImage from "@assets/IMG_2786_2_1756229049596.jpg";
 import cattleImage from "@assets/IMG_7989_1754205048016.jpg";
 
 export default function About() {
@@ -63,8 +64,8 @@ export default function About() {
                   
                   <div className="order-1 md:order-2">
                     <img 
-                      src={fieldImage} 
-                      alt="Peaceful ranch field with heritage oak tree" 
+                      src={cattleFieldImage} 
+                      alt="Black cattle grazing in Texas Hill Country pasture" 
                       className="rounded-lg shadow-xl w-full"
                     />
                   </div>

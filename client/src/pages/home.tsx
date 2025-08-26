@@ -22,7 +22,6 @@ export default function Home() {
             backgroundImage: `url("${heroImage}")`
           }}
         />
-        <div className="absolute inset-0 bg-black/40" />
         
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-24">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-merriweather font-black mb-6 leading-tight">
