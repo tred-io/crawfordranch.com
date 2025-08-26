@@ -2,7 +2,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
-import fieldImage from "@assets/IMG_2196_1754202398409.jpg";
+import fieldImage from "@assets/IMG_2196_1756229360023.jpg";
 import cattleImage from "@assets/IMG_7989_1754205048016.jpg";
 
 export default function About() {
@@ -45,27 +45,29 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="order-2 md:order-1 space-y-6">
-                  <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Exceptional Cattle & Conservation</h2>
-                  <p className="text-lg text-warm-gray leading-relaxed">
-                    We focused on breeding exceptional cattle, ensuring that each generation was stronger and healthier than the last. 
-                    Our cattle grazed on the natural grasses of the Hill Country, resulting in superior quality beef that reflects 
-                    the essence of our land.
-                  </p>
-                  <p className="text-lg text-warm-gray leading-relaxed">
-                    Our family also recognized the importance of the abundant wildlife that called our ranch home. Responsible hunting 
-                    practices created a balanced ecosystem that benefited both the land and the animals. This commitment to conservation 
-                    has attracted hunters from all over the country, eager to experience the thrill of the hunt in one of Texas's most beautiful landscapes.
-                  </p>
-                </div>
-                
-                <div className="order-1 md:order-2">
-                  <img 
-                    src={fieldImage} 
-                    alt="Peaceful ranch field with heritage oak tree" 
-                    className="rounded-lg shadow-xl w-full"
-                  />
+              <div className="bg-ranch-cream p-8 rounded-lg">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="order-2 md:order-1 space-y-6">
+                    <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Exceptional Cattle & Conservation</h2>
+                    <p className="text-lg text-warm-gray leading-relaxed">
+                      We focused on breeding exceptional cattle, ensuring that each generation was stronger and healthier than the last. 
+                      Our cattle grazed on the natural grasses of the Hill Country, resulting in superior quality beef that reflects 
+                      the essence of our land.
+                    </p>
+                    <p className="text-lg text-warm-gray leading-relaxed">
+                      Our family also recognized the importance of the abundant wildlife that called our ranch home. Responsible hunting 
+                      practices created a balanced ecosystem that benefited both the land and the animals. This commitment to conservation 
+                      has attracted hunters from all over the country, eager to experience the thrill of the hunt in one of Texas's most beautiful landscapes.
+                    </p>
+                  </div>
+                  
+                  <div className="order-1 md:order-2">
+                    <img 
+                      src={fieldImage} 
+                      alt="Peaceful ranch field with heritage oak tree" 
+                      className="rounded-lg shadow-xl w-full"
+                    />
+                  </div>
                 </div>
               </div>
 

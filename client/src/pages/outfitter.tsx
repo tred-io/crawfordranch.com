@@ -6,8 +6,10 @@ import { Link } from "wouter";
 import { Target, MapPin, Users, Award, Fish } from "lucide-react";
 import { StarIcon, LonghornIcon } from "@/components/icons/ranch-icons";
 import huntingImage from "@assets/IMG_7597_1754202325477.jpg";
-import deerImage from "@assets/IMG_5829_1754205067288.jpg";
+import deerImage from "@assets/IMG_2721_1756229798753.jpg";
 import creekImage from "@assets/IMG_3328_1754202354559.jpg";
+import lodgeImage from "@assets/IMG_3645_1756229827038.jpg";
+import guideImage from "@assets/IMG_0849_1756229924407.jpg";
 
 export default function Outfitter() {
   const features = [
@@ -130,9 +132,11 @@ export default function Outfitter() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-warm-gray/20 rounded-lg h-48 mb-4 flex items-center justify-center">
-                    <p className="text-warm-gray text-center">Lodge accommodations photo</p>
-                  </div>
+                  <img 
+                    src={lodgeImage} 
+                    alt="Crawford Ranch lodge accommodations" 
+                    className="rounded-lg mb-4 w-full h-48 object-cover"
+                  />
                   <p className="text-warm-gray leading-relaxed mb-4">
                     Our comfortable lodge provides the perfect base for your outdoor adventure. 
                     Relax in rustic comfort after a successful day in the field or on the water.
@@ -153,9 +157,11 @@ export default function Outfitter() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-warm-gray/20 rounded-lg h-48 mb-4 flex items-center justify-center">
-                    <p className="text-warm-gray text-center">Guide services photo</p>
-                  </div>
+                  <img 
+                    src={guideImage} 
+                    alt="Expert hunting guide with successful hunter" 
+                    className="rounded-lg mb-4 w-full h-48 object-cover"
+                  />
                   <p className="text-warm-gray leading-relaxed mb-4">
                     Whether you're an experienced hunter or new to the sport, our expert guides are dedicated 
                     to delivering unforgettable outdoor experiences tailored to your needs.
