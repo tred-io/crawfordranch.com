@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
 import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
-import heroImage from "@assets/IMG_2788_1754201480313.jpg";
+import heroImage from "@assets/IMG_2786_2_1756229049596.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-merriweather font-black mb-6 leading-tight">
             <span className="block sm:inline">Four Generations of</span>
             <span className="block sm:inline"> Texas Heritage</span><br className="hidden sm:block" />
-            <span className="text-ranch-brown block sm:inline">In the Beautiful Hill Country</span>
+            <span className="text-white block sm:inline">In the Beautiful Hill Country</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
             A generational cattle and hunting ranch where families gather, friends connect, and memories are made.<br />

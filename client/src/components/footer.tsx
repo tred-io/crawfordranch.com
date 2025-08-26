@@ -5,7 +5,7 @@ import logoImage from "@assets/logo_1754206429175.png";
 
 export default function Footer() {
   const quickLinks = [
-    { href: '/about', label: 'About Us' },
+    { href: '/about', label: 'About the Ranch' },
     { href: '/events', label: 'Events' },
     { href: '/outfitter', label: 'Outfitter' },
     { href: '/gallery', label: 'Gallery' },

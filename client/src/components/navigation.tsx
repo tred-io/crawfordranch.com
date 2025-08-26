@@ -22,7 +22,7 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
+    { href: '/about', label: 'About the Ranch' },
     { href: '/events', label: 'Events' },
     { href: '/outfitter', label: 'Outfitter' },
     { href: '/gallery', label: 'Gallery' },
