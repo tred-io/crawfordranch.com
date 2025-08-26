@@ -1,8 +1,8 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
-import barnImage from "@assets/IMG_0518_1754201480310.jpg";
-import fieldImage from "@assets/IMG_2196_1756229360023.jpg";
+import barnImage from "@assets/IMG_5016_1756230324987.jpg";
+import fieldImage from "@assets/IMG_0518_1754201480310.jpg";
 import cattleImage from "@assets/IMG_7989_1754205048016.jpg";
 
 export default function About() {

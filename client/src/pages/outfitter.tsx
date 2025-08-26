@@ -9,7 +9,7 @@ import huntingImage from "@assets/IMG_7597_1754202325477.jpg";
 import deerImage from "@assets/IMG_2721_1756229798753.jpg";
 import creekImage from "@assets/IMG_3328_1754202354559.jpg";
 import lodgeImage from "@assets/IMG_3645_1756229827038.jpg";
-import guideImage from "@assets/IMG_0849_1756229924407.jpg";
+import guideImage from "@assets/IMG_6604_1756230314550.jpg";
 
 export default function Outfitter() {
   const features = [
@@ -99,8 +99,7 @@ export default function Outfitter() {
               
               <Card className="bg-ranch-cream">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-2xl font-merriweather font-bold text-texas-maroon">
-                    <Fish className="text-texas-maroon h-8 w-8 mr-4" />
+                  <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                     Creek Fishing
                   </CardTitle>
                 </CardHeader>
@@ -125,7 +124,7 @@ export default function Outfitter() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <Card className="bg-white">
+              <Card className="bg-ranch-cream">
                 <CardHeader>
                   <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                     Lodge & Accommodations
@@ -150,7 +149,7 @@ export default function Outfitter() {
                 </CardContent>
               </Card>
               
-              <Card className="bg-white">
+              <Card className="bg-ranch-cream">
                 <CardHeader>
                   <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                     Guided Experiences

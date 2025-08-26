@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "wouter";
 import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
-import partyHouseImage from "@assets/IMG_3645_1754201480316.jpg";
+import partyHouseImage from "@assets/wed-283001_1756230624714.jpg";
 import landscapeImage from "@assets/IMG_3326_1754202418292.jpg";
 import bluebonnetImage from "@assets/IMG_2196_1754202398409.jpg";
 import familyGetawaysImage from "@assets/IMG_7989_1754205048016.jpg";
@@ -70,9 +70,9 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {events.slice(0, 2).map((event, index) => (
-                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+              {events.map((event, index) => (
+                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow flex flex-col">
                   <div className="overflow-hidden rounded-t-lg">
                     <img 
                       src={event.image} 
@@ -85,11 +85,11 @@ export default function Events() {
                       {event.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="flex-1 flex flex-col">
                     <p className="text-warm-gray mb-4 leading-relaxed">
                       {event.description}
                     </p>
-                    <ul className="space-y-2 mb-4">
+                    <ul className="space-y-2 mb-4 flex-1">
                       {event.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
                           <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
@@ -97,48 +97,13 @@ export default function Events() {
                         </li>
                       ))}
                     </ul>
-                    <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
-                      <Button className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white">
-                        More Information
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-              {events.slice(2).map((event, index) => (
-                <Card key={index + 2} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="overflow-hidden rounded-t-lg">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className={`w-full h-64 object-cover ${event.title === 'Hunting Parties' ? 'brightness-125 contrast-90' : ''}`}
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
-                      {event.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-warm-gray mb-4 leading-relaxed">
-                      {event.description}
-                    </p>
-                    <ul className="space-y-2 mb-4">
-                      {event.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
-                          <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
-                      <Button className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white">
-                        More Information
-                      </Button>
-                    </Link>
+                    <div className="mt-auto">
+                      <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
+                        <Button className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white">
+                          More Information
+                        </Button>
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
               ))}

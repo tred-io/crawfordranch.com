@@ -21,6 +21,13 @@ import image14 from "@assets/IMG_3328_1754202354559.jpg";
 import image15 from "@assets/IMG_2196_1754202398409.jpg";
 import image16 from "@assets/IMG_3326_1754202418292.jpg";
 import image17 from "@assets/IMG_3327_1754202418294.jpg";
+import image18 from "@assets/IMG_2786_2_1756229049596.jpg";
+import image19 from "@assets/IMG_2721_1756229798753.jpg";
+import image20 from "@assets/IMG_3645_1756229827038.jpg";
+import image21 from "@assets/IMG_6604_1756230314550.jpg";
+import image22 from "@assets/IMG_5016_1756230324987.jpg";
+import image23 from "@assets/IMG_2196_1756230374363.jpg";
+import image24 from "@assets/wed-283001_1756230624714.jpg";
 
 export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -127,6 +134,41 @@ export default function Gallery() {
     {
       src: image17,
       alt: "Heritage oak tree surrounded by ranch fencing",
+      className: "h-64 object-cover"
+    },
+    {
+      src: image18,
+      alt: "Black cattle grazing in Texas Hill Country pasture",
+      className: "h-64 object-cover"
+    },
+    {
+      src: image19,
+      alt: "Whitetail deer with wild turkeys on ranch property",
+      className: "h-64 object-cover"
+    },
+    {
+      src: image20,
+      alt: "Ranch lodge accommodations under oak trees",
+      className: "h-64 object-cover"
+    },
+    {
+      src: image21,
+      alt: "Successful turkey hunters with impressive harvest",
+      className: "md:col-span-2 h-64 object-cover"
+    },
+    {
+      src: image22,
+      alt: "Multi-generational ranchers on lodge porch",
+      className: "h-64 object-cover"
+    },
+    {
+      src: image23,
+      alt: "Sunset over Texas ranch with heritage oak tree",
+      className: "h-64 object-cover"
+    },
+    {
+      src: image24,
+      alt: "Beautiful wedding ceremony under ranch oak trees",
       className: "h-64 object-cover"
     }
   ];
