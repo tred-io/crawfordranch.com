@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
 import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
-import heroImage from "@assets/IMG_2786_2_1756229049596.jpg";
+import heroImage from "@assets/IMG_2196_1756230374363.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 
 export default function Home() {
