@@ -38,37 +38,35 @@ export default function Outfitter() {
               </p>
             </div>
             
-            <div className="bg-texas-maroon p-8 rounded-lg mb-16">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <img 
-                    src={huntingImage} 
-                    alt="White-tail deer and wild turkeys feeding at ranch" 
-                    className="rounded-lg shadow-xl w-full"
-                  />
-                </div>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="bg-texas-maroon p-8 -mx-4 sm:-mx-6 lg:-mx-8">
+                <img 
+                  src={huntingImage} 
+                  alt="White-tail deer and wild turkeys feeding at ranch" 
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+              
+              <div className="space-y-6">
+                <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">Exceptional Hunting Experience</h2>
+                <p className="text-lg text-warm-gray leading-relaxed">
+                  Our lodge provides comfortable accommodations, ensuring you feel right at home while enjoying the thrill of the hunt. 
+                  With easy access to town, you can indulge in local dining and shopping while still being surrounded by the stunning 
+                  natural beauty of the Hill Country.
+                </p>
+                <p className="text-lg text-warm-gray leading-relaxed">
+                  Whether you're an experienced hunter or new to the sport, our expert guides are dedicated to delivering an unforgettable 
+                  whitetail hunting experience, tailored to your needs. Join us for an adventure that combines exceptional hunting and 
+                  serene surroundings, making memories that will last a lifetime.
+                </p>
                 
-                <div className="space-y-6">
-                  <h2 className="text-3xl font-merriweather font-bold text-white">Exceptional Hunting Experience</h2>
-                  <p className="text-lg text-ranch-cream leading-relaxed">
-                    Our lodge provides comfortable accommodations, ensuring you feel right at home while enjoying the thrill of the hunt. 
-                    With easy access to town, you can indulge in local dining and shopping while still being surrounded by the stunning 
-                    natural beauty of the Hill Country.
-                  </p>
-                  <p className="text-lg text-ranch-cream leading-relaxed">
-                    Whether you're an experienced hunter or new to the sport, our expert guides are dedicated to delivering an unforgettable 
-                    whitetail hunting experience, tailored to your needs. Join us for an adventure that combines exceptional hunting and 
-                    serene surroundings, making memories that will last a lifetime.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-4 pt-6">
-                    {features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <feature.icon className="text-ranch-cream h-5 w-5" />
-                        <span className="text-ranch-cream">{feature.label}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className="grid grid-cols-2 gap-4 pt-6">
+                  {features.map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <feature.icon className="text-texas-maroon h-5 w-5" />
+                      <span className="text-warm-gray">{feature.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
