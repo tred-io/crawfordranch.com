@@ -3,10 +3,11 @@ import Footer from "@/components/footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { Target, MapPin, Users, Award } from "lucide-react";
+import { Target, MapPin, Users, Award, Fish } from "lucide-react";
 import { StarIcon, LonghornIcon } from "@/components/icons/ranch-icons";
 import huntingImage from "@assets/IMG_7597_1754202325477.jpg";
 import deerImage from "@assets/IMG_5829_1754205067288.jpg";
+import creekImage from "@assets/IMG_3328_1754202354559.jpg";
 
 export default function Outfitter() {
   const features = [
@@ -82,20 +83,47 @@ export default function Outfitter() {
                     className="rounded-lg mb-4 w-full h-48 object-cover"
                   />
                   <p className="text-warm-gray leading-relaxed mb-4">
-                    Our high-fence operation ensures excellent hunting opportunities with mature whitetail deer. 
-                    The controlled environment allows for sustainable wildlife management while providing 
-                    hunters with the best possible experience.
+                    Experience the thrill of the hunt in one of Texas's most beautiful landscapes. Our high-fence operation 
+                    ensures excellent hunting opportunities with mature whitetail deer and expert guides.
                   </p>
                   <ul className="space-y-2 text-warm-gray">
                     <li>• Trophy-class whitetail deer</li>
-                    <li>• Year-round hunting seasons</li>
+                    <li>• Prime hunting grounds</li>
                     <li>• Professional field dressing</li>
-                    <li>• Taxidermy recommendations</li>
+                    <li>• Group accommodations</li>
                   </ul>
                 </CardContent>
               </Card>
               
               <Card className="bg-ranch-cream">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-2xl font-merriweather font-bold text-texas-maroon">
+                    <Fish className="text-texas-maroon h-8 w-8 mr-4" />
+                    Creek Fishing
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <img 
+                    src={creekImage} 
+                    alt="Crystal clear creek flowing through ranch property" 
+                    className="rounded-lg mb-4 w-full h-48 object-cover"
+                  />
+                  <p className="text-warm-gray leading-relaxed mb-4">
+                    Cast your line in our pristine creeks that wind through the property. These crystal-clear waters 
+                    are home to bass, catfish, and perch, offering peaceful fishing experiences for all skill levels.
+                  </p>
+                  <ul className="space-y-2 text-warm-gray">
+                    <li>• Multiple creek locations</li>
+                    <li>• Catch and release policy</li>
+                    <li>• Family-friendly spots</li>
+                    <li>• Equipment available</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <Card className="bg-white">
                 <CardHeader>
                   <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
                     Lodge & Accommodations
@@ -106,24 +134,46 @@ export default function Outfitter() {
                     <p className="text-warm-gray text-center">Lodge accommodations photo</p>
                   </div>
                   <p className="text-warm-gray leading-relaxed mb-4">
-                    Our comfortable lodge provides the perfect base for your hunting adventure. 
-                    Relax in rustic comfort after a successful day in the field, with all the 
-                    amenities you need for a memorable stay.
+                    Our comfortable lodge provides the perfect base for your outdoor adventure. 
+                    Relax in rustic comfort after a successful day in the field or on the water.
                   </p>
                   <ul className="space-y-2 text-warm-gray">
                     <li>• Comfortable guest rooms</li>
-                    <li>• Communal dining areas</li>
+                    <li>• Fire pit gatherings</li>
                     <li>• Game processing facilities</li>
                     <li>• Trophy preparation area</li>
+                  </ul>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white">
+                <CardHeader>
+                  <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
+                    Guided Experiences
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="bg-warm-gray/20 rounded-lg h-48 mb-4 flex items-center justify-center">
+                    <p className="text-warm-gray text-center">Guide services photo</p>
+                  </div>
+                  <p className="text-warm-gray leading-relaxed mb-4">
+                    Whether you're an experienced hunter or new to the sport, our expert guides are dedicated 
+                    to delivering unforgettable outdoor experiences tailored to your needs.
+                  </p>
+                  <ul className="space-y-2 text-warm-gray">
+                    <li>• Experienced local guides</li>
+                    <li>• Traditional hunting experience</li>
+                    <li>• Year-round availability</li>
+                    <li>• Taxidermy recommendations</li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
             
             <div className="text-center bg-texas-maroon text-white p-8 rounded-lg">
-              <h2 className="text-3xl font-merriweather font-bold mb-4">Ready to Book Your Hunt?</h2>
+              <h2 className="text-3xl font-merriweather font-bold mb-4">Ready to Book Your Outdoor Adventure?</h2>
               <p className="text-xl mb-6 leading-relaxed">
-                Contact us today to discuss packages, pricing, and availability for your Texas Hill Country hunting adventure.
+                Contact us today to discuss packages, pricing, and availability for your Texas Hill Country hunting and fishing experience.
               </p>
               <Link href="/contact">
                 <Button className="bg-white text-texas-maroon hover:bg-ranch-cream px-8 py-4 text-lg font-semibold">

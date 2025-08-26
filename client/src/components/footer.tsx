@@ -16,7 +16,7 @@ export default function Footer() {
     { href: '/events', label: 'Wedding Venues' },
     { href: '/events', label: 'Retreats' },
     { href: '/outfitter', label: 'Hunting Trips' },
-    { href: '/events', label: 'Creek Fishing' },
+    { href: '/outfitter', label: 'Creek Fishing' },
   ];
 
   return (

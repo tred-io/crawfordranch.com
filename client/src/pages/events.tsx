@@ -38,17 +38,6 @@ export default function Events() {
       ]
     },
     {
-      title: "Creek Fishing",
-      image: bluebonnetImage,
-      description: "Cast your line in our pristine creeks that wind through the property. These crystal-clear waters are home to bass, catfish, and perch, offering peaceful fishing experiences for all skill levels.",
-      features: [
-        "Multiple creek locations",
-        "Catch and release policy",
-        "Family-friendly spots",
-        "Equipment available"
-      ]
-    },
-    {
       title: "Family Getaways",
       image: familyGetawaysImage,
       description: "Create lasting memories with authentic ranch experiences where families gather and friends connect. Enjoy hands-on activities with cattle, explore the beautiful property, and bond in our peaceful hill country setting.",
@@ -59,17 +48,6 @@ export default function Events() {
         "Educational ranch tours"
       ]
     },
-    {
-      title: "Hunting Parties",
-      image: huntingPartiesImage,
-      description: "Experience the thrill of the hunt in one of Texas's most beautiful landscapes. Our ranch offers excellent hunting opportunities with expert guides, followed by comfortable accommodations and great fellowship.",
-      features: [
-        "Prime hunting grounds",
-        "Fire pit gatherings",
-        "Group accommodation",
-        "Traditional hunting experience"
-      ]
-    }
   ];
 
   return (
@@ -84,7 +62,7 @@ export default function Events() {
                 <CowboyHatIcon className="text-texas-maroon h-8 w-12 mx-2" />
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
               </div>
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Event Venues & Corporate Retreats</h1>
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Events & Venue Rentals</h1>
               <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
                 Our ranch is a place where families gather, friends connect, and memories are made. We invite you to experience 
                 the perfect blend of adventure and relaxation in the beautiful Texas Hill Country, where your vision becomes reality 
@@ -92,8 +70,8 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {events.slice(0, 4).map((event, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {events.slice(0, 2).map((event, index) => (
                 <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <div className="overflow-hidden rounded-t-lg">
                     <img 
@@ -130,8 +108,8 @@ export default function Events() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-              {events.slice(4).map((event, index) => (
-                <Card key={index + 4} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+              {events.slice(2).map((event, index) => (
+                <Card key={index + 2} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <div className="overflow-hidden rounded-t-lg">
                     <img 
                       src={event.image} 
