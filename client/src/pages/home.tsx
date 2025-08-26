@@ -28,24 +28,16 @@ export default function Home() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-merriweather font-black mb-6 leading-tight">
             <span className="block sm:inline">Four Generations of</span>
             <span className="block sm:inline"> Texas Heritage</span><br className="hidden sm:block" />
-            <span className="text-sunset-orange block sm:inline">In the Beautiful Hill Country</span>
+            <span className="text-ranch-brown block sm:inline">In the Beautiful Hill Country</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
             A generational cattle and hunting ranch where families gather, friends connect, and memories are made.<br />
             Experience the perfect blend of adventure and relaxation in one of Texas's most beautiful landscapes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link href="/events">
               <Button className="bg-texas-maroon hover:bg-texas-maroon-light text-white px-8 py-4 text-lg font-semibold">
                 Plan Your Event
-              </Button>
-            </Link>
-            <Link href="/activities">
-              <Button
-                variant="outline"
-                className="border-2 border-white bg-transparent hover:bg-white hover:text-ranch-brown text-white px-8 py-4 text-lg font-semibold"
-              >
-                Explore Activities
               </Button>
             </Link>
           </div>

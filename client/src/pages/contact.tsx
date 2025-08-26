@@ -88,11 +88,11 @@ export default function Contact() {
 
   const eventTypes = [
     "Wedding",
-    "Corporate Retreat",
-    "Christian Retreat",
+    "Retreats",
     "Family Reunion",
     "Bachelor/Bachelorette Party",
     "Hunting Trip",
+    "Creek Fishing",
     "Other"
   ];
 

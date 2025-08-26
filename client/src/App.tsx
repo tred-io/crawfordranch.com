@@ -6,7 +6,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Events from "@/pages/events";
-import Activities from "@/pages/activities";
 import Outfitter from "@/pages/outfitter";
 import Gallery from "@/pages/gallery";
 import Contact from "@/pages/contact";
@@ -18,7 +17,6 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/events" component={Events} />
-      <Route path="/activities" component={Activities} />
       <Route path="/outfitter" component={Outfitter} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/contact" component={Contact} />

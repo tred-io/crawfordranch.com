@@ -7,7 +7,6 @@ export default function Footer() {
   const quickLinks = [
     { href: '/about', label: 'About Us' },
     { href: '/events', label: 'Events' },
-    { href: '/activities', label: 'Activities' },
     { href: '/outfitter', label: 'Outfitter' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
@@ -15,10 +14,9 @@ export default function Footer() {
 
   const services = [
     { href: '/events', label: 'Wedding Venues' },
-    { href: '/events', label: 'Corporate Retreats' },
-    { href: '/events', label: 'Christian Retreats' },
+    { href: '/events', label: 'Retreats' },
     { href: '/outfitter', label: 'Hunting Trips' },
-    { href: '/activities', label: 'Creek Fishing' },
+    { href: '/events', label: 'Creek Fishing' },
   ];
 
   return (
@@ -30,7 +28,7 @@ export default function Footer() {
               <img 
                 src={logoImage} 
                 alt="Crawford Ranch Logo" 
-                className="h-16 w-auto filter brightness-0 invert"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-ranch-cream/80 mb-4 leading-relaxed">

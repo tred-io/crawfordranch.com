@@ -25,25 +25,27 @@ export default function Events() {
       ]
     },
     {
-      title: "Corporate Retreats",
+      title: "Retreats",
       image: landscapeImage,
-      description: "Inspire your team with a change of scenery in the tranquil hill country. Our ranch provides the perfect environment for productive meetings, team building, and strategic planning surrounded by stunning natural beauty.",
+      description: "Inspire your team or group with a change of scenery in the tranquil hill country. Our ranch provides the perfect environment for productive meetings, team building, and strategic planning surrounded by stunning natural beauty.",
       features: [
         "Private meeting spaces",
         "Team building activities",
         "Catering services available",
-        "Technology support"
+        "Technology support",
+        "Quiet spaces for reflection",
+        "Natural amphitheater"
       ]
     },
     {
-      title: "Christian Retreats",
+      title: "Creek Fishing",
       image: bluebonnetImage,
-      description: "Find peace and spiritual renewal in God's creation. Our serene hill country setting provides the perfect atmosphere for worship, fellowship, and reflection under the Texas sky.",
+      description: "Cast your line in our pristine creeks that wind through the property. These crystal-clear waters are home to bass, catfish, and perch, offering peaceful fishing experiences for all skill levels.",
       features: [
-        "Quiet prayer spaces",
-        "Natural amphitheater",
-        "Fellowship hall",
-        "Peaceful walking trails"
+        "Multiple creek locations",
+        "Catch and release policy",
+        "Family-friendly spots",
+        "Equipment available"
       ]
     },
     {
@@ -90,8 +92,8 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events.slice(0, 3).map((event, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {events.slice(0, 4).map((event, index) => (
                 <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <div className="overflow-hidden rounded-t-lg">
                     <img 
@@ -127,9 +129,9 @@ export default function Events() {
               ))}
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
-              {events.slice(3).map((event, index) => (
-                <Card key={index + 3} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+              {events.slice(4).map((event, index) => (
+                <Card key={index + 4} className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <div className="overflow-hidden rounded-t-lg">
                     <img 
                       src={event.image} 
