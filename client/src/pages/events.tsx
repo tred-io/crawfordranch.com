@@ -73,14 +73,18 @@ export default function Events() {
             <div className="space-y-16">
               {events.map((event, index) => {
                 const isEven = index % 2 === 0;
-                const bgColors = ['bg-ranch-cream', 'bg-white', 'bg-warm-gray/5'];
+                const bgColors = [
+                  'bg-ranch-brown text-ranch-cream', 
+                  'bg-texas-maroon text-white', 
+                  'bg-white text-ranch-brown'
+                ];
                 const textBgColor = bgColors[index % bgColors.length];
                 
                 return (
-                  <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div className={`grid md:grid-cols-2 gap-0 ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
+                  <div key={index} className="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div className={`grid md:grid-cols-2 ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
                       {/* Image Section */}
-                      <div className={`${!isEven ? 'md:col-start-2' : ''} relative overflow-hidden`}>
+                      <div className={`${!isEven ? 'md:col-start-2' : ''} relative`}>
                         <img 
                           src={event.image} 
                           alt={event.title}
@@ -90,23 +94,27 @@ export default function Events() {
                       
                       {/* Content Section */}
                       <div className={`${textBgColor} p-8 md:p-12 flex flex-col justify-center ${!isEven ? 'md:col-start-1' : ''}`}>
-                        <h2 className="text-3xl md:text-4xl font-merriweather font-bold text-texas-maroon mb-6">
+                        <h2 className="text-3xl md:text-4xl font-merriweather font-bold mb-6">
                           {event.title}
                         </h2>
-                        <p className="text-lg text-ranch-brown mb-6 leading-relaxed">
+                        <p className="text-lg mb-6 leading-relaxed opacity-90">
                           {event.description}
                         </p>
                         <ul className="space-y-3 mb-8">
                           {event.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-ranch-brown">
-                              <Check className="h-5 w-5 text-texas-maroon mr-3 flex-shrink-0" />
+                            <li key={featureIndex} className="flex items-center">
+                              <Check className={`h-5 w-5 mr-3 flex-shrink-0 ${index === 2 ? 'text-texas-maroon' : 'text-current opacity-75'}`} />
                               <span className="font-medium">{feature}</span>
                             </li>
                           ))}
                         </ul>
                         <div className="mt-auto">
                           <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
-                            <Button className="bg-texas-maroon hover:bg-texas-maroon-light text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-md hover:shadow-lg transition-all">
+                            <Button className={`px-8 py-3 text-lg font-semibold rounded-lg shadow-md hover:shadow-lg transition-all ${
+                              index === 0 ? 'bg-texas-maroon hover:bg-texas-maroon-light text-white' :
+                              index === 1 ? 'bg-ranch-cream hover:bg-white text-texas-maroon' :
+                              'bg-texas-maroon hover:bg-texas-maroon-light text-white'
+                            }`}>
                               More Information
                             </Button>
                           </Link>
