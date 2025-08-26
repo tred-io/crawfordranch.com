@@ -54,7 +54,7 @@ export default function Events() {
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
       <div className="pt-16">
-        <section className="py-20 bg-ranch-cream">
+        <section className="py-20 bg-gradient-to-b from-ranch-cream to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
@@ -63,50 +63,59 @@ export default function Events() {
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
               </div>
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Texas Ranch Events & Venue Rentals</h1>
-              <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-ranch-brown max-w-3xl mx-auto leading-relaxed">
                 Our ranch is a place where families gather, friends connect, and memories are made. We invite you to experience 
                 the perfect blend of adventure and relaxation in the beautiful Texas Hill Country, where your vision becomes reality 
                 in a serene and enchanting environment.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-              {events.map((event, index) => (
-                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow flex flex-col">
-                  <div className="overflow-hidden rounded-t-lg">
-                    <img 
-                      src={event.image} 
-                      alt={event.title}
-                      className="w-full h-64 object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-2xl font-merriweather font-bold text-texas-maroon">
-                      {event.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-1 flex flex-col">
-                    <p className="text-warm-gray mb-4 leading-relaxed">
-                      {event.description}
-                    </p>
-                    <ul className="space-y-2 mb-4 flex-1">
-                      {event.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-warm-gray">
-                          <Check className="h-4 w-4 text-texas-maroon mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-auto">
-                      <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
-                        <Button className="w-full bg-texas-maroon hover:bg-texas-maroon-light text-white">
-                          More Information
-                        </Button>
-                      </Link>
+            <div className="space-y-16">
+              {events.map((event, index) => {
+                const isEven = index % 2 === 0;
+                const bgColors = ['bg-ranch-cream', 'bg-white', 'bg-warm-gray/5'];
+                const textBgColor = bgColors[index % bgColors.length];
+                
+                return (
+                  <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div className={`grid md:grid-cols-2 gap-0 ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
+                      {/* Image Section */}
+                      <div className={`${!isEven ? 'md:col-start-2' : ''} relative overflow-hidden`}>
+                        <img 
+                          src={event.image} 
+                          alt={event.title}
+                          className="w-full h-80 md:h-96 object-cover"
+                        />
+                      </div>
+                      
+                      {/* Content Section */}
+                      <div className={`${textBgColor} p-8 md:p-12 flex flex-col justify-center ${!isEven ? 'md:col-start-1' : ''}`}>
+                        <h2 className="text-3xl md:text-4xl font-merriweather font-bold text-texas-maroon mb-6">
+                          {event.title}
+                        </h2>
+                        <p className="text-lg text-ranch-brown mb-6 leading-relaxed">
+                          {event.description}
+                        </p>
+                        <ul className="space-y-3 mb-8">
+                          {event.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-ranch-brown">
+                              <Check className="h-5 w-5 text-texas-maroon mr-3 flex-shrink-0" />
+                              <span className="font-medium">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="mt-auto">
+                          <Link href={`/contact?event=${encodeURIComponent(event.title)}`}>
+                            <Button className="bg-texas-maroon hover:bg-texas-maroon-light text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-md hover:shadow-lg transition-all">
+                              More Information
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
