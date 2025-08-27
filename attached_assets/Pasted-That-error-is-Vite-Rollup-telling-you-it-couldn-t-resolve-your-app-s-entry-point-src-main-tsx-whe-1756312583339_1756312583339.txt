@@ -1,0 +1,87 @@
+That error is Vite/Rollup telling you it couldn’t resolve your app’s entry point (/src/main.tsx) when bundling. In other words:
+when Rollup was processing your index.html in client/, it saw a script tag like:
+
+<script type="module" src="/src/main.tsx"></script>
+
+
+…but it couldn’t actually find that file from the build context on Vercel.
+
+Common causes
+
+Wrong path in index.html
+
+If your index.html is in client/, and your source is in client/src/main.tsx, then the script tag should usually be:
+
+<script type="module" src="/src/main.tsx"></script>
+
+
+(that assumes root in vite.config.ts is client).
+
+If your Vite root isn’t set to client, Rollup will look for /src/main.tsx at the repo root and fail.
+
+Incorrect Vite root setting
+
+In vite.config.ts, if you have:
+
+export default defineConfig({
+  root: "client",
+})
+
+
+then Vite knows to resolve from inside client/.
+
+Without that, it will resolve /src/main.tsx relative to the repo root and fail.
+
+File missing / misnamed
+
+Maybe it’s actually main.ts or main.jsx, not main.tsx.
+
+Or the file lives in client/src/ but your index.html is trying to load from /src/.
+
+Build command mismatch
+
+Your Vercel build command is:
+
+cd client && npm install && npm run build && cd .. && npm run build:server
+
+
+If your Vite build expects to run from inside client/, make sure that vite.config.ts root aligns with that.
+
+Sometimes you don’t need to cd client if your monorepo is already set up with workspaces.
+
+How to fix
+
+Check client/index.html
+Ensure the script tag points correctly:
+
+<script type="module" src="/src/main.tsx"></script>
+
+
+If index.html is already inside client/, that’s correct only if Vite root is client. Otherwise change to:
+
+<script type="module" src="./src/main.tsx"></script>
+
+
+Set root in vite.config.ts:
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  root: 'client',
+  plugins: [react()],
+})
+
+
+Double-check file existence
+Confirm you actually have client/src/main.tsx.
+
+👉 To debug locally, run:
+
+cd client
+npm run build
+
+
+If it fails the same way, adjust root or index.html. If it works locally but fails on Vercel, likely your Vercel project root/build settings are pointed at the wrong directory.
+
+Do you want me to look at your vite.config.ts and index.html and show you exactly how those should line up for a client/ subfolder setup?
