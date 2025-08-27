@@ -1,31 +1,37 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  plugins: [react({
-    jsxImportSource: 'react',
-  })],
-  root: path.resolve(__dirname, "."),
+  plugins: [
+    react(),
+    runtimeErrorOverlay(),
+    ...(process.env.NODE_ENV !== "production" &&
+    process.env.REPL_ID !== undefined
+      ? [
+          await import("@replit/vite-plugin-cartographer").then((m) =>
+            m.cartographer(),
+          ),
+        ]
+      : []),
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@shared": path.resolve(__dirname, "../shared"),
-      "@assets": path.resolve(__dirname, "../attached_assets"),
+      "@": path.resolve(import.meta.dirname, "client", "src"),
+      "@shared": path.resolve(import.meta.dirname, "shared"),
+      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+  root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: "../public",
+    outDir: "dist",   // relative to client/
     emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        assetFileNames: `assets/[name]-[hash].[ext]`,
-        chunkFileNames: `assets/[name]-[hash].js`,
-        entryFileNames: `assets/[name]-[hash].js`,
-      }
-    }
+  },
+  server: {
+    fs: {
+      strict: true,
+      deny: ["**/.*"],
+    },
   },
 });
