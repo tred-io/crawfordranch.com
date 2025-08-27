@@ -13,12 +13,14 @@ export default function About() {
       <div className="pt-16">
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Our Family Legacy - Four Generations in the Texas Hill Country</h1>
-              <p className="text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed">
-                Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch 
-                stands as a testament to the enduring spirit of family, tradition, and the great outdoors.
-              </p>
+            <div className="bg-texas-maroon -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16 mb-16">
+              <div className="text-center max-w-7xl mx-auto">
+                <h1 className="text-4xl md:text-5xl font-merriweather font-black text-white mb-6">Our Family Legacy - Four Generations in the Texas Hill Country</h1>
+                <p className="text-xl text-ranch-cream max-w-3xl mx-auto leading-relaxed">
+                  Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch 
+                  stands as a testament to the enduring spirit of family, tradition, and the great outdoors.
+                </p>
+              </div>
             </div>
             
             <div className="space-y-16">
@@ -27,7 +29,8 @@ export default function About() {
                   <img 
                     src={barnImage} 
                     alt="Historic Crawford Ranch barn with cattle corrals" 
-                    className="rounded-lg shadow-xl w-full"
+                    className="rounded-lg shadow-xl w-full h-80 object-cover"
+                    style={{objectPosition: '60% 40%'}}
                   />
                 </div>
                 

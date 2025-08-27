@@ -82,9 +82,9 @@ export default function Events() {
                 
                 return (
                   <div key={index} className="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div className={`grid md:grid-cols-2 ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
+                    <div className={`grid md:grid-cols-5 ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
                       {/* Image Section */}
-                      <div className={`${!isEven ? 'md:col-start-2' : ''} relative`}>
+                      <div className={`${!isEven ? 'md:col-start-3 md:col-span-3' : 'md:col-span-3'} relative`}>
                         <img 
                           src={event.image} 
                           alt={event.title}
@@ -93,7 +93,7 @@ export default function Events() {
                       </div>
                       
                       {/* Content Section */}
-                      <div className={`${textBgColor} p-8 md:p-12 flex flex-col justify-center ${!isEven ? 'md:col-start-1' : ''}`}>
+                      <div className={`${textBgColor} p-8 md:p-12 flex flex-col justify-center ${!isEven ? 'md:col-start-1 md:col-span-2' : 'md:col-span-2'}`}>
                         <h2 className="text-3xl md:text-4xl font-merriweather font-bold mb-6">
                           {event.title}
                         </h2>

@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-ranch-cream/20 mt-8 pt-8">
-          <div className="bg-texas-maroon -mx-8 -mb-12 px-8 py-6 text-center">
+          <div className="bg-ranch-brown -mx-8 -mb-12 px-8 py-6 text-center">
             <p className="text-ranch-cream">&copy; 2025 Crawford Ranch. All rights reserved.</p>
           </div>
         </div>
