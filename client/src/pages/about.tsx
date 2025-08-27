@@ -11,17 +11,19 @@ export default function About() {
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
       <div className="pt-16">
+        <div className="bg-texas-maroon py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-merriweather font-black text-white mb-6">Our Family Legacy - Four Generations in the Texas Hill Country</h1>
+              <p className="text-xl text-ranch-cream max-w-3xl mx-auto leading-relaxed">
+                Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch 
+                stands as a testament to the enduring spirit of family, tradition, and the great outdoors.
+              </p>
+            </div>
+          </div>
+        </div>
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-texas-maroon -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16 mb-16">
-              <div className="text-center max-w-7xl mx-auto">
-                <h1 className="text-4xl md:text-5xl font-merriweather font-black text-white mb-6">Our Family Legacy - Four Generations in the Texas Hill Country</h1>
-                <p className="text-xl text-ranch-cream max-w-3xl mx-auto leading-relaxed">
-                  Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch 
-                  stands as a testament to the enduring spirit of family, tradition, and the great outdoors.
-                </p>
-              </div>
-            </div>
             
             <div className="space-y-16">
               <div className="grid md:grid-cols-2 gap-12 items-center">
