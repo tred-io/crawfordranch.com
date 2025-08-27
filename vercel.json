@@ -1,7 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "node build.js",
-  "outputDirectory": "dist/public",
+  "buildCommand": "cd client && npm install && npm run build && cd .. && npm run build:server",
+  "installCommand": "npm install",
+  "outputDirectory": "client/dist",
   "functions": {
     "api/[...path].ts": {
       "maxDuration": 30
