@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react({
     jsxImportSource: 'react',
   })],
-  root: ".",
+  root: path.resolve(__dirname, "."),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
