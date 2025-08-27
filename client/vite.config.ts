@@ -5,27 +5,22 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+console.log(">>> [vite.config] Using CLIENT config <<<");
+console.log(">>> [vite.config] __dirname:", __dirname);
+console.log(">>> [vite.config] NODE_ENV:", process.env.NODE_ENV);
+
 export default defineConfig({
-  plugins: [react({
-    jsxImportSource: "react",
-  })],
-  root: __dirname,   // 👈 force root to client/
+  root: __dirname,   // force root = client
+  plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "src"),
       "@shared": path.resolve(__dirname, "../shared"),
       "@assets": path.resolve(__dirname, "../attached_assets"),
     },
   },
   build: {
-    outDir: "../public",   // 👈 same as working app
+    outDir: "../public",   // put built files in repo/public
     emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        assetFileNames: `assets/[name]-[hash].[ext]`,
-        chunkFileNames: `assets/[name]-[hash].js`,
-        entryFileNames: `assets/[name]-[hash].js`,
-      }
-    }
   },
 });

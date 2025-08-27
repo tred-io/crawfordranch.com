@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd client && vite build --outDir ../public --emptyOutDir",
+  "buildCommand": "cd client && npm run build",
   "outputDirectory": "public",
   "cleanUrls": false,
   "trailingSlash": false,
