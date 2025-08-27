@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { insertContactInquirySchema } from "@shared/schema";
 import { z } from "zod";
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export function setupRoutes(app: Express, storage: any) {
   // Contact inquiry endpoint
   app.post("/api/contact", async (req, res) => {
     try {
@@ -30,6 +30,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+}
+
+export async function registerRoutes(app: Express): Promise<Server> {
+  setupRoutes(app, storage);
   const httpServer = createServer(app);
   return httpServer;
 }

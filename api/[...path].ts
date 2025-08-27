@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import express from 'express';
-import { setupRoutes } from '../server/routes.js';
-import { getStorage } from '../server/storage.js';
+import { registerRoutes } from '../server/routes.js';
+import { storage } from '../server/storage.js';
 
 const app = express();
 
@@ -22,9 +22,31 @@ app.use((req, res, next) => {
   }
 });
 
-// Initialize storage and routes
-const storage = getStorage();
-setupRoutes(app, storage);
+// Initialize routes
+app.post("/api/contact", async (req, res) => {
+  try {
+    const { insertContactInquirySchema } = await import('../shared/schema.js');
+    const { z } = await import('zod');
+    const inquiry = insertContactInquirySchema.parse(req.body);
+    const createdInquiry = await storage.createContactInquiry(inquiry);
+    res.json(createdInquiry);
+  } catch (error) {
+    if (error instanceof Error && 'issues' in error) {
+      res.status(400).json({ message: "Invalid request data", errors: (error as any).issues });
+    } else {
+      res.status(500).json({ message: "Internal server error" });
+    }
+  }
+});
+
+app.get("/api/contact", async (req, res) => {
+  try {
+    const inquiries = await storage.getAllContactInquiries();
+    res.json(inquiries);
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   return new Promise((resolve) => {
