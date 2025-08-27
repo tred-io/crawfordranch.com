@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://crawfordranch.com/sitemap.xml
+
+# Specific rules for SEO crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block common bot traffic that doesn't add SEO value
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# General crawl delay to prevent server overload
+Crawl-delay: 1

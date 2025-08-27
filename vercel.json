@@ -1,21 +1,13 @@
 {
-  "version": 2,
-  "buildCommand": "cd client && npm install && npm run build && cd .. && npm run build:server",
-  "installCommand": "npm install",
-  "outputDirectory": "client/dist",
-  "functions": {
-    "api/[...path].ts": {
-      "maxDuration": 30
-    }
-  },
+  "buildCommand": "cd client && vite build --outDir ../public --emptyOutDir",
+  "outputDirectory": "public",
+  "cleanUrls": false,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/((?!api).*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "version": 2
 }
