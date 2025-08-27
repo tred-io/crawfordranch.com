@@ -1,8 +1,0 @@
-node_modules
-.env.local
-.env
-replit.md
-attached_assets
-client/src
-server/vite.ts
-*.log

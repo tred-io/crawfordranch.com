@@ -61,25 +61,35 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        "texas-red": "var(--texas-red)",
-        "texas-red-light": "var(--texas-red-light)",
-        "texas-maroon": "var(--texas-maroon)",
-        "texas-maroon-light": "var(--texas-maroon-light)",
-        "sunset-orange": "var(--sunset-orange)",
-        "ranch-cream": "var(--ranch-cream)",
-        "prairie-gold": "var(--prairie-gold)",
-        "sage-green": "var(--sage-green)",
-        "barn-wood": "var(--barn-wood)",
-        "dusty-rose": "var(--dusty-rose)",
-        "bluebonnet": "var(--bluebonnet)",
-        "leather-brown": "var(--leather-brown)",
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        crimson: ["Crimson Text", "serif"],
-        merriweather: ["Merriweather", "serif"],
+        'playfair': ['Playfair Display', 'serif'],
+        'crimson': ['Crimson Text', 'serif'],
+        'merriweather': ['Merriweather', 'serif'],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
