@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd client && npm install && npm run build",
-  "outputDirectory": "client/dist",
-  "cleanUrls": true,
+  "buildCommand": "cd client && vite build --outDir ../public --emptyOutDir",
+  "outputDirectory": "public",
+  "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
     {
