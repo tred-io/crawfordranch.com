@@ -1,0 +1,49 @@
+[11:22:53.406] Running build in Washington, D.C., USA (East) – iad1
+[11:22:53.406] Build machine configuration: 4 cores, 8 GB
+[11:22:53.428] Cloning github.com/tred-io/crawfordranch.com (Branch: main, Commit: 1a963c1)
+[11:22:53.533] Previous build caches not available
+[11:22:55.083] Cloning completed: 1.654s
+[11:22:55.122] Found .vercelignore
+[11:22:55.140] Removed 108 ignored files defined in .vercelignore
+[11:22:55.141]   /attached_assets/Crawford Ranch Write Ups_1755884400847.docx
+[11:22:55.141]   /attached_assets/General Ranch Story, Marketing_1755884400852.docx
+[11:22:55.141]   /attached_assets/IMG_0518_1754201480310.jpg
+[11:22:55.141]   /attached_assets/IMG_0849_1756229924407.jpg
+[11:22:55.141]   /attached_assets/IMG_1144_1754201480312.jpg
+[11:22:55.141]   /attached_assets/IMG_2196_1754202398409.jpg
+[11:22:55.141]   /attached_assets/IMG_2196_1754202398409.jpg.bak
+[11:22:55.141]   /attached_assets/IMG_2196_1756229360023.jpg
+[11:22:55.141]   /attached_assets/IMG_2196_1756230374363.jpg
+[11:22:55.141]   /attached_assets/IMG_2721_1756229798753.jpg
+[11:22:55.462] Running "vercel build"
+[11:22:55.881] Vercel CLI 46.0.3
+[11:22:56.624] Installing dependencies...
+[11:23:01.370] npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+[11:23:01.382] npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+[11:23:06.862] 
+[11:23:06.863] added 481 packages in 10s
+[11:23:06.863] 
+[11:23:06.863] 64 packages are looking for funding
+[11:23:06.863]   run `npm fund` for details
+[11:23:07.074] 
+[11:23:07.074] > rest-express@1.0.0 build
+[11:23:07.074] > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+[11:23:07.074] 
+[11:23:07.351] [36mvite v5.4.19 [32mbuilding for production...[36m[39m
+[11:23:07.413] transforming...
+[11:23:07.424] [32m✓[39m 2 modules transformed.
+[11:23:07.430] [31mx[39m Build failed in 54ms
+[11:23:07.430] [31merror during build:
+[11:23:07.430] [31m[vite]: Rollup failed to resolve import "/src/main.tsx" from "/vercel/path0/client/index.html".
+[11:23:07.430] This is most likely unintended because it can break your application at runtime.
+[11:23:07.430] If you do want to externalize this module explicitly add it to
+[11:23:07.431] `build.rollupOptions.external`[31m
+[11:23:07.431]     at viteWarn (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65839:17)
+[11:23:07.431]     at onwarn (file:///vercel/path0/node_modules/@vitejs/plugin-react/dist/index.mjs:280:9)
+[11:23:07.431]     at onRollupWarning (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65869:5)
+[11:23:07.431]     at onwarn (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65534:7)
+[11:23:07.431]     at file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:19452:13
+[11:23:07.431]     at Object.logger [as onLog] (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:21178:9)
+[11:23:07.431]     at ModuleLoader.handleInvalidResolvedId (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20067:26)
+[11:23:07.431]     at file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20025:26[39m
+[11:23:07.446] Error: Command "npm run build" exited with 1
