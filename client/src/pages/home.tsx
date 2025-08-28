@@ -83,7 +83,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
           <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
           <RopeIcon className="text-warm-gray h-4 w-32" />
-          <LonghornIcon className="text-texas-maroon h-8 w-16 mx-4" />
+          <img 
+            src={barnWithBikesImage} 
+            alt="Barn with bikes" 
+            className="h-8 w-16 mx-4 opacity-70"
+          />
           <RopeIcon className="text-warm-gray h-4 w-32" />
           <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
         </div>

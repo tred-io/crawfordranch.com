@@ -29,7 +29,11 @@ export default function Outfitter() {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-                <LonghornIcon className="text-texas-maroon h-8 w-16 mx-2" />
+                <img 
+                  src={barnWithBikesImage} 
+                  alt="Barn with bikes" 
+                  className="h-8 w-16 mx-2 opacity-70"
+                />
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
               </div>
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Premier Texas Hill Country Outfitting</h1>
