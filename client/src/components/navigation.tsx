@@ -35,7 +35,13 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            {/* Logo space reserved for floating logo */}
+            <Link href="/" className="flex items-center">
+              <img 
+                src={logoImage} 
+                alt="Crawford Ranch Logo" 
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
           
           <div className="hidden md:block">
