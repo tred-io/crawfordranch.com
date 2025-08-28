@@ -10,6 +10,7 @@ import landscapeImage from "@assets/IMG_3326_1754202418292.jpg";
 import bluebonnetImage from "@assets/IMG_2196_1754202398409.jpg";
 import familyGetawaysImage from "@assets/IMG_7989_1754205048016.jpg";
 import huntingPartiesImage from "@assets/IMG_5829_1754205067288.jpg";
+import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 export default function Events() {
   const events = [
@@ -128,6 +129,18 @@ export default function Events() {
           </div>
         </section>
       </div>
+      
+      {/* Floating Barn with Bikes */}
+      <div className="relative">
+        <div className="absolute bottom-8 right-8 z-10">
+          <img 
+            src={barnWithBikesImage} 
+            alt="Rustic barn with vintage bicycles" 
+            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
+          />
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );

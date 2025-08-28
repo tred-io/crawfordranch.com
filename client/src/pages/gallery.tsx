@@ -28,6 +28,7 @@ import image21 from "@assets/IMG_6604_1756230314550.jpg";
 import image22 from "@assets/IMG_5016_1756230324987.jpg";
 import image23 from "@assets/IMG_2196_1756230374363.jpg";
 import image24 from "@assets/wed-283001_1756230624714.jpg";
+import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 export default function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -214,6 +215,18 @@ export default function Gallery() {
           </div>
         </section>
       </div>
+      
+      {/* Floating Barn with Bikes */}
+      <div className="relative">
+        <div className="absolute bottom-8 right-8 z-10">
+          <img 
+            src={barnWithBikesImage} 
+            alt="Rustic barn with vintage bicycles" 
+            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
+          />
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );

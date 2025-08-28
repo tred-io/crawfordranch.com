@@ -5,6 +5,7 @@ import barnImage from "@assets/IMG_5016_1756230324987.jpg";
 import fieldImage from "@assets/IMG_0518_1754201480310.jpg";
 import cattleFieldImage from "@assets/IMG_2786_2_1756229049596.jpg";
 import cattleImage from "@assets/IMG_7989_1754205048016.jpg";
+import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 export default function About() {
   return (
@@ -119,6 +120,18 @@ export default function About() {
           </div>
         </section>
       </div>
+      
+      {/* Floating Barn with Bikes */}
+      <div className="relative">
+        <div className="absolute bottom-8 right-8 z-10">
+          <img 
+            src={barnWithBikesImage} 
+            alt="Rustic barn with vintage bicycles" 
+            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
+          />
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );

@@ -18,6 +18,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { insertContactInquirySchema } from "@shared/schema";
 import { RopeIcon, StarIcon } from "@/components/icons/ranch-icons";
 import SimpleMap from "@/components/map";
+import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 const formSchema = insertContactInquirySchema.extend({
   firstName: z.string().min(1, "First name is required"),
@@ -304,6 +305,18 @@ export default function Contact() {
           </div>
         </section>
       </div>
+      
+      {/* Floating Barn with Bikes */}
+      <div className="relative">
+        <div className="absolute bottom-8 right-8 z-10">
+          <img 
+            src={barnWithBikesImage} 
+            alt="Rustic barn with vintage bicycles" 
+            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
+          />
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );
