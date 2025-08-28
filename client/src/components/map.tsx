@@ -30,18 +30,30 @@ export default function SimpleMap({ latitude, longitude, title }: SimpleMapProps
               </div>
             </div>
             
-            {/* Decorative elements representing roads and terrain */}
+            {/* Decorative elements representing wider area roads and terrain */}
             <div className="absolute top-0 left-0 w-full h-full opacity-30">
-              <div className="absolute top-1/4 left-1/4 w-1/2 h-1 bg-gray-400 rounded transform rotate-45"></div>
-              <div className="absolute bottom-1/4 right-1/4 w-1/3 h-1 bg-gray-400 rounded transform -rotate-45"></div>
-              <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-blue-400 rounded-full"></div>
-              <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-blue-400 rounded-full"></div>
+              {/* Major highways */}
+              <div className="absolute top-1/5 left-0 w-full h-1 bg-gray-500 rounded transform rotate-12"></div>
+              <div className="absolute top-3/5 left-0 w-full h-1 bg-gray-500 rounded transform -rotate-12"></div>
+              <div className="absolute top-0 left-1/3 w-1 h-full bg-gray-500 rounded transform rotate-6"></div>
+              
+              {/* Local roads */}
+              <div className="absolute top-1/4 left-1/6 w-3/4 h-0.5 bg-gray-400 rounded transform rotate-45"></div>
+              <div className="absolute bottom-1/4 right-1/6 w-2/3 h-0.5 bg-gray-400 rounded transform -rotate-45"></div>
+              <div className="absolute top-2/3 left-1/5 w-1/2 h-0.5 bg-gray-400 rounded transform rotate-30"></div>
+              
+              {/* Towns and water features */}
+              <div className="absolute top-1/6 right-1/4 w-3 h-3 bg-gray-600 rounded opacity-50"></div>
+              <div className="absolute bottom-1/5 left-1/5 w-2 h-2 bg-gray-600 rounded opacity-50"></div>
+              <div className="absolute top-1/2 right-1/6 w-4 h-1 bg-blue-400 rounded-full"></div>
+              <div className="absolute bottom-1/3 left-2/5 w-2 h-2 bg-blue-400 rounded-full"></div>
+              <div className="absolute top-1/4 left-3/5 w-1 h-3 bg-blue-400 rounded"></div>
             </div>
           </div>
           
           <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-2 text-xs text-gray-600">
             <p className="font-semibold">Crawford Ranch</p>
-            <p>Lampasas County, TX</p>
+            <p>Central Texas Hill Country</p>
           </div>
         </div>
         
