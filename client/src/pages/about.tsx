@@ -13,7 +13,15 @@ export default function About() {
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
       <div className="pt-16">
-        <div className="bg-texas-maroon py-16">
+        <div className="bg-texas-maroon py-16 relative">
+          {/* Cardinal positioned on header section */}
+          <div className="absolute top-8 right-4 md:right-16 z-20">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-75"
+            />
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-white mb-6">Our Family Legacy - Four Generations in the Texas Hill Country</h1>
@@ -120,17 +128,6 @@ export default function About() {
             </div>
           </div>
         </section>
-
-        {/* Cardinal positioned randomly */}
-        <div className="relative">
-          <div className="absolute -top-6 left-16 z-10">
-            <img 
-              src={cardinalImage} 
-              alt="Cardinal" 
-              className="w-10 h-10 opacity-80"
-            />
-          </div>
-        </div>
 
         <DecorativeDivider />
       </div>

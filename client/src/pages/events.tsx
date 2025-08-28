@@ -72,7 +72,15 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="space-y-16">
+            <div className="space-y-16 relative">
+              {/* Cardinal positioned on events content */}
+              <div className="absolute -top-4 left-6 md:left-16 z-20">
+                <img 
+                  src={cardinalImage} 
+                  alt="Cardinal" 
+                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 opacity-80"
+                />
+              </div>
               {events.map((event, index) => {
                 const isEven = index % 2 === 0;
                 const bgColors = [
@@ -129,17 +137,6 @@ export default function Events() {
             </div>
           </div>
         </section>
-
-        {/* Cardinal positioned randomly */}
-        <div className="relative">
-          <div className="absolute -top-4 right-8 z-10">
-            <img 
-              src={cardinalImage} 
-              alt="Cardinal" 
-              className="w-11 h-11 opacity-75"
-            />
-          </div>
-        </div>
 
         <DecorativeDivider />
       </div>

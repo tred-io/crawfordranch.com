@@ -180,7 +180,15 @@ export default function Gallery() {
       <Navigation />
       <div className="pt-16">
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            {/* Cardinal positioned on gallery */}
+            <div className="absolute top-8 left-6 md:left-16 z-20">
+              <img 
+                src={cardinalImage} 
+                alt="Cardinal" 
+                className="w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 opacity-90"
+              />
+            </div>
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Crawford Ranch Gallery</h1>
               <div className="flex items-center justify-center mb-6">
@@ -215,17 +223,6 @@ export default function Gallery() {
             />
           </div>
         </section>
-
-        {/* Cardinal positioned randomly */}
-        <div className="relative">
-          <div className="absolute -top-7 right-1/4 z-10">
-            <img 
-              src={cardinalImage} 
-              alt="Cardinal" 
-              className="w-10 h-10 opacity-90"
-            />
-          </div>
-        </div>
 
         <DecorativeDivider />
       </div>

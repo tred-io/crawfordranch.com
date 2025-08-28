@@ -51,7 +51,15 @@ export default function Home() {
 
       {/* About Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {/* Cardinal positioned on about section */}
+          <div className="absolute top-6 right-4 md:right-12 z-20">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-85"
+            />
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img 
@@ -78,17 +86,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Cardinal positioned randomly */}
-      <div className="relative">
-        <div className="absolute -top-8 right-1/4 z-10">
-          <img 
-            src={cardinalImage} 
-            alt="Cardinal" 
-            className="w-12 h-12 opacity-80"
-          />
-        </div>
-      </div>
 
       <DecorativeDivider />
 

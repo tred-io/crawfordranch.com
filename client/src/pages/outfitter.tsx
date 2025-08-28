@@ -25,7 +25,15 @@ export default function Outfitter() {
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
       <div className="pt-16">
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white relative">
+          {/* Cardinal positioned on hunting section */}
+          <div className="absolute top-12 right-8 md:right-24 z-20">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-85"
+            />
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
@@ -197,17 +205,6 @@ export default function Outfitter() {
             </div>
           </div>
         </section>
-
-        {/* Cardinal positioned randomly */}
-        <div className="relative">
-          <div className="absolute -top-5 left-1/3 z-10">
-            <img 
-              src={cardinalImage} 
-              alt="Cardinal" 
-              className="w-9 h-9 opacity-85"
-            />
-          </div>
-        </div>
 
         <DecorativeDivider />
       </div>
