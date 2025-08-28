@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { CattleBrandIcon } from "@/components/icons/ranch-icons";
-import logoImage from "@assets/logo_1754206429175.png";
+import wideLogoImage from "@assets/logo_wide_1754206705389.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,13 +35,15 @@ export default function Navigation() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <img 
-                src={logoImage} 
-                alt="Crawford Ranch Logo" 
-                className="h-12 w-auto"
-              />
-            </Link>
+            {location !== '/' && (
+              <Link href="/" className="flex items-center">
+                <img 
+                  src={wideLogoImage} 
+                  alt="Crawford Ranch Logo" 
+                  className="h-10 w-auto"
+                />
+              </Link>
+            )}
           </div>
           
           <div className="hidden md:block">
