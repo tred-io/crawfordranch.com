@@ -17,8 +17,8 @@ import { apiRequest } from "@/lib/queryClient";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { insertContactInquirySchema } from "@shared/schema";
 import { RopeIcon, StarIcon } from "@/components/icons/ranch-icons";
+import DecorativeDivider from "@/components/decorative-divider";
 import SimpleMap from "@/components/map";
-import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 const formSchema = insertContactInquirySchema.extend({
   firstName: z.string().min(1, "First name is required"),
@@ -305,20 +305,7 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Decorative Rope Divider */}
-        <div className="bg-ranch-cream py-8">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
-            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-            <RopeIcon className="text-warm-gray h-4 w-32" />
-            <img 
-              src={barnWithBikesImage} 
-              alt="Barn with bikes" 
-              className="h-12 w-24 mx-4"
-            />
-            <RopeIcon className="text-warm-gray h-4 w-32" />
-            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-          </div>
-        </div>
+        <DecorativeDivider />
       </div>
       <Footer />
     </div>

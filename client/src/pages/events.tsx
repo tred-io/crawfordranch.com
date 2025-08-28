@@ -4,13 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "wouter";
-import { CowboyHatIcon, StarIcon, RopeIcon } from "@/components/icons/ranch-icons";
+import { CowboyHatIcon, StarIcon } from "@/components/icons/ranch-icons";
+import DecorativeDivider from "@/components/decorative-divider";
 import partyHouseImage from "@assets/wed-283001_1756230624714.jpg";
 import landscapeImage from "@assets/IMG_3326_1754202418292.jpg";
 import bluebonnetImage from "@assets/IMG_2196_1754202398409.jpg";
 import familyGetawaysImage from "@assets/IMG_7989_1754205048016.jpg";
 import huntingPartiesImage from "@assets/IMG_5829_1754205067288.jpg";
-import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 export default function Events() {
   const events = [
@@ -129,20 +129,7 @@ export default function Events() {
           </div>
         </section>
 
-        {/* Decorative Rope Divider */}
-        <div className="bg-ranch-cream py-8">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
-            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-            <RopeIcon className="text-warm-gray h-4 w-32" />
-            <img 
-              src={barnWithBikesImage} 
-              alt="Barn with bikes" 
-              className="h-12 w-24 mx-4"
-            />
-            <RopeIcon className="text-warm-gray h-4 w-32" />
-            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-          </div>
-        </div>
+        <DecorativeDivider />
       </div>
       <Footer />
     </div>

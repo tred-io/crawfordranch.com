@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
 import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
+import DecorativeDivider from "@/components/decorative-divider";
 import heroImage from "@assets/IMG_2196_1756230374363.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
-import barnWithBikesImage from "@assets/barn_with_bikes_sm_1756390597760.png";
 
 export default function Home() {
 
@@ -78,20 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Decorative Rope Divider */}
-      <div className="bg-ranch-cream py-9">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
-          <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-          <RopeIcon className="text-warm-gray h-4 w-32" />
-          <img 
-            src={barnWithBikesImage} 
-            alt="Barn with bikes" 
-            className="h-12 w-24 mx-4"
-          />
-          <RopeIcon className="text-warm-gray h-4 w-32" />
-          <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-        </div>
-      </div>
+      <DecorativeDivider />
 
       <Footer />
     </div>
