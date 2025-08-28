@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
+import { BluesonnetIcon, RopeIcon, StarIcon } from "@/components/icons/ranch-icons";
 import Lightbox from "@/components/lightbox";
 import ThumbnailImage from "@/components/thumbnail-image";
 import image1 from "@assets/IMG_0518_1754201480310.jpg";
@@ -214,19 +214,22 @@ export default function Gallery() {
             />
           </div>
         </section>
-      </div>
-      
-      {/* Floating Barn with Bikes */}
-      <div className="relative">
-        <div className="absolute bottom-8 right-8 z-10">
-          <img 
-            src={barnWithBikesImage} 
-            alt="Rustic barn with vintage bicycles" 
-            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
-          />
+
+        {/* Decorative Rope Divider */}
+        <div className="bg-ranch-cream py-8">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
+            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+            <RopeIcon className="text-warm-gray h-4 w-32" />
+            <img 
+              src={barnWithBikesImage} 
+              alt="Barn with bikes" 
+              className="h-12 w-24 mx-4"
+            />
+            <RopeIcon className="text-warm-gray h-4 w-32" />
+            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+          </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );

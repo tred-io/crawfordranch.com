@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Target, MapPin, Users, Award, Fish } from "lucide-react";
-import { StarIcon, LonghornIcon } from "@/components/icons/ranch-icons";
+import { StarIcon, LonghornIcon, RopeIcon } from "@/components/icons/ranch-icons";
 import huntingImage from "@assets/IMG_7597_1754202325477.jpg";
 import deerImage from "@assets/IMG_2721_1756229798753.jpg";
 import creekImage from "@assets/IMG_3328_1754202354559.jpg";
@@ -29,11 +29,7 @@ export default function Outfitter() {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
-                <img 
-                  src={barnWithBikesImage} 
-                  alt="Barn with bikes" 
-                  className="h-8 w-16 mx-2 opacity-70"
-                />
+                <LonghornIcon className="text-texas-maroon h-8 w-16 mx-2" />
                 <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
               </div>
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Premier Texas Hill Country Outfitting</h1>
@@ -200,19 +196,22 @@ export default function Outfitter() {
             </div>
           </div>
         </section>
-      </div>
-      
-      {/* Floating Barn with Bikes */}
-      <div className="relative">
-        <div className="absolute bottom-8 right-8 z-10">
-          <img 
-            src={barnWithBikesImage} 
-            alt="Rustic barn with vintage bicycles" 
-            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
-          />
+
+        {/* Decorative Rope Divider */}
+        <div className="bg-ranch-cream py-8">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
+            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+            <RopeIcon className="text-warm-gray h-4 w-32" />
+            <img 
+              src={barnWithBikesImage} 
+              alt="Barn with bikes" 
+              className="h-12 w-24 mx-4"
+            />
+            <RopeIcon className="text-warm-gray h-4 w-32" />
+            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+          </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );

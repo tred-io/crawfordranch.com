@@ -86,24 +86,13 @@ export default function Home() {
           <img 
             src={barnWithBikesImage} 
             alt="Barn with bikes" 
-            className="h-8 w-16 mx-4 opacity-70"
+            className="h-12 w-24 mx-4"
           />
           <RopeIcon className="text-warm-gray h-4 w-32" />
           <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
         </div>
       </div>
 
-      {/* Floating Barn with Bikes */}
-      <div className="relative">
-        <div className="absolute -bottom-3 right-5 z-10">
-          <img 
-            src={barnWithBikesImage} 
-            alt="Rustic barn with vintage bicycles" 
-            className="w-32 md:w-32 lg:w-36 opacity-60"
-          />
-        </div>
-      </div>
-      
       <Footer />
     </div>
   );

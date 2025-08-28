@@ -304,19 +304,22 @@ export default function Contact() {
             </div>
           </div>
         </section>
-      </div>
-      
-      {/* Floating Barn with Bikes */}
-      <div className="relative">
-        <div className="absolute bottom-8 right-8 z-10">
-          <img 
-            src={barnWithBikesImage} 
-            alt="Rustic barn with vintage bicycles" 
-            className="w-32 md:w-40 lg:w-48 opacity-60 hover:opacity-80 transition-opacity"
-          />
+
+        {/* Decorative Rope Divider */}
+        <div className="bg-ranch-cream py-8">
+          <div className="max-w-7xl mx-auto px-4 flex items-center justify-center">
+            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+            <RopeIcon className="text-warm-gray h-4 w-32" />
+            <img 
+              src={barnWithBikesImage} 
+              alt="Barn with bikes" 
+              className="h-12 w-24 mx-4"
+            />
+            <RopeIcon className="text-warm-gray h-4 w-32" />
+            <StarIcon className="text-texas-maroon h-6 w-6 mx-4" />
+          </div>
         </div>
       </div>
-      
       <Footer />
     </div>
   );
