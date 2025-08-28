@@ -36,7 +36,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             {location !== '/' && (
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <img 
                   src={wideLogoImage} 
                   alt="Crawford Ranch Logo" 
@@ -63,7 +63,7 @@ export default function Navigation() {
                 </Link>
               ))}
               <Link href="/contact">
-                <Button className="bg-texas-maroon text-white hover:bg-texas-maroon-light">
+                <Button className="bg-texas-maroon text-white hover:bg-texas-maroon-light" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   Contact
                 </Button>
               </Link>
