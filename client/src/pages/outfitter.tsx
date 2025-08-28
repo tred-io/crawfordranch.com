@@ -11,6 +11,7 @@ import deerImage from "@assets/IMG_2721_1756229798753.jpg";
 import creekImage from "@assets/IMG_3328_1754202354559.jpg";
 import lodgeImage from "@assets/IMG_3645_1756229827038.jpg";
 import guideImage from "@assets/IMG_6604_1756230314550.jpg";
+import cardinalImage from "@assets/cardinal_1756393988044.png";
 
 export default function Outfitter() {
   const features = [
@@ -196,6 +197,17 @@ export default function Outfitter() {
             </div>
           </div>
         </section>
+
+        {/* Cardinal positioned randomly */}
+        <div className="relative">
+          <div className="absolute -top-5 left-1/3 z-10">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-9 h-9 opacity-85"
+            />
+          </div>
+        </div>
 
         <DecorativeDivider />
       </div>

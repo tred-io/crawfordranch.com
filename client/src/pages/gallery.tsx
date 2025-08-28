@@ -5,6 +5,7 @@ import { BluesonnetIcon, RopeIcon } from "@/components/icons/ranch-icons";
 import DecorativeDivider from "@/components/decorative-divider";
 import Lightbox from "@/components/lightbox";
 import ThumbnailImage from "@/components/thumbnail-image";
+import cardinalImage from "@assets/cardinal_1756393988044.png";
 import image1 from "@assets/IMG_0518_1754201480310.jpg";
 import image2 from "@assets/IMG_1144_1754201480312.jpg";
 import image3 from "@assets/IMG_2788_1754201480313.jpg";
@@ -214,6 +215,17 @@ export default function Gallery() {
             />
           </div>
         </section>
+
+        {/* Cardinal positioned randomly */}
+        <div className="relative">
+          <div className="absolute -top-7 right-1/4 z-10">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-10 h-10 opacity-90"
+            />
+          </div>
+        </div>
 
         <DecorativeDivider />
       </div>

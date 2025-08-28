@@ -8,6 +8,7 @@ import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from 
 import DecorativeDivider from "@/components/decorative-divider";
 import heroImage from "@assets/IMG_2196_1756230374363.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
+import cardinalImage from "@assets/cardinal_1756393988044.png";
 
 export default function Home() {
 
@@ -77,6 +78,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Cardinal positioned randomly */}
+      <div className="relative">
+        <div className="absolute -top-8 right-1/4 z-10">
+          <img 
+            src={cardinalImage} 
+            alt="Cardinal" 
+            className="w-12 h-12 opacity-80"
+          />
+        </div>
+      </div>
 
       <DecorativeDivider />
 

@@ -6,6 +6,7 @@ import barnImage from "@assets/IMG_5016_1756230324987.jpg";
 import fieldImage from "@assets/IMG_0518_1754201480310.jpg";
 import cattleFieldImage from "@assets/IMG_2786_2_1756229049596.jpg";
 import cattleImage from "@assets/IMG_7989_1754205048016.jpg";
+import cardinalImage from "@assets/cardinal_1756393988044.png";
 
 export default function About() {
   return (
@@ -119,6 +120,17 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* Cardinal positioned randomly */}
+        <div className="relative">
+          <div className="absolute -top-6 left-16 z-10">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-10 h-10 opacity-80"
+            />
+          </div>
+        </div>
 
         <DecorativeDivider />
       </div>

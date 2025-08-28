@@ -19,6 +19,7 @@ import { insertContactInquirySchema } from "@shared/schema";
 import { RopeIcon, StarIcon } from "@/components/icons/ranch-icons";
 import DecorativeDivider from "@/components/decorative-divider";
 import SimpleMap from "@/components/map";
+import cardinalImage from "@assets/cardinal_1756393988044.png";
 
 const formSchema = insertContactInquirySchema.extend({
   firstName: z.string().min(1, "First name is required"),
@@ -304,6 +305,17 @@ export default function Contact() {
             </div>
           </div>
         </section>
+
+        {/* Cardinal positioned randomly */}
+        <div className="relative">
+          <div className="absolute -top-6 left-1/4 z-10">
+            <img 
+              src={cardinalImage} 
+              alt="Cardinal" 
+              className="w-11 h-11 opacity-80"
+            />
+          </div>
+        </div>
 
         <DecorativeDivider />
       </div>
