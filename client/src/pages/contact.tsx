@@ -143,11 +143,11 @@ export default function Contact() {
                 
                 <div className="relative">
                   {/* Cardinal sitting on map box */}
-                  <div className="absolute -top-2 right-4 z-20">
+                  <div className="absolute top-20 right-16 z-20">
                     <img 
                       src={cardinalImage} 
                       alt="Cardinal" 
-                      className="w-6 h-6 sm:w-8 sm:h-8 opacity-80"
+                      className="w-6 opacity-80"
                     />
                   </div>
                   <SimpleMap 
