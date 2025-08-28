@@ -89,11 +89,11 @@ export default function Events() {
                       <div className={`${!isEven ? 'md:col-start-3 md:col-span-3' : 'md:col-span-3'} relative`}>
                         {/* Cardinal sitting on first event image */}
                         {index === 0 && (
-                          <div className="absolute top-4 right-4 z-20">
+                          <div className="absolute -bottom-2 left-4 z-20">
                             <img 
                               src={cardinalImage} 
                               alt="Cardinal" 
-                              className="w-6 h-6 sm:w-8 sm:h-8 opacity-80"
+                              className="w-6 opacity-80"
                             />
                           </div>
                         )}

@@ -55,11 +55,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               {/* Cardinal sitting on barn image */}
-              <div className="absolute -top-2 right-4 z-20">
+              <div className="absolute -top-6 right-4 z-20">
                 <img 
                   src={cardinalImage} 
                   alt="Cardinal" 
-                  className="w-6 h-6 sm:w-8 sm:h-8 opacity-85"
+                  className="w-6 opacity-85"
                 />
               </div>
               <img 

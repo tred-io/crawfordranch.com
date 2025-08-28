@@ -141,11 +141,21 @@ export default function Contact() {
                   </CardContent>
                 </Card>
                 
-                <SimpleMap 
-                  latitude={31.052657624177748} 
-                  longitude={-98.12161918442692} 
-                  title="Crawford Ranch Location" 
-                />
+                <div className="relative">
+                  {/* Cardinal sitting on map box */}
+                  <div className="absolute -top-2 right-4 z-20">
+                    <img 
+                      src={cardinalImage} 
+                      alt="Cardinal" 
+                      className="w-6 h-6 sm:w-8 sm:h-8 opacity-80"
+                    />
+                  </div>
+                  <SimpleMap 
+                    latitude={31.052657624177748} 
+                    longitude={-98.12161918442692} 
+                    title="Crawford Ranch Location" 
+                  />
+                </div>
               </div>
               
               <Card className="bg-white shadow-lg">

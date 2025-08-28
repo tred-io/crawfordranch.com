@@ -41,14 +41,6 @@ export default function Outfitter() {
             </div>
             
             <div className="mb-16 relative">
-              {/* Cardinal sitting on hunting image */}
-              <div className="absolute -top-2 right-6 z-20">
-                <img 
-                  src={cardinalImage} 
-                  alt="Cardinal" 
-                  className="w-6 h-6 sm:w-8 sm:h-8 opacity-85"
-                />
-              </div>
               <img 
                 src={huntingImage} 
                 alt="White-tail deer and wild turkeys feeding at ranch" 
@@ -192,7 +184,15 @@ export default function Outfitter() {
               </Card>
             </div>
             
-            <div className="text-center bg-texas-maroon text-white p-8 rounded-lg">
+            <div className="text-center bg-texas-maroon text-white p-8 rounded-lg relative">
+              {/* Cardinal sitting on hunting image */}
+              <div className="absolute -top-6 right-6 z-20">
+                <img 
+                  src={cardinalImage} 
+                  alt="Cardinal" 
+                  className="w-6 opacity-85"
+                />
+              </div>
               <h2 className="text-3xl font-merriweather font-bold mb-4">Ready to Book Your Outdoor Adventure?</h2>
               <p className="text-xl mb-6 leading-relaxed">
                 Contact us today to discuss packages, pricing, and availability for your Texas Hill Country hunting and fishing experience.

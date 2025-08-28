@@ -197,12 +197,12 @@ export default function Gallery() {
               {images.map((image, index) => (
                 <div key={index} className="relative">
                   {/* Cardinal sitting on third gallery image */}
-                  {index === 2 && (
-                    <div className="absolute -top-2 right-2 z-20">
+                  {index === 11 && (
+                    <div className="absolute -top-6 right-2 z-20">
                       <img 
                         src={cardinalImage} 
                         alt="Cardinal" 
-                        className="w-5 h-5 sm:w-6 sm:h-6 opacity-90"
+                        className="w-6 opacity-90"
                       />
                     </div>
                   )}
