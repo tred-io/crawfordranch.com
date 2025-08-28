@@ -21,14 +21,20 @@ export default function SimpleMap({ latitude, longitude, title }: SimpleMapProps
       
       <div className="bg-white rounded-lg p-4 shadow-lg">
         <div className="aspect-video rounded-lg relative overflow-hidden">
-          {/* Google Maps Static API terrain image */}
-          <img 
-            src={`https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=10&size=640x360&maptype=terrain&markers=color:red%7Clabel:R%7C${latitude},${longitude}&key=AIzaSyA5kEQCz9N5aN8Fa4HjTzgLQQmH7bOzNkE`}
-            alt="Crawford Ranch Location - Terrain Map"
-            className="w-full h-full object-cover rounded-lg"
+          {/* Google Maps Embed */}
+          <iframe
+            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyA5kEQCz9N5aN8Fa4HjTzgLQQmH7bOzNkE&q=${latitude},${longitude}&zoom=10&maptype=terrain`}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="rounded-lg"
+            title="Crawford Ranch Location"
           />
           
-          <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-2 text-xs text-gray-600">
+          <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-2 text-xs text-gray-600 pointer-events-none">
             <p className="font-semibold">Crawford Ranch</p>
             <p>Central Texas Hill Country</p>
           </div>
