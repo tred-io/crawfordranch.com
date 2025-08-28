@@ -40,7 +40,7 @@ export default function Navigation() {
                 <img 
                   src={wideLogoImage} 
                   alt="Crawford Ranch Logo" 
-                  className="h-10 w-auto"
+                  className="h-10 md:h-12 lg:h-14 w-auto opacity-80"
                 />
               </Link>
             )}
