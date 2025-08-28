@@ -23,7 +23,7 @@ export default function SimpleMap({ latitude, longitude, title }: SimpleMapProps
         <div className="aspect-video rounded-lg relative overflow-hidden">
           {/* Google Maps Embed */}
           <iframe
-            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyA5kEQCz9N5aN8Fa4HjTzgLQQmH7bOzNkE&q=${latitude},${longitude}&zoom=10&maptype=terrain`}
+            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyA5kEQCz9N5aN8Fa4HjTzgLQQmH7bOzNkE&q=${latitude},${longitude}&zoom=10`}
             width="100%"
             height="100%"
             style={{ border: 0 }}
