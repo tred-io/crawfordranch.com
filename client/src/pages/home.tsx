@@ -51,17 +51,17 @@ export default function Home() {
 
       {/* About Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          {/* Cardinal positioned on about section */}
-          <div className="absolute top-6 right-4 md:right-12 z-20">
-            <img 
-              src={cardinalImage} 
-              alt="Cardinal" 
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-85"
-            />
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative">
+              {/* Cardinal sitting on barn image */}
+              <div className="absolute -top-2 right-4 z-20">
+                <img 
+                  src={cardinalImage} 
+                  alt="Cardinal" 
+                  className="w-6 h-6 sm:w-8 sm:h-8 opacity-85"
+                />
+              </div>
               <img 
                 src={barnImage} 
                 alt="Historic Crawford Ranch barn with cattle corrals" 

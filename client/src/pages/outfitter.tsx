@@ -25,15 +25,7 @@ export default function Outfitter() {
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
       <div className="pt-16">
-        <section className="py-20 bg-white relative">
-          {/* Cardinal positioned on hunting section */}
-          <div className="absolute top-12 right-8 md:right-24 z-20">
-            <img 
-              src={cardinalImage} 
-              alt="Cardinal" 
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-85"
-            />
-          </div>
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
@@ -48,7 +40,15 @@ export default function Outfitter() {
               </p>
             </div>
             
-            <div className="mb-16">
+            <div className="mb-16 relative">
+              {/* Cardinal sitting on hunting image */}
+              <div className="absolute -top-2 right-6 z-20">
+                <img 
+                  src={cardinalImage} 
+                  alt="Cardinal" 
+                  className="w-6 h-6 sm:w-8 sm:h-8 opacity-85"
+                />
+              </div>
               <img 
                 src={huntingImage} 
                 alt="White-tail deer and wild turkeys feeding at ranch" 

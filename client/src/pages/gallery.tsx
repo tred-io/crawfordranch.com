@@ -180,15 +180,7 @@ export default function Gallery() {
       <Navigation />
       <div className="pt-16">
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            {/* Cardinal positioned on gallery */}
-            <div className="absolute top-8 left-6 md:left-16 z-20">
-              <img 
-                src={cardinalImage} 
-                alt="Cardinal" 
-                className="w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 opacity-90"
-              />
-            </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Crawford Ranch Gallery</h1>
               <div className="flex items-center justify-center mb-6">
@@ -203,13 +195,24 @@ export default function Gallery() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {images.map((image, index) => (
-                <ThumbnailImage
-                  key={index}
-                  src={image.src}
-                  alt={image.alt}
-                  className={image.className}
-                  onClick={() => openLightbox(index)}
-                />
+                <div key={index} className="relative">
+                  {/* Cardinal sitting on third gallery image */}
+                  {index === 2 && (
+                    <div className="absolute -top-2 right-2 z-20">
+                      <img 
+                        src={cardinalImage} 
+                        alt="Cardinal" 
+                        className="w-5 h-5 sm:w-6 sm:h-6 opacity-90"
+                      />
+                    </div>
+                  )}
+                  <ThumbnailImage
+                    src={image.src}
+                    alt={image.alt}
+                    className={image.className}
+                    onClick={() => openLightbox(index)}
+                  />
+                </div>
               ))}
             </div>
 

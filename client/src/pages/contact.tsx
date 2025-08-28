@@ -103,15 +103,7 @@ export default function Contact() {
       <Navigation />
       <div className="pt-16">
         <section className="py-20 bg-ranch-cream">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-            {/* Cardinal positioned on contact form */}
-            <div className="absolute top-8 right-4 md:right-16 z-20">
-              <img 
-                src={cardinalImage} 
-                alt="Cardinal" 
-                className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-80"
-              />
-            </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-merriweather font-black text-texas-maroon mb-6">Contact Crawford Ranch - Book Your Texas Event</h1>
               <div className="flex items-center justify-center mb-6">

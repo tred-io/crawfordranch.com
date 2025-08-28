@@ -72,15 +72,7 @@ export default function Events() {
               </p>
             </div>
             
-            <div className="space-y-16 relative">
-              {/* Cardinal positioned on events content */}
-              <div className="absolute -top-4 left-6 md:left-16 z-20">
-                <img 
-                  src={cardinalImage} 
-                  alt="Cardinal" 
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-9 md:h-9 opacity-80"
-                />
-              </div>
+            <div className="space-y-16">
               {events.map((event, index) => {
                 const isEven = index % 2 === 0;
                 const bgColors = [
@@ -95,6 +87,16 @@ export default function Events() {
                     <div className={`grid md:grid-cols-5 ${!isEven ? 'md:grid-flow-col-dense' : ''}`}>
                       {/* Image Section */}
                       <div className={`${!isEven ? 'md:col-start-3 md:col-span-3' : 'md:col-span-3'} relative`}>
+                        {/* Cardinal sitting on first event image */}
+                        {index === 0 && (
+                          <div className="absolute top-4 right-4 z-20">
+                            <img 
+                              src={cardinalImage} 
+                              alt="Cardinal" 
+                              className="w-6 h-6 sm:w-8 sm:h-8 opacity-80"
+                            />
+                          </div>
+                        )}
                         <img 
                           src={event.image} 
                           alt={event.title}

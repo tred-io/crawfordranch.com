@@ -14,12 +14,12 @@ export default function About() {
       <Navigation />
       <div className="pt-16">
         <div className="bg-texas-maroon py-16 relative">
-          {/* Cardinal positioned on header section */}
-          <div className="absolute top-8 right-4 md:right-16 z-20">
+          {/* Cardinal sitting on maroon background block */}
+          <div className="absolute top-4 right-8 md:right-20 z-20">
             <img 
               src={cardinalImage} 
               alt="Cardinal" 
-              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-75"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-85"
             />
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
