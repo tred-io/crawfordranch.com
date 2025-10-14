@@ -68,7 +68,7 @@ export default function ThumbnailImage({ src, alt, className, onClick }: Thumbna
           style={{
             contentVisibility: 'auto',
             containIntrinsicSize: '300px 200px',
-            imageRendering: 'optimizeQuality'
+            imageRendering: 'high-quality' as any
           }}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
