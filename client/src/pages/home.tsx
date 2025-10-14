@@ -1,88 +1,167 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
-import FloatingLogo from "@/components/floating-logo";
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { ChevronDown } from "lucide-react";
-import { LonghornIcon, StarIcon, RopeIcon, HorseshoeIcon, BluesonnetIcon } from "@/components/icons/ranch-icons";
+import HeroCarousel from "@/components/hero-carousel";
+import HighlightCard from "@/components/highlight-card";
 import DecorativeDivider from "@/components/decorative-divider";
-import heroImage from "@assets/IMG_2196_1756230374363.jpg";
+import heroImage1 from "@assets/IMG_2196_1756230374363.jpg";
+import heroImage2 from "@assets/IMG_3326_1754202418292.jpg";
+import heroImage3 from "@assets/IMG_3645_1754201480316.jpg";
+import heroImage4 from "@assets/IMG_7597_1754202325477.jpg";
+import heroImage5 from "@assets/IMG_2721_1756229798753.jpg";
+import heroImage6 from "@assets/IMG_6604_1756230314550.jpg";
 import barnImage from "@assets/IMG_0518_1754201480310.jpg";
 import cardinalImage from "@assets/cardinal_1756393988044.png";
+import weddingImage from "@assets/wed-283001_1756230624714.jpg";
+import corporateImage from "@assets/IMG_3326_1754202418292.jpg";
+import activitiesImage from "@assets/IMG_3645_1754201480316.jpg";
+import attractionsImage from "@assets/IMG_2721_1756229798753.jpg";
 
 export default function Home() {
+  const heroSlides = [
+    {
+      image: heroImage1,
+      title: "Four Generations of Texas Heritage",
+      subtitle: "Experience authentic ranch life in the heart of the Texas Hill Country"
+    },
+    {
+      image: heroImage2,
+      title: "Where Memories Are Made",
+      subtitle: "Host your special event surrounded by natural beauty and rustic elegance"
+    },
+    {
+      image: heroImage3,
+      title: "Adventure Awaits",
+      subtitle: "Discover trails, wildlife, and the spirit of the Old West"
+    },
+    {
+      image: heroImage4,
+      title: "Celebrate Under Texas Skies",
+      subtitle: "From intimate gatherings to grand celebrations, create unforgettable moments"
+    },
+    {
+      image: heroImage5,
+      title: "Nature's Sanctuary",
+      subtitle: "Witness breathtaking wildlife and pristine landscapes in every season"
+    },
+    {
+      image: heroImage6,
+      title: "Your Texas Story Begins Here",
+      subtitle: "Hunting, outfitting, and authentic ranch experiences for every adventurer"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
-      <FloatingLogo />
 
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url("${heroImage}")`
-          }}
-        />
-        
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 pt-24">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-merriweather font-black mb-6 leading-tight">
-            <span className="block sm:inline">Four Generations of</span>
-            <span className="block sm:inline"> Texas Heritage</span><br className="hidden sm:block" />
-            <span className="text-white block sm:inline">In the Beautiful Hill Country</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 font-crimson leading-relaxed">
-            A generational cattle and hunting ranch where families gather, friends connect, and memories are made.<br />
-            Experience the perfect blend of adventure and relaxation in one of Texas's most beautiful landscapes.
-          </p>
-          <div className="flex justify-center">
-            <Link href="/events">
-              <Button className="bg-texas-maroon hover:bg-texas-maroon-light text-white px-12 py-6 text-xl font-bold shadow-lg hover:shadow-xl transition-all">
-                Plan Your Event
-              </Button>
-            </Link>
-          </div>
-        </div>
-        
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="text-white text-2xl h-8 w-8" />
-        </div>
-      </section>
+      {/* Hero Carousel */}
+      <HeroCarousel slides={heroSlides} />
 
       {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white texture-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               {/* Cardinal sitting on barn image */}
               <div className="absolute -top-6 right-4 z-20">
-                <img 
-                  src={cardinalImage} 
-                  alt="Cardinal" 
+                <img
+                  src={cardinalImage}
+                  alt="Cardinal"
                   className="w-6 opacity-85"
                 />
               </div>
-              <img 
-                src={barnImage} 
-                alt="Historic Crawford Ranch barn with cattle corrals" 
+              <img
+                src={barnImage}
+                alt="Historic Crawford Ranch barn with cattle corrals"
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
-            
+
             <div className="space-y-6">
-              <h2 className="text-3xl font-merriweather font-bold text-texas-maroon">A Testament to Family, Tradition & the Great Outdoors</h2>
-              <p className="text-lg text-warm-gray leading-relaxed">
-                Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch stands as 
-                a testament to the enduring spirit of family, tradition, and the great outdoors. For over four generations, we have 
+              <h2 className="text-4xl font-playfair font-bold text-texas-maroon">
+                <span className="decorative-line">A Testament to Family</span>
+              </h2>
+              <p className="text-lg text-warm-gray leading-relaxed font-inter">
+                Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch stands as
+                a testament to the enduring spirit of family, tradition, and the great outdoors. For over four generations, we have
                 cultivated this land, not just as a business but as a way of life.
               </p>
-              <p className="text-lg text-warm-gray leading-relaxed">
-                Our ranch is now a place where families gather, friends connect, and memories are made. We invite visitors to 
-                immerse themselves in the beauty of the Texas Hill Country, where nature and heritage intertwine to create 
+              <p className="text-lg text-warm-gray leading-relaxed font-inter">
+                Our ranch is now a place where families gather, friends connect, and memories are made. We invite visitors to
+                immerse themselves in the beauty of the Texas Hill Country, where nature and heritage intertwine to create
                 unforgettable experiences amid stunning landscapes.
               </p>
-              
             </div>
+          </div>
+        </div>
+      </section>
+
+      <DecorativeDivider />
+
+      {/* Textured Accent Bar */}
+      <div className="section-bar texture-cowhide py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-3xl md:text-4xl font-playfair font-bold text-ranch-brown mb-3">
+            Authentic Texas Ranch Experiences
+          </h3>
+          <p className="text-lg text-ranch-brown/80 max-w-2xl mx-auto font-inter">
+            From working cattle to elegant events, experience the true spirit of Hill Country hospitality
+          </p>
+        </div>
+      </div>
+
+      {/* Highlights Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold text-texas-maroon mb-4">
+              Discover Crawford Ranch
+            </h2>
+            <p className="text-xl text-warm-gray max-w-3xl mx-auto font-inter">
+              From intimate gatherings to corporate retreats, experience the perfect blend of rustic charm and upscale amenities
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <HighlightCard
+              image={weddingImage}
+              title="Events & Outfitting"
+              description="Create unforgettable memories with weddings, celebrations, and special events in our stunning Hill Country setting. Professional venues and authentic Texas hospitality await."
+              learnMoreLink="/events"
+              bookNowLink="/contact"
+              learnMoreParams="?source=home-highlights"
+              bookNowParams="?context=events&eventType=Wedding&source=home-highlights"
+            />
+
+            <HighlightCard
+              image={corporateImage}
+              title="Corporate Retreats"
+              description="Inspire your team with productive meetings and strategic planning in our tranquil ranch environment. Private spaces, team building activities, and natural beauty combine for success."
+              learnMoreLink="/corporate"
+              bookNowLink="/contact"
+              learnMoreParams="?source=home-highlights"
+              bookNowParams="?context=corporate&eventType=Corporate%20Retreat&source=home-highlights"
+            />
+
+            <HighlightCard
+              image={activitiesImage}
+              title="Activities & Trails"
+              description="Explore scenic trails, experience authentic ranch life, and discover the natural beauty of the Texas Hill Country through guided activities and adventures for all ages."
+              learnMoreLink="/activities"
+              bookNowLink="/contact"
+              learnMoreParams="?source=home-highlights"
+              bookNowParams="?context=activities&eventType=Activities%20Inquiry&source=home-highlights"
+            />
+
+            <HighlightCard
+              image={attractionsImage}
+              title="Local Central Texas Attractions"
+              description="Enhance your ranch experience with nearby Hill Country wineries, historic towns, live music venues, and natural wonders. We're your gateway to the best of Central Texas."
+              learnMoreLink="/local-attractions"
+              bookNowLink="/contact"
+              learnMoreParams="?source=home-highlights"
+              bookNowParams="?context=attractions&source=home-highlights"
+            />
           </div>
         </div>
       </section>

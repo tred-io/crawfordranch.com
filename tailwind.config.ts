@@ -64,8 +64,9 @@ export default {
       },
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],
-        'crimson': ['Crimson Text', 'serif'],
-        'merriweather': ['Merriweather', 'serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        'serif': ['Playfair Display', 'serif'],
       },
       keyframes: {
         "accordion-down": {

@@ -6,7 +6,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Events from "@/pages/events";
-import Outfitter from "@/pages/outfitter";
+import Corporate from "@/pages/corporate";
+import Activities from "@/pages/activities";
+import LocalAttractions from "@/pages/local-attractions";
 import Gallery from "@/pages/gallery";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
@@ -17,7 +19,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/events" component={Events} />
-      <Route path="/outfitter" component={Outfitter} />
+      <Route path="/corporate" component={Corporate} />
+      <Route path="/activities" component={Activities} />
+      <Route path="/local-attractions" component={LocalAttractions} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
