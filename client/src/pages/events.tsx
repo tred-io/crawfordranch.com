@@ -140,6 +140,18 @@ export default function Events() {
           </div>
         </section>
 
+        {/* Textured Accent Bar */}
+        <div className="section-bar texture-brand py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-3">
+              Your Event, Your Way
+            </h3>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto font-inter">
+              Personalized service and attention to detail make every Crawford Ranch event extraordinary
+            </p>
+          </div>
+        </div>
+
         <DecorativeDivider />
       </div>
       <Footer />

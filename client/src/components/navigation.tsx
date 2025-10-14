@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { CattleBrandIcon } from "@/components/icons/ranch-icons";
 import wideLogoImage from "@assets/logo_wide_1754206705389.png";
 
 export default function Navigation() {
@@ -13,7 +12,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -22,71 +21,44 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About the Ranch' },
-    { href: '/events', label: 'Events' },
-    { href: '/outfitter', label: 'Outfitter' },
+    { href: '/events', label: 'Events & Outfitting' },
+    { href: '/corporate', label: 'Corporate Retreats' },
+    { href: '/activities', label: 'Activities / Trails' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/about', label: 'About' },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-sm shadow-sm' : 'bg-white/95 backdrop-blur-sm'
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+      isScrolled
+        ? 'bg-white shadow-lg py-3'
+        : 'bg-white/98 shadow-md py-6'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            {location !== '/' && (
-              <Link href="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                <img 
-                  src={wideLogoImage} 
-                  alt="Crawford Ranch Logo" 
-                  className="h-10 md:h-12 lg:h-14 w-auto opacity-80"
-                />
-              </Link>
-            )}
-          </div>
-          
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`transition-colors font-medium ${
-                    location === item.href 
-                      ? 'text-texas-maroon' 
-                      : 'text-ranch-brown hover:text-texas-maroon'
-                  }`}
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <Link href="/contact">
-                <Button className="bg-texas-maroon text-white hover:bg-texas-maroon-light" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  Contact
-                </Button>
-              </Link>
-            </div>
-          </div>
-          
-          <div className="md:hidden">
+        <div className="flex items-center justify-between">
+          {/* Left: Hamburger Menu */}
+          <div className="flex-shrink-0">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6 text-ranch-brown" />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-texas-maroon hover:bg-ranch-cream/50 h-12 w-12"
+                  aria-label="Open menu"
+                >
+                  <Menu className="h-8 w-8" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <div className="flex flex-col space-y-4 mt-6">
+              <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-ranch-cream">
+                <nav className="flex flex-col space-y-1 mt-8" role="navigation" aria-label="Main navigation">
                   {navItems.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`text-left px-3 py-2 transition-colors font-medium ${
-                        location === item.href 
-                          ? 'text-texas-maroon' 
-                          : 'text-ranch-brown hover:text-texas-maroon'
+                      className={`text-left px-4 py-3 transition-colors font-medium text-lg rounded-md ${
+                        location === item.href
+                          ? 'text-texas-maroon bg-white/50'
+                          : 'text-ranch-brown hover:text-texas-maroon hover:bg-white/30'
                       }`}
                       onClick={() => {
                         setIsOpen(false);
@@ -98,18 +70,45 @@ export default function Navigation() {
                   ))}
                   <Link href="/contact">
                     <Button
-                      className="bg-texas-maroon text-white hover:bg-texas-maroon-light mt-4"
+                      className="w-full bg-texas-maroon text-white hover:bg-texas-maroon-light mt-6"
                       onClick={() => {
                         setIsOpen(false);
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                     >
-                      Contact
+                      Contact Us
                     </Button>
                   </Link>
-                </div>
+                </nav>
               </SheetContent>
             </Sheet>
+          </div>
+
+          {/* Center: Logo */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
+            <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <img
+                src={wideLogoImage}
+                alt="Crawford Ranch"
+                className={`transition-all duration-500 ease-out object-contain ${
+                  isScrolled
+                    ? 'h-12 md:h-14'
+                    : 'h-16 md:h-20 lg:h-24'
+                }`}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
+              />
+            </Link>
+          </div>
+
+          {/* Right: Book Now Button */}
+          <div className="flex-shrink-0">
+            <Link href="/contact?context=booking&source=header">
+              <Button
+                className="bg-texas-maroon text-white hover:bg-texas-maroon-light hover:shadow-lg transition-all duration-300 font-semibold px-6 py-5 text-base"
+              >
+                Book Now
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>

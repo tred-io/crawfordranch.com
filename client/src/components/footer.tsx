@@ -7,16 +7,17 @@ export default function Footer() {
   const quickLinks = [
     { href: '/about', label: 'About the Ranch' },
     { href: '/events', label: 'Events' },
-    { href: '/outfitter', label: 'Outfitter' },
+    { href: '/corporate', label: 'Corporate Retreats' },
+    { href: '/activities', label: 'Activities' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/contact', label: 'Contact' },
   ];
 
   const services = [
     { href: '/events', label: 'Wedding Venues' },
-    { href: '/events', label: 'Retreats' },
-    { href: '/outfitter', label: 'Hunting Trips' },
-    { href: '/outfitter', label: 'Creek Fishing' },
+    { href: '/corporate', label: 'Retreats' },
+    { href: '/activities', label: 'Guided Activities' },
+    { href: '/local-attractions', label: 'Local Attractions' },
   ];
 
   return (

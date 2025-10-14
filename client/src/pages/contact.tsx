@@ -53,12 +53,41 @@ export default function Contact() {
     },
   });
 
-  // Handle URL parameters for prepopulating event type
+  // Handle URL parameters for prepopulating form fields
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
+
+    // Legacy support for 'event' param
     const eventParam = urlParams.get('event');
     if (eventParam) {
       form.setValue('eventType', eventParam);
+    }
+
+    // New prefill support
+    const eventType = urlParams.get('eventType');
+    if (eventType) {
+      form.setValue('eventType', decodeURIComponent(eventType));
+    }
+
+    const context = urlParams.get('context');
+    const source = urlParams.get('source');
+
+    // Set default message based on context and source
+    if (context || source) {
+      const contextMessages: Record<string, string> = {
+        'booking': 'I am interested in booking an event at Crawford Ranch.',
+        'events': 'I would like to learn more about hosting an event at Crawford Ranch.',
+        'corporate': 'I am interested in planning a corporate retreat at Crawford Ranch.',
+        'activities': 'I would like to learn more about activities and trails at Crawford Ranch.',
+        'attractions': 'I am interested in visiting Crawford Ranch and exploring local Central Texas attractions.'
+      };
+
+      const defaultMessage = contextMessages[context || ''] || 'I am interested in learning more about Crawford Ranch.';
+
+      // Only set message if it's currently empty
+      if (!form.getValues('message')) {
+        form.setValue('message', defaultMessage);
+      }
     }
   }, [form, location]);
 
@@ -90,11 +119,14 @@ export default function Contact() {
 
   const eventTypes = [
     "Wedding",
+    "Corporate Retreat",
     "Retreats",
     "Family Reunion",
+    "Activities Inquiry",
     "Bachelor/Bachelorette Party",
     "Hunting Trip",
     "Creek Fishing",
+    "General Inquiry",
     "Other"
   ];
 
@@ -230,7 +262,7 @@ export default function Contact() {
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Event Type</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <Select onValueChange={field.onChange} value={field.value}>
                               <FormControl>
                                 <SelectTrigger>
                                   <SelectValue placeholder="Select an event type" />
