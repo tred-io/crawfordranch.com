@@ -10,6 +10,7 @@ interface HighlightCardProps {
   bookNowLink: string;
   learnMoreParams?: string;
   bookNowParams?: string;
+  accent?: boolean;
 }
 
 export default function HighlightCard({
@@ -20,9 +21,10 @@ export default function HighlightCard({
   bookNowLink,
   learnMoreParams = '',
   bookNowParams = '',
+  accent = false,
 }: HighlightCardProps) {
   return (
-    <div className="group relative bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+    <div className={`card group relative bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 ${accent ? 'card--accent' : ''}`}>
       {/* Image Container */}
       <div className="relative h-64 overflow-hidden">
         <div
@@ -57,7 +59,7 @@ export default function HighlightCard({
             </Button>
           </Link>
           <Link href={`${bookNowLink}${bookNowParams}`} className="flex-1">
-            <Button className="w-full bg-texas-maroon text-white hover:bg-texas-maroon-light transition-colors">
+            <Button className={`w-full transition-colors ${accent ? 'btn-accent' : 'bg-texas-maroon text-white hover:bg-texas-maroon-light'}`}>
               Book Now
             </Button>
           </Link>

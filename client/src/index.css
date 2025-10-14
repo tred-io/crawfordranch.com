@@ -38,6 +38,19 @@
   --sage-teal: hsl(180, 25%, 55%);
   --sage-teal-light: hsl(180, 30%, 65%);
   --sage-teal-dark: hsl(180, 20%, 45%);
+
+  /* Alisal-style accent and depth */
+  --color-accent: #2a9d8f;
+  --color-maroon: hsl(357, 85%, 25%);
+  --color-blue: #4a5d7a;
+  --color-ink: hsl(30, 67%, 14%);
+  --elev-1: 0 6px 14px rgba(0,0,0,.08), 0 1px 0 rgba(0,0,0,.04);
+  --elev-2: 0 14px 40px rgba(0,0,0,.12), 0 2px 0 rgba(0,0,0,.04);
+  --elev-3: 0 28px 80px rgba(0,0,0,.18), 0 3px 0 rgba(0,0,0,.05);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 .dark {
@@ -341,5 +354,197 @@
     .animate-kenburns {
       animation: none;
     }
+  }
+
+  /* ====== ALISAL-STYLE DELTA UPDATES ====== */
+
+  /* Depth - Floating Panels */
+  .panel {
+    background: #fffdf9;
+    border-radius: 14px;
+    box-shadow: var(--elev-2);
+  }
+
+  .panel--floating {
+    position: relative;
+  }
+
+  .panel--floating::after {
+    content: "";
+    position: absolute;
+    inset: auto 8% -14px 8%;
+    height: 28px;
+    background: radial-gradient(50% 60% at 50% 50%, rgba(0,0,0,.18), transparent 70%);
+    filter: blur(8px);
+    opacity: .35;
+    pointer-events: none;
+  }
+
+  /* Patterned color blocks */
+  .pattern {
+    position: relative;
+    color: #fff;
+  }
+
+  .pattern--maroon {
+    background: var(--color-maroon);
+  }
+
+  .pattern--blue {
+    background: var(--color-blue);
+  }
+
+  .pattern::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .18;
+    pointer-events: none;
+    background-image: url('/patterns/alisal-floral.svg');
+    background-size: 780px auto;
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+  }
+
+  .pattern--map::before {
+    background-image: url('/patterns/plat-map.svg');
+    opacity: .12;
+  }
+
+  /* Torn photo edge & stamp */
+  .torn {
+    position: relative;
+    background: #fffdf9;
+    box-shadow: var(--elev-1);
+  }
+
+  .torn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    -webkit-mask: url('/patterns/torn-edge.svg') 0/cover no-repeat;
+    mask: url('/patterns/torn-edge.svg') 0/cover no-repeat;
+    background: #fffdf9;
+  }
+
+  .stamp {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: url('/decor/stamp.svg') center/contain no-repeat;
+    opacity: .85;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,.15));
+  }
+
+  /* Typography enhancements */
+  .eyebrow {
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: color-mix(in lab, var(--color-ink) 70%, var(--color-maroon));
+  }
+
+  .display {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.05;
+    font-feature-settings: "liga", "dlig", "lnum";
+  }
+
+  .display em {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .copy {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.65;
+  }
+
+  /* Slab sections */
+  .slab {
+    padding: clamp(2rem, 4vw, 3rem);
+    position: relative;
+  }
+
+  .slab__inner {
+    padding: clamp(1.25rem, 2.2vw, 2rem);
+    background: rgba(255, 253, 249, .85);
+    backdrop-filter: blur(3px);
+  }
+
+  /* CTA Band */
+  .cta-band {
+    padding: clamp(3rem, 6vw, 6rem) 1rem;
+    text-align: center;
+  }
+
+  .cta-wrap {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: clamp(1.25rem, 2vw, 2rem);
+  }
+
+  /* Accent buttons and styling */
+  .btn-accent {
+    background: var(--color-accent);
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .btn-accent:hover {
+    filter: saturate(1.1);
+    box-shadow: var(--elev-1);
+    transform: translateY(-1px);
+  }
+
+  /* Card enhancements */
+  .card--accent {
+    border: 2px solid color-mix(in lab, var(--color-accent) 60%, transparent);
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--elev-2);
+    border-color: var(--color-accent);
+  }
+
+  /* Decorative rules */
+  .hr-decor {
+    height: 1px;
+    background: color-mix(in lab, var(--color-ink) 12%, transparent);
+    margin: 2rem 0;
+    position: relative;
+  }
+
+  .hr-decor::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: -8px;
+    height: 1px;
+    background: color-mix(in lab, var(--color-accent) 45%, transparent);
+    opacity: .6;
+  }
+
+  /* Accent link styling */
+  a.link-accent {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  a.link-accent:hover {
+    border-bottom-color: var(--color-accent);
   }
 }

@@ -3,6 +3,9 @@ import Footer from "@/components/footer";
 import HeroCarousel from "@/components/hero-carousel";
 import HighlightCard from "@/components/highlight-card";
 import DecorativeDivider from "@/components/decorative-divider";
+import FeatureSlab from "@/components/blocks/FeatureSlab";
+import CtaBand from "@/components/blocks/CtaBand";
+import { Link } from "wouter";
 import heroImage1 from "@assets/IMG_2196_1756230374363.jpg";
 import heroImage2 from "@assets/IMG_3326_1754202418292.jpg";
 import heroImage3 from "@assets/IMG_3645_1754201480316.jpg";
@@ -61,7 +64,7 @@ export default function Home() {
       <section className="py-20 bg-white texture-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative torn">
               {/* Cardinal sitting on barn image */}
               <div className="absolute -top-6 right-4 z-20">
                 <img
@@ -70,23 +73,25 @@ export default function Home() {
                   className="w-6 opacity-85"
                 />
               </div>
+              {/* Stamp decoration */}
+              <div className="stamp" style={{ top: '-20px', right: '-20px' }}></div>
               <img
                 src={barnImage}
                 alt="Historic Crawford Ranch barn with cattle corrals"
-                className="rounded-lg shadow-xl w-full"
+                className="rounded-lg w-full"
               />
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-4xl font-playfair font-bold text-texas-maroon">
-                <span className="decorative-line">A Testament to Family</span>
+              <h2 className="display text-texas-maroon">
+                <em>A</em> Testament to Family
               </h2>
-              <p className="text-lg text-warm-gray leading-relaxed font-inter">
+              <p className="copy text-warm-gray">
                 Nestled in the heart of the breathtaking Texas Hill Country, our generational cattle and hunting ranch stands as
                 a testament to the enduring spirit of family, tradition, and the great outdoors. For over four generations, we have
                 cultivated this land, not just as a business but as a way of life.
               </p>
-              <p className="text-lg text-warm-gray leading-relaxed font-inter">
+              <p className="copy text-warm-gray">
                 Our ranch is now a place where families gather, friends connect, and memories are made. We invite visitors to
                 immerse themselves in the beauty of the Texas Hill Country, where nature and heritage intertwine to create
                 unforgettable experiences amid stunning landscapes.
@@ -98,17 +103,28 @@ export default function Home() {
 
       <DecorativeDivider />
 
-      {/* Textured Accent Bar */}
-      <div className="section-bar texture-cowhide py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-3xl md:text-4xl font-playfair font-bold text-ranch-brown mb-3">
-            Authentic Texas Ranch Experiences
-          </h3>
-          <p className="text-lg text-ranch-brown/80 max-w-2xl mx-auto font-inter">
-            From working cattle to elegant events, experience the true spirit of Hill Country hospitality
-          </p>
-        </div>
-      </div>
+      {/* Feature Slab */}
+      <FeatureSlab
+        kicker="FOUR GENERATIONS STRONG"
+        title="The Spirit of Texas Adventure"
+        pattern="maroon"
+        useMapPattern={true}
+        cta={
+          <Link href="/about">
+            <a className="btn-accent">Discover Our Story</a>
+          </Link>
+        }
+      >
+        <p className="mb-4">
+          From working cattle drives to elegant weddings under ancient oaks, Crawford Ranch embodies the authentic
+          Texas experience. Our 800+ acres of pristine Hill Country provide the perfect backdrop for life's most
+          important moments.
+        </p>
+        <p>
+          Whether you're seeking adventure, celebration, or connection with nature, our ranch offers a rare
+          combination of rustic authenticity and refined hospitality that makes every visit unforgettable.
+        </p>
+      </FeatureSlab>
 
       {/* Highlights Section */}
       <section className="py-20 bg-white">
@@ -141,6 +157,7 @@ export default function Home() {
               bookNowLink="/contact"
               learnMoreParams="?source=home-highlights"
               bookNowParams="?context=corporate&eventType=Corporate%20Retreat&source=home-highlights"
+              accent={true}
             />
 
             <HighlightCard
@@ -161,12 +178,22 @@ export default function Home() {
               bookNowLink="/contact"
               learnMoreParams="?source=home-highlights"
               bookNowParams="?context=attractions&source=home-highlights"
+              accent={true}
             />
           </div>
         </div>
       </section>
 
       <DecorativeDivider />
+
+      {/* Bold CTA Band with Blue Pattern */}
+      <CtaBand
+        title="Your Adventure Begins Here"
+        copy="Ready to experience authentic Texas hospitality? Book your event, retreat, or ranch adventure today and create memories that last a lifetime."
+        href="/contact?context=booking&source=home-cta"
+        pattern="blue"
+        useMapPattern={true}
+      />
 
       <Footer />
     </div>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" fill="none">
+  <g opacity="0.8">
+    <!-- Circular postmark stamp -->
+    <circle cx="70" cy="70" r="60" stroke="#8B4513" stroke-width="3" fill="none"/>
+    <circle cx="70" cy="70" r="54" stroke="#8B4513" stroke-width="1.5" fill="none"/>
+    <!-- Text curve (stylized) -->
+    <path d="M30 70a40 40 0 0180 0" stroke="#8B4513" stroke-width="2" fill="none"/>
+    <circle cx="70" cy="70" r="8" fill="#8B4513"/>
+    <!-- Star in center -->
+    <path d="M70 55l4 12h13l-10 8 4 12-11-8-11 8 4-12-10-8h13z" fill="#8B4513"/>
+    <!-- Decorative dashes around outer edge -->
+    <g stroke="#8B4513" stroke-width="2">
+      <line x1="70" y1="5" x2="70" y2="12"/>
+      <line x1="100" y1="15" x2="95" y2="21"/>
+      <line x1="125" y1="40" x2="119" y2="45"/>
+      <line x1="135" y1="70" x2="128" y2="70"/>
+      <line x1="125" y1="100" x2="119" y2="95"/>
+      <line x1="100" y1="125" x2="95" y2="119"/>
+      <line x1="70" y1="135" x2="70" y2="128"/>
+      <line x1="40" y1="125" x2="45" y2="119"/>
+      <line x1="15" y1="100" x2="21" y2="95"/>
+      <line x1="5" y1="70" x2="12" y2="70"/>
+      <line x1="15" y1="40" x2="21" y2="45"/>
+      <line x1="40" y1="15" x2="45" y2="21"/>
+    </g>
+  </g>
+</svg>
