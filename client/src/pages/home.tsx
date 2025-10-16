@@ -73,8 +73,8 @@ export default function Home() {
                   className="w-6 opacity-85"
                 />
               </div>
-              {/* Stamp decoration */}
-              <div className="stamp" style={{ top: '-20px', right: '-20px' }}></div>
+              {/* Stamp decoration - moved to bottom left */}
+              <div className="stamp" style={{ bottom: '-20px', left: '-20px' }}></div>
               <img
                 src={barnImage}
                 alt="Historic Crawford Ranch barn with cattle corrals"

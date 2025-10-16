@@ -59,7 +59,6 @@ export default function About() {
             <div className="space-y-16">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="relative">
-                  <div className="stamp" style={{ top: '-20px', right: '-20px' }}></div>
                   <img
                     src={barnImage}
                     alt="Historic Crawford Ranch barn with cattle corrals"
