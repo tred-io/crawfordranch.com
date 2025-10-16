@@ -6,7 +6,9 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(npm run check:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(cat:*)",
+      "Bash(tr:*)"
     ],
     "deny": [],
     "ask": []

@@ -404,6 +404,7 @@
     background-size: 780px auto;
     background-repeat: repeat;
     mix-blend-mode: multiply;
+    z-index: 0;
   }
 
   .pattern--map::before {
@@ -411,22 +412,20 @@
     opacity: .12;
   }
 
-  /* Torn photo edge & stamp */
-  .torn {
-    position: relative;
-    background: #fffdf9;
-    box-shadow: var(--elev-1);
+  .pattern--texture::before {
+    background-image: url('/patterns/937953_ODE0A11.svg');
+    background-size: 400px auto;
+    opacity: .08;
+    mix-blend-mode: darken;
   }
 
-  .torn::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    -webkit-mask: url('/patterns/torn-edge.svg') 0/cover no-repeat;
-    mask: url('/patterns/torn-edge.svg') 0/cover no-repeat;
-    background: #fffdf9;
+  .pattern--texture2::before {
+    background-image: url('/patterns/396593911.svg');
+    background-size: 400px auto;
+    opacity: .1;
   }
 
+  /* Stamp decoration */
   .stamp {
     position: absolute;
     width: 140px;
@@ -466,24 +465,31 @@
   .slab {
     padding: clamp(2rem, 4vw, 3rem);
     position: relative;
+    overflow: hidden;
   }
 
   .slab__inner {
     padding: clamp(1.25rem, 2.2vw, 2rem);
     background: rgba(255, 253, 249, .85);
     backdrop-filter: blur(3px);
+    position: relative;
+    z-index: 1;
   }
 
   /* CTA Band */
   .cta-band {
     padding: clamp(3rem, 6vw, 6rem) 1rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
   }
 
   .cta-wrap {
     margin: 0 auto;
     max-width: 900px;
     padding: clamp(1.25rem, 2vw, 2rem);
+    position: relative;
+    z-index: 1;
   }
 
   /* Accent buttons and styling */

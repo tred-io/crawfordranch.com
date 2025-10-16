@@ -4,6 +4,8 @@ interface CtaBandProps {
   href: string;
   pattern?: 'maroon' | 'blue';
   useMapPattern?: boolean;
+  useTexturePattern?: boolean;
+  useTexture2Pattern?: boolean;
 }
 
 export default function CtaBand({
@@ -11,14 +13,18 @@ export default function CtaBand({
   copy,
   href,
   pattern = 'maroon',
-  useMapPattern = true
+  useMapPattern = true,
+  useTexturePattern = false,
+  useTexture2Pattern = false
 }: CtaBandProps) {
   const titleWords = title.split(' ');
   const firstWord = titleWords[0];
   const restOfTitle = titleWords.slice(1).join(' ');
 
+  const patternClass = useTexture2Pattern ? ' pattern--texture2' : (useTexturePattern ? ' pattern--texture' : (useMapPattern ? ' pattern--map' : ''));
+
   return (
-    <section className={`cta-band pattern pattern--${pattern}${useMapPattern ? ' pattern--map' : ''}`}>
+    <section className={`cta-band pattern pattern--${pattern}${patternClass}`}>
       <div className="cta-wrap panel panel--floating">
         <h2 className="display mb-4 text-ranch-brown">
           <em>{firstWord}</em> {restOfTitle}

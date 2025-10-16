@@ -3,37 +3,54 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import wideLogoImage from "@assets/logo_wide_1754206705389.png";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollOpacity, setScrollOpacity] = useState(0.98);
   const [isOpen, setIsOpen] = useState(false);
   const [location] = useLocation();
+  const isHomePage = location === '/';
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 100);
+
+      // On home page: fade from transparent (0) to white (1) over 200px
+      // On other pages: fade from 0.98 to 1.0 over 100px
+      if (isHomePage) {
+        const opacity = Math.min(scrollY / 200, 1.0);
+        setScrollOpacity(opacity);
+      } else {
+        const opacity = Math.min(0.98 + (scrollY / 100) * 0.02, 1.0);
+        setScrollOpacity(opacity);
+      }
     };
+
+    // Initialize opacity on mount
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/events', label: 'Events & Outfitting' },
+    { href: '/events', label: 'Events' },
+    { href: '/outfitting', label: 'Outfitting' },
     { href: '/corporate', label: 'Corporate Retreats' },
-    { href: '/activities', label: 'Activities / Trails' },
+    { href: '/activities', label: 'Activities' },
     { href: '/gallery', label: 'Gallery' },
     { href: '/about', label: 'About' },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
-      isScrolled
-        ? 'bg-white shadow-lg py-3'
-        : 'bg-white/98 shadow-md py-6'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+        isScrolled ? 'py-3' : 'py-4'
+      }`}
+      style={{ backgroundColor: `rgba(255, 255, 255, ${scrollOpacity})` }}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Left: Hamburger Menu */}
@@ -43,10 +60,10 @@ export default function Navigation() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-texas-maroon hover:bg-ranch-cream/50 h-12 w-12"
+                  className="text-texas-maroon hover:bg-ranch-cream/50 h-14 w-14"
                   aria-label="Open menu"
                 >
-                  <Menu className="h-8 w-8" />
+                  <Menu className="h-10 w-10" style={{ width: '2rem', height: '2rem' }} />
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-ranch-cream">
@@ -88,12 +105,12 @@ export default function Navigation() {
           <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
             <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img
-                src={wideLogoImage}
+                src="/images/CrawfordRanchLogoHorizontal_alpha_clean.png"
                 alt="Crawford Ranch"
                 className={`transition-all duration-500 ease-out object-contain ${
                   isScrolled
-                    ? 'h-12 md:h-14'
-                    : 'h-16 md:h-20 lg:h-24'
+                    ? 'h-10 md:h-12'
+                    : 'h-14 md:h-16 lg:h-20'
                 }`}
                 style={{ objectFit: 'contain', objectPosition: 'center' }}
               />

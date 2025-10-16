@@ -34,7 +34,7 @@ export default function Home() {
     {
       image: heroImage3,
       title: "Adventure Awaits",
-      subtitle: "Discover trails, wildlife, and the spirit of the Old West"
+      subtitle: "Discover wildlife, authentic ranch experiences, and the spirit of the Old West"
     },
     {
       image: heroImage4,
@@ -61,10 +61,10 @@ export default function Home() {
       <HeroCarousel slides={heroSlides} />
 
       {/* About Section */}
-      <section className="py-20 bg-white texture-bg">
+      <section className="py-20 bg-white texture-floral">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative torn">
+            <div className="relative">
               {/* Cardinal sitting on barn image */}
               <div className="absolute -top-6 right-4 z-20">
                 <img
@@ -78,7 +78,7 @@ export default function Home() {
               <img
                 src={barnImage}
                 alt="Historic Crawford Ranch barn with cattle corrals"
-                className="rounded-lg w-full"
+                className="rounded-lg shadow-xl w-full"
               />
             </div>
 
@@ -108,7 +108,7 @@ export default function Home() {
         kicker="FOUR GENERATIONS STRONG"
         title="The Spirit of Texas Adventure"
         pattern="maroon"
-        useMapPattern={true}
+        useTexturePattern={true}
         cta={
           <Link href="/about">
             <a className="btn-accent">Discover Our Story</a>
@@ -141,12 +141,23 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <HighlightCard
               image={weddingImage}
-              title="Events & Outfitting"
+              title="Events"
               description="Create unforgettable memories with weddings, celebrations, and special events in our stunning Hill Country setting. Professional venues and authentic Texas hospitality await."
               learnMoreLink="/events"
               bookNowLink="/contact"
               learnMoreParams="?source=home-highlights"
               bookNowParams="?context=events&eventType=Wedding&source=home-highlights"
+            />
+
+            <HighlightCard
+              image={heroImage4}
+              title="Outfitting"
+              description="Experience premier high-fence whitetail hunting in the beautiful Texas Hill Country. Expert guides and exceptional opportunities for trophy deer await."
+              learnMoreLink="/outfitting"
+              bookNowLink="/contact"
+              learnMoreParams="?source=home-highlights"
+              bookNowParams="?context=outfitting&eventType=Hunting%20Inquiry&source=home-highlights"
+              accent={true}
             />
 
             <HighlightCard
@@ -157,27 +168,16 @@ export default function Home() {
               bookNowLink="/contact"
               learnMoreParams="?source=home-highlights"
               bookNowParams="?context=corporate&eventType=Corporate%20Retreat&source=home-highlights"
-              accent={true}
             />
 
             <HighlightCard
               image={activitiesImage}
-              title="Activities & Trails"
-              description="Explore scenic trails, experience authentic ranch life, and discover the natural beauty of the Texas Hill Country through guided activities and adventures for all ages."
+              title="Activities"
+              description="Experience authentic ranch life and discover the natural beauty of the Texas Hill Country through guided activities and adventures for all ages."
               learnMoreLink="/activities"
               bookNowLink="/contact"
               learnMoreParams="?source=home-highlights"
               bookNowParams="?context=activities&eventType=Activities%20Inquiry&source=home-highlights"
-            />
-
-            <HighlightCard
-              image={attractionsImage}
-              title="Local Central Texas Attractions"
-              description="Enhance your ranch experience with nearby Hill Country wineries, historic towns, live music venues, and natural wonders. We're your gateway to the best of Central Texas."
-              learnMoreLink="/local-attractions"
-              bookNowLink="/contact"
-              learnMoreParams="?source=home-highlights"
-              bookNowParams="?context=attractions&source=home-highlights"
               accent={true}
             />
           </div>
@@ -192,8 +192,10 @@ export default function Home() {
         copy="Ready to experience authentic Texas hospitality? Book your event, retreat, or ranch adventure today and create memories that last a lifetime."
         href="/contact?context=booking&source=home-cta"
         pattern="blue"
-        useMapPattern={true}
+        useTexture2Pattern={true}
       />
+
+      <DecorativeDivider showBarn={true} />
 
       <Footer />
     </div>

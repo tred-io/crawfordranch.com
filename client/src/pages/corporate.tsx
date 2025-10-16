@@ -3,9 +3,11 @@ import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import DecorativeDivider from "@/components/decorative-divider";
+import FeatureSlab from "@/components/blocks/FeatureSlab";
+import CtaBand from "@/components/blocks/CtaBand";
 import { Check, Users, Coffee, Target, Lightbulb } from "lucide-react";
 import landscapeImage from "@assets/IMG_3326_1754202418292.jpg";
-import barnImage from "@assets/IMG_0518_1754201480310.jpg";
+import venueImage from "@assets/IMG_3639_1754201480314.jpg";
 
 export default function Corporate() {
   const benefits = [
@@ -46,58 +48,42 @@ export default function Corporate() {
     <div className="min-h-screen bg-ranch-cream">
       <Navigation />
       <div className="pt-24">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url("${landscapeImage}")` }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
-          <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair font-bold mb-6 leading-tight">
-              Corporate Retreats in the Texas Hill Country
+        {/* Hero Header */}
+        <section className="py-16 bg-ranch-cream">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="eyebrow mb-4 text-texas-maroon">INSPIRE YOUR TEAM</p>
+            <h1 className="display text-ranch-brown mb-6">
+              <em>Corporate</em> Retreats Reimagined
             </h1>
-            <p className="text-xl md:text-2xl mb-8 font-inter font-light leading-relaxed">
-              Inspire your team with a change of scenery. Elevate productivity and morale in our tranquil ranch setting.
+            <p className="copy text-warm-gray max-w-3xl mx-auto">
+              Inspire your team with a change of scenery in the heart of the Texas Hill Country. From intimate leadership
+              gatherings to full-scale company retreats, we offer private spaces and authentic ranch experiences that foster
+              collaboration, creativity, and connection surrounded by stunning natural beauty.
             </p>
-            <Link href="/contact?context=corporate&eventType=Corporate%20Retreat&source=corporate-hero">
-              <Button className="bg-white text-texas-maroon hover:bg-ranch-cream border-2 border-white/40 px-8 py-6 text-lg font-semibold">
-                Plan Your Retreat
-              </Button>
-            </Link>
           </div>
         </section>
 
-        {/* Textured Accent Bar */}
-        <div className="section-bar texture-map py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-xl font-playfair text-ranch-brown italic">
-              "The perfect escape for teams seeking inspiration and connection"
-            </p>
-          </div>
-        </div>
-
-        {/* Benefits Grid */}
-        <section className="py-20 bg-white">
+        {/* Benefits Grid - Start with content */}
+        <section className="py-20 bg-white texture-floral">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-playfair font-bold text-texas-maroon mb-4">
-                Why Choose Crawford Ranch
+              <h2 className="display text-texas-maroon mb-4">
+                <em>Why</em> Choose Crawford Ranch
               </h2>
-              <p className="text-lg text-warm-gray max-w-2xl mx-auto">
+              <p className="copy text-warm-gray max-w-2xl mx-auto">
                 Our ranch provides the perfect balance of professional amenities and natural inspiration
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center p-6 rounded-lg bg-ranch-cream/50 hover:bg-ranch-cream transition-colors">
+                <div key={index} className="card text-center p-6 rounded-lg bg-white hover:shadow-lg transition-all">
                   <benefit.icon className="h-12 w-12 text-sage-teal mx-auto mb-4" />
                   <h3 className="text-xl font-playfair font-semibold text-texas-maroon mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-warm-gray font-inter">
+                  <p className="copy text-warm-gray">
                     {benefit.description}
                   </p>
                 </div>
@@ -107,14 +93,14 @@ export default function Corporate() {
         </section>
 
         {/* Amenities Section */}
-        <section className="py-20 bg-gradient-to-b from-white to-ranch-cream">
+        <section className="py-20 bg-ranch-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-playfair font-bold text-texas-maroon mb-6">
-                  Retreat Amenities & Services
+                <h2 className="display text-texas-maroon mb-6">
+                  <em>Retreat</em> Amenities & Services
                 </h2>
-                <p className="text-lg text-warm-gray mb-8 font-inter leading-relaxed">
+                <p className="copy text-warm-gray mb-8">
                   Everything your team needs for a successful and memorable retreat experience in the heart of Texas Hill Country.
                 </p>
 
@@ -128,15 +114,16 @@ export default function Corporate() {
                 </ul>
 
                 <Link href="/contact?context=corporate&eventType=Corporate%20Retreat&source=corporate-amenities">
-                  <Button className="bg-texas-maroon text-white hover:bg-texas-maroon-light px-8 py-6 text-lg font-semibold">
+                  <a className="btn-accent">
                     Request Information
-                  </Button>
+                  </a>
                 </Link>
               </div>
 
               <div className="relative">
+                <div className="stamp" style={{ top: '-20px', right: '-20px' }}></div>
                 <img
-                  src={barnImage}
+                  src={venueImage}
                   alt="Crawford Ranch venue"
                   className="rounded-lg shadow-xl w-full"
                 />
@@ -145,7 +132,29 @@ export default function Corporate() {
           </div>
         </section>
 
-        <DecorativeDivider />
+        {/* Feature Slab - Maroon variant for variety */}
+        <FeatureSlab
+          kicker="TEAM SUCCESS"
+          title="Transform Your Retreat"
+          pattern="maroon"
+          useTexturePattern={true}
+          cta={
+            <Link href="/contact?context=corporate&eventType=Corporate%20Retreat&source=corporate-slab">
+              <a className="btn-accent">Plan Your Retreat</a>
+            </Link>
+          }
+        >
+          <p className="mb-4">
+            Step away from the office and into an environment designed to inspire innovation and strengthen bonds.
+            Our ranch offers the perfect balance of professional meeting spaces and unique team-building opportunities.
+          </p>
+          <p>
+            Whether you're planning strategic sessions, leadership development, or company-wide gatherings, Crawford
+            Ranch provides an unmatched setting for corporate success.
+          </p>
+        </FeatureSlab>
+
+        <DecorativeDivider showBarn={true} />
       </div>
       <Footer />
     </div>

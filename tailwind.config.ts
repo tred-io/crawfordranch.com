@@ -3,6 +3,32 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: ["class"],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
+  safelist: [
+    'pattern',
+    'pattern--maroon',
+    'pattern--blue',
+    'pattern--map',
+    'pattern--texture',
+    'pattern--texture2',
+    'slab',
+    'slab__inner',
+    'cta-band',
+    'cta-wrap',
+    'panel',
+    'panel--floating',
+    'torn',
+    'stamp',
+    'eyebrow',
+    'display',
+    'copy',
+    'btn-accent',
+    'card--accent',
+    'texture-floral',
+    'texture-map',
+    'texture-leather',
+    'texture-cowhide',
+    'texture-brand',
+  ],
   theme: {
     extend: {
       borderRadius: {
