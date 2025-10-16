@@ -85,9 +85,21 @@ export default function Navigation() {
                       {item.label}
                     </Link>
                   ))}
+                  <Link href="/contact?context=booking&source=mobile-menu">
+                    <Button
+                      className="w-full bg-texas-maroon text-white hover:bg-texas-maroon-light mt-6 py-6 text-lg font-semibold"
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    >
+                      Book Now
+                    </Button>
+                  </Link>
                   <Link href="/contact">
                     <Button
-                      className="w-full bg-texas-maroon text-white hover:bg-texas-maroon-light mt-6"
+                      variant="outline"
+                      className="w-full border-texas-maroon text-texas-maroon hover:bg-white/50 mt-2"
                       onClick={() => {
                         setIsOpen(false);
                         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -112,13 +124,17 @@ export default function Navigation() {
                     ? 'h-10 md:h-12'
                     : 'h-14 md:h-16 lg:h-20'
                 }`}
-                style={{ objectFit: 'contain', objectPosition: 'center' }}
+                style={{
+                  objectFit: 'contain',
+                  objectPosition: 'center',
+                  filter: 'drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6))'
+                }}
               />
             </Link>
           </div>
 
-          {/* Right: Book Now Button */}
-          <div className="flex-shrink-0">
+          {/* Right: Book Now Button - Hidden on mobile */}
+          <div className="flex-shrink-0 hidden md:block">
             <Link href="/contact?context=booking&source=header">
               <Button
                 className="bg-texas-maroon text-white hover:bg-texas-maroon-light hover:shadow-lg transition-all duration-300 font-semibold px-6 py-5 text-base"
